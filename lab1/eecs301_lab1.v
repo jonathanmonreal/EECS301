@@ -55,8 +55,14 @@ module eecs301_lab1(
 //  REG/WIRE declarations
 //=======================================================
 
+wire left, right;
+
 //=======================================================
 //  Structural coding
 //=======================================================
+
+// Assign left and right
+assign left = SW[0];
+assign right = SW[1];
 
 endmodule

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for eecs301_lab1
-Fri Sep 04 14:29:42 2015
+Fri Sep 04 16:49:12 2015
 Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
 
 
@@ -43,7 +43,7 @@ agreement for further details.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +---------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Sep 04 14:29:41 2015      ;
+; Analysis & Synthesis Status     ; Successful - Fri Sep 04 16:49:12 2015      ;
 ; Quartus II 64-Bit Version       ; 15.0.0 Build 145 04/22/2015 SJ Web Edition ;
 ; Revision Name                   ; eecs301_lab1                               ;
 ; Top-level Entity Name           ; eecs301_lab1                               ;
@@ -244,7 +244,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:08     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -254,30 +254,32 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
-    Info: Processing started: Fri Sep 04 14:29:00 2015
+    Info: Processing started: Fri Sep 04 16:48:59 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off eecs301_lab1 -c eecs301_lab1
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file eecs301_lab1.v
     Info (12023): Found entity 1: eecs301_lab1
 Info (12127): Elaborating entity "eecs301_lab1" for the top level hierarchy
-Warning (10034): Output port "HEX0" at eecs301_lab1.v(20) has no driver
-Warning (10034): Output port "HEX1" at eecs301_lab1.v(21) has no driver
-Warning (10034): Output port "HEX2" at eecs301_lab1.v(22) has no driver
-Warning (10034): Output port "HEX3" at eecs301_lab1.v(23) has no driver
-Warning (10034): Output port "HEX4" at eecs301_lab1.v(24) has no driver
-Warning (10034): Output port "HEX5" at eecs301_lab1.v(25) has no driver
-Warning (10034): Output port "LEDR" at eecs301_lab1.v(31) has no driver
-Warning (10034): Output port "VGA_B" at eecs301_lab1.v(37) has no driver
-Warning (10034): Output port "VGA_G" at eecs301_lab1.v(40) has no driver
-Warning (10034): Output port "VGA_R" at eecs301_lab1.v(42) has no driver
-Warning (10034): Output port "ADC_CONVST" at eecs301_lab1.v(8) has no driver
-Warning (10034): Output port "ADC_DIN" at eecs301_lab1.v(9) has no driver
-Warning (10034): Output port "ADC_SCLK" at eecs301_lab1.v(11) has no driver
-Warning (10034): Output port "VGA_BLANK_N" at eecs301_lab1.v(38) has no driver
-Warning (10034): Output port "VGA_CLK" at eecs301_lab1.v(39) has no driver
-Warning (10034): Output port "VGA_HS" at eecs301_lab1.v(41) has no driver
-Warning (10034): Output port "VGA_SYNC_N" at eecs301_lab1.v(43) has no driver
-Warning (10034): Output port "VGA_VS" at eecs301_lab1.v(44) has no driver
+Warning (10036): Verilog HDL or VHDL warning at eecs301_lab1.v(58): object "left" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at eecs301_lab1.v(58): object "right" assigned a value but never read
+Warning (10034): Output port "HEX0" at eecs301_lab1.v(21) has no driver
+Warning (10034): Output port "HEX1" at eecs301_lab1.v(22) has no driver
+Warning (10034): Output port "HEX2" at eecs301_lab1.v(23) has no driver
+Warning (10034): Output port "HEX3" at eecs301_lab1.v(24) has no driver
+Warning (10034): Output port "HEX4" at eecs301_lab1.v(25) has no driver
+Warning (10034): Output port "HEX5" at eecs301_lab1.v(26) has no driver
+Warning (10034): Output port "LEDR" at eecs301_lab1.v(32) has no driver
+Warning (10034): Output port "VGA_B" at eecs301_lab1.v(38) has no driver
+Warning (10034): Output port "VGA_G" at eecs301_lab1.v(41) has no driver
+Warning (10034): Output port "VGA_R" at eecs301_lab1.v(43) has no driver
+Warning (10034): Output port "ADC_CONVST" at eecs301_lab1.v(9) has no driver
+Warning (10034): Output port "ADC_DIN" at eecs301_lab1.v(10) has no driver
+Warning (10034): Output port "ADC_SCLK" at eecs301_lab1.v(12) has no driver
+Warning (10034): Output port "VGA_BLANK_N" at eecs301_lab1.v(39) has no driver
+Warning (10034): Output port "VGA_CLK" at eecs301_lab1.v(40) has no driver
+Warning (10034): Output port "VGA_HS" at eecs301_lab1.v(42) has no driver
+Warning (10034): Output port "VGA_SYNC_N" at eecs301_lab1.v(44) has no driver
+Warning (10034): Output port "VGA_VS" at eecs301_lab1.v(45) has no driver
 Warning (12158): Entity "eecs301_lab1" contains only dangling pins
 Warning (13039): The following bidirectional pins have no drivers
     Warning (13040): bidirectional pin "GPIO_0[0]" has no driver
@@ -463,10 +465,10 @@ Info (21057): Implemented 175 device resources after synthesis - the final resou
     Info (21058): Implemented 19 input pins
     Info (21059): Implemented 84 output pins
     Info (21060): Implemented 72 bidirectional pins
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 198 warnings
-    Info: Peak virtual memory: 704 megabytes
-    Info: Processing ended: Fri Sep 04 14:29:42 2015
-    Info: Elapsed time: 00:00:42
-    Info: Total CPU time (on all processors): 00:00:31
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 200 warnings
+    Info: Peak virtual memory: 712 megabytes
+    Info: Processing ended: Fri Sep 04 16:49:12 2015
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:28
 
 
