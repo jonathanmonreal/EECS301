@@ -3,7 +3,7 @@ ADC_CONVST <= <GND>
 ADC_DIN <= <GND>
 ADC_DOUT => ~NO_FANOUT~
 ADC_SCLK <= <GND>
-CLOCK_50 => ~NO_FANOUT~
+CLOCK_50 => CLOCK_50.IN1
 CLOCK2_50 => ~NO_FANOUT~
 CLOCK3_50 => ~NO_FANOUT~
 CLOCK4_50 => ~NO_FANOUT~
@@ -53,18 +53,18 @@ KEY[0] => ~NO_FANOUT~
 KEY[1] => ~NO_FANOUT~
 KEY[2] => ~NO_FANOUT~
 KEY[3] => ~NO_FANOUT~
-LEDR[0] <= <GND>
-LEDR[1] <= <GND>
-LEDR[2] <= <GND>
+LEDR[0] <= turn:insig.r_signal
+LEDR[1] <= turn:insig.r_signal
+LEDR[2] <= turn:insig.r_signal
 LEDR[3] <= <GND>
 LEDR[4] <= <GND>
 LEDR[5] <= <GND>
 LEDR[6] <= <GND>
-LEDR[7] <= <GND>
-LEDR[8] <= <GND>
-LEDR[9] <= <GND>
-SW[0] => ~NO_FANOUT~
-SW[1] => ~NO_FANOUT~
+LEDR[7] <= turn:insig.l_signal
+LEDR[8] <= turn:insig.l_signal
+LEDR[9] <= turn:insig.l_signal
+SW[0] => l.IN1
+SW[1] => r.IN1
 SW[2] => ~NO_FANOUT~
 SW[3] => ~NO_FANOUT~
 SW[4] => ~NO_FANOUT~
@@ -174,5 +174,58 @@ GPIO_1[32] <> <UNC>
 GPIO_1[33] <> <UNC>
 GPIO_1[34] <> <UNC>
 GPIO_1[35] <> <UNC>
+
+
+|eecs301_lab1|counter:count
+clk => internal_counter[0].CLK
+clk => internal_counter[1].CLK
+clk => internal_counter[2].CLK
+clk => internal_counter[3].CLK
+clk => internal_counter[4].CLK
+clk => internal_counter[5].CLK
+clk => internal_counter[6].CLK
+clk => internal_counter[7].CLK
+clk => internal_counter[8].CLK
+clk => internal_counter[9].CLK
+clk => internal_counter[10].CLK
+clk => internal_counter[11].CLK
+clk => internal_counter[12].CLK
+clk => internal_counter[13].CLK
+clk => internal_counter[14].CLK
+clk => internal_counter[15].CLK
+clk => internal_counter[16].CLK
+clk => internal_counter[17].CLK
+clk => internal_counter[18].CLK
+clk => internal_counter[19].CLK
+clk => internal_counter[20].CLK
+clk => internal_counter[21].CLK
+clk => internal_counter[22].CLK
+clk => internal_counter[23].CLK
+counter_msb <= internal_counter[23].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|eecs301_lab1|turn:insig
+clock => r_signal[0]~reg0.CLK
+clock => r_signal[1]~reg0.CLK
+clock => r_signal[2]~reg0.CLK
+clock => l_signal[0]~reg0.CLK
+clock => l_signal[1]~reg0.CLK
+clock => l_signal[2]~reg0.CLK
+left => r_signal.OUTPUTSELECT
+left => r_signal.OUTPUTSELECT
+left => r_signal.OUTPUTSELECT
+left => l_signal.OUTPUTSELECT
+left => l_signal.OUTPUTSELECT
+left => l_signal.OUTPUTSELECT
+right => r_signal.OUTPUTSELECT
+right => r_signal.OUTPUTSELECT
+right => r_signal.OUTPUTSELECT
+l_signal[0] <= l_signal[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+l_signal[1] <= l_signal[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+l_signal[2] <= l_signal[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+r_signal[0] <= r_signal[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+r_signal[1] <= r_signal[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+r_signal[2] <= r_signal[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+error <= <GND>
 
 
