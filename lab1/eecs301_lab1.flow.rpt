@@ -1,5 +1,5 @@
 Flow report for eecs301_lab1
-Sat Sep 05 19:51:54 2015
+Sun Sep 06 05:01:24 2015
 Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Full Version
 
 
@@ -41,25 +41,25 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Flow Failed - Sat Sep 05 19:51:54 2015      ;
+; Flow Status                     ; Successful - Sun Sep 06 05:01:03 2015       ;
 ; Quartus II 64-Bit Version       ; 15.0.0 Build 145 04/22/2015 SJ Full Version ;
 ; Revision Name                   ; eecs301_lab1                                ;
 ; Top-level Entity Name           ; eecs301_lab1                                ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 30                                          ;
-; Total pins                      ; 175                                         ;
+; Logic utilization (in ALMs)     ; 21 / 32,070 ( < 1 % )                       ;
+; Total registers                 ; 35                                          ;
+; Total pins                      ; 175 / 457 ( 38 % )                          ;
 ; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 0                                           ;
-; Total DSP Blocks                ; 0                                           ;
+; Total block memory bits         ; 0 / 4,065,280 ( 0 % )                       ;
+; Total DSP Blocks                ; 0 / 87 ( 0 % )                              ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
 ; Total HSSI TX PCSs              ; 0                                           ;
 ; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 0                                           ;
-; Total DLLs                      ; 0                                           ;
+; Total PLLs                      ; 0 / 6 ( 0 % )                               ;
+; Total DLLs                      ; 0 / 4 ( 0 % )                               ;
 +---------------------------------+---------------------------------------------+
 
 
@@ -68,7 +68,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 09/05/2015 19:51:35 ;
+; Start date & time ; 09/06/2015 04:59:29 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; eecs301_lab1        ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ agreement for further details.
 +-------------------------------------+---------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+---------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 207120311525705.144149709405448       ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 207120311525705.144152996905472       ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                     ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; 16764057                              ; --            ; --          ; Top        ;
@@ -91,32 +91,41 @@ agreement for further details.
 +-------------------------------------+---------------------------------------+---------------+-------------+------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                        ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:18     ; 1.0                     ; 777 MB              ; 00:00:22                           ;
-; Fitter               ; 00:00:08     ; 1.0                     ; 956 MB              ; 00:00:01                           ;
-; Total                ; 00:00:26     ; --                      ; --                  ; 00:00:23                           ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:00:17     ; 1.0                     ; 733 MB              ; 00:00:23                           ;
+; Partition Merge           ; 00:00:10     ; 1.0                     ; 877 MB              ; 00:00:02                           ;
+; Fitter                    ; 00:00:47     ; 1.4                     ; 2393 MB             ; 00:00:49                           ;
+; Assembler                 ; 00:00:23     ; 1.0                     ; 775 MB              ; 00:00:10                           ;
+; TimeQuest Timing Analyzer ; 00:00:19     ; 1.0                     ; 1120 MB             ; 00:00:11                           ;
+; Total                     ; 00:01:56     ; --                      ; --                  ; 00:01:35                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+-----------------------------------------------------------------------------------+
-; Flow OS Summary                                                                   ;
-+----------------------+------------------+-----------+------------+----------------+
-; Module Name          ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
-+----------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis ; abc1929          ; Windows 7 ; 6.2        ; x86_64         ;
-; Fitter               ; abc1929          ; Windows 7 ; 6.2        ; x86_64         ;
-+----------------------+------------------+-----------+------------+----------------+
++----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                        ;
++---------------------------+------------------+-----------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
++---------------------------+------------------+-----------+------------+----------------+
+; Analysis & Synthesis      ; abc1929          ; Windows 7 ; 6.2        ; x86_64         ;
+; Partition Merge           ; abc1929          ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; abc1929          ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; abc1929          ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; abc1929          ; Windows 7 ; 6.2        ; x86_64         ;
++---------------------------+------------------+-----------+------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
-quartus_map --read_settings_files=on --write_settings_files=off eecs301_lab1 -c eecs301_lab1
-quartus_fit --read_settings_files=off --write_settings_files=off eecs301_lab1 -c eecs301_lab1
+quartus_map --read_settings_files=on --write_settings_files=off eecs301_lab1 -c eecs301_lab1 --recompile=on
+quartus_cdb --read_settings_files=on --write_settings_files=off eecs301_lab1 -c eecs301_lab1 --merge=on --recompile=on
+quartus_fit --read_settings_files=off --write_settings_files=off eecs301_lab1 -c eecs301_lab1 --recompile=on
+quartus_asm --read_settings_files=off --write_settings_files=off eecs301_lab1 -c eecs301_lab1
+quartus_sta eecs301_lab1 -c eecs301_lab1
 
 
 

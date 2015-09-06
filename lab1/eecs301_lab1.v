@@ -55,30 +55,31 @@ module eecs301_lab1(
 //  REG/WIRE declarations
 //=======================================================
 
-wire l, r, c, e;
-wire [2:0] lights;
+wire c;
+wire [2:0] llights, rlights;
+wire [9:0] test;
 
 //=======================================================
 //  Structural coding
 //=======================================================
 
-// Assign left and right
-assign l = SW[0];
-assign r = SW[1];
-assign e = (SW[0] & SW[1]);
+assign LEDR[9:7] = llights;
+assign LEDR[2:0] = rlights;
+assign test = SW;
 
 
 counter count(
           .clk( CLOCK_50 ),
           .counter_msb( c )
-        );	
+        );
 
 turn insig(
 	.clock(c),
-	.left(l),
-	.right(r),
-	.l_signal(LEDR[9:7]), .r_signal(LEDR[2:0]), .error(e)
+	.left(test[1]),
+	.right(test[0]),
+	.l_signal(llights), .r_signal(rlights), .error()
 
 );
+
 
 endmodule
