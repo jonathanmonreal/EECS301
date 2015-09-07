@@ -1,7 +1,14 @@
 
 State Machine - |eecs301_lab1|turn:insig|rtemp
-Name rtemp.110 rtemp.100 rtemp.000~0 rtemp.111 
-rtemp.000~0 0 0 0 0 
+Name rtemp.110 rtemp.100 rtemp.000 rtemp.111 
+rtemp.000 0 0 0 0 
 rtemp.100 0 1 1 0 
 rtemp.110 1 0 1 0 
 rtemp.111 0 0 1 1 
+
+State Machine - |eecs301_lab1|turn:insig|ltemp
+Name ltemp.011 ltemp.001 ltemp.111 ltemp.000 
+ltemp.000 0 0 0 0 
+ltemp.001 0 1 0 1 
+ltemp.011 1 0 0 1 
+ltemp.111 0 0 1 1 

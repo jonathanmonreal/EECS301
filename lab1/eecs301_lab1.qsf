@@ -442,6 +442,7 @@ set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 # end ENTITY(eecs301_lab1)
 # -----------------------
 
+set_global_assignment -name VERILOG_FILE V/brake.v
 set_global_assignment -name VERILOG_FILE V/turn.v
 set_global_assignment -name VERILOG_FILE V/counter.v
 set_global_assignment -name VERILOG_FILE eecs301_lab1.v
