@@ -41,7 +41,7 @@
 # Project-Wide Assignments
 # ========================
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 14.0
-set_global_assignment -name LAST_QUARTUS_VERSION 15.0.2
+set_global_assignment -name LAST_QUARTUS_VERSION 15.0.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "21:05:47 AUGUST 20,2015"
 set_global_assignment -name SMART_RECOMPILE ON
 set_global_assignment -name VERILOG_FILE eecs301_lab2.v
