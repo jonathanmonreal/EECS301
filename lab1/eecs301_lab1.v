@@ -55,14 +55,67 @@ module eecs301_lab1(
 //  REG/WIRE declarations
 //=======================================================
 
-wire left, right;
+//Clock and error
+wire c,err;
+//final light signals and signals from turn module
+wire [2:0] llights,rlights,tl,tr;
+//center lights signal from brake
+wire [1:0] clights;
+//dummy var for 10 switches
+wire [9:0] switches;
+//dummy var for 4 buttons
+wire [3:0] buttons;
+
 
 //=======================================================
 //  Structural coding
 //=======================================================
 
-// Assign left and right
-assign left = SW[0];
-assign right = SW[1];
+
+
+//I/O mappings
+assign LEDR[9:7] = llights;
+assign LEDR[2:0] = rlights;
+assign LEDR[5:4] = clights;
+assign switches = SW;
+assign buttons = ~KEY;
+
+
+assign HEX0 [3]= c;
+
+assign {HEX2[0],HEX2[3],HEX2[4],HEX2[5],HEX2[6]} 
+= {~err,~err,~err,~err,~err,~err};
+
+assign {HEX0[6:4],HEX0[2:0]}= ~6'b0;
+assign HEX1= ~7'b0;
+assign {HEX2[1],HEX2[2]}= ~2'b0;
+assign HEX3= ~7'b0;
+assign HEX4= ~7'b0;
+assign HEX5= ~7'b0;
+
+
+
+counter count(
+          .clk( CLOCK_50 ),
+          .counter_msb( c )
+        );
+  
+turn insig(
+	.clock(c),
+	.left(switches[1]),
+	.right(switches[0]),
+	.l_signal(tl), .r_signal(tr), .error(err)
+
+);
+
+brake braking(.clock(c), 
+.brake(buttons[2]), 
+.l_signal(tl), 
+.r_signal(tr), 
+.l_lights(llights), 
+.r_lights(rlights), 
+.c_lights(clights)
+
+);
 
 endmodule

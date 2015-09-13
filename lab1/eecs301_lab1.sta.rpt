@@ -1,6 +1,6 @@
 TimeQuest Timing Analyzer report for eecs301_lab1
-Fri Sep 04 16:50:27 2015
-Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
+Mon Sep 07 05:11:55 2015
+Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Full Version
 
 
 ---------------------
@@ -18,42 +18,59 @@ Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
  10. Slow 1100mV 85C Model Recovery Summary
  11. Slow 1100mV 85C Model Removal Summary
  12. Slow 1100mV 85C Model Minimum Pulse Width Summary
- 13. Slow 1100mV 85C Model Datasheet Report
- 14. Slow 1100mV 85C Model Metastability Summary
- 15. Slow 1100mV 0C Model Fmax Summary
- 16. Slow 1100mV 0C Model Setup Summary
- 17. Slow 1100mV 0C Model Hold Summary
- 18. Slow 1100mV 0C Model Recovery Summary
- 19. Slow 1100mV 0C Model Removal Summary
- 20. Slow 1100mV 0C Model Minimum Pulse Width Summary
- 21. Slow 1100mV 0C Model Datasheet Report
- 22. Slow 1100mV 0C Model Metastability Summary
- 23. Fast 1100mV 85C Model Setup Summary
- 24. Fast 1100mV 85C Model Hold Summary
- 25. Fast 1100mV 85C Model Recovery Summary
- 26. Fast 1100mV 85C Model Removal Summary
- 27. Fast 1100mV 85C Model Minimum Pulse Width Summary
- 28. Fast 1100mV 85C Model Datasheet Report
- 29. Fast 1100mV 85C Model Metastability Summary
- 30. Fast 1100mV 0C Model Setup Summary
- 31. Fast 1100mV 0C Model Hold Summary
- 32. Fast 1100mV 0C Model Recovery Summary
- 33. Fast 1100mV 0C Model Removal Summary
- 34. Fast 1100mV 0C Model Minimum Pulse Width Summary
- 35. Fast 1100mV 0C Model Datasheet Report
- 36. Fast 1100mV 0C Model Metastability Summary
- 37. Multicorner Timing Analysis Summary
- 38. Board Trace Model Assignments
- 39. Input Transition Times
- 40. Signal Integrity Metrics (Slow 1100mv 0c Model)
- 41. Signal Integrity Metrics (Slow 1100mv 85c Model)
- 42. Signal Integrity Metrics (Fast 1100mv 0c Model)
- 43. Signal Integrity Metrics (Fast 1100mv 85c Model)
- 44. Clock Transfers
- 45. Report TCCS
- 46. Report RSKM
- 47. Unconstrained Paths
- 48. TimeQuest Timing Analyzer Messages
+ 13. Clock to Output Times
+ 14. Minimum Clock to Output Times
+ 15. Propagation Delay
+ 16. Minimum Propagation Delay
+ 17. Slow 1100mV 85C Model Metastability Summary
+ 18. Slow 1100mV 0C Model Fmax Summary
+ 19. Slow 1100mV 0C Model Setup Summary
+ 20. Slow 1100mV 0C Model Hold Summary
+ 21. Slow 1100mV 0C Model Recovery Summary
+ 22. Slow 1100mV 0C Model Removal Summary
+ 23. Slow 1100mV 0C Model Minimum Pulse Width Summary
+ 24. Clock to Output Times
+ 25. Minimum Clock to Output Times
+ 26. Propagation Delay
+ 27. Minimum Propagation Delay
+ 28. Slow 1100mV 0C Model Metastability Summary
+ 29. Fast 1100mV 85C Model Setup Summary
+ 30. Fast 1100mV 85C Model Hold Summary
+ 31. Fast 1100mV 85C Model Recovery Summary
+ 32. Fast 1100mV 85C Model Removal Summary
+ 33. Fast 1100mV 85C Model Minimum Pulse Width Summary
+ 34. Clock to Output Times
+ 35. Minimum Clock to Output Times
+ 36. Propagation Delay
+ 37. Minimum Propagation Delay
+ 38. Fast 1100mV 85C Model Metastability Summary
+ 39. Fast 1100mV 0C Model Setup Summary
+ 40. Fast 1100mV 0C Model Hold Summary
+ 41. Fast 1100mV 0C Model Recovery Summary
+ 42. Fast 1100mV 0C Model Removal Summary
+ 43. Fast 1100mV 0C Model Minimum Pulse Width Summary
+ 44. Clock to Output Times
+ 45. Minimum Clock to Output Times
+ 46. Propagation Delay
+ 47. Minimum Propagation Delay
+ 48. Fast 1100mV 0C Model Metastability Summary
+ 49. Multicorner Timing Analysis Summary
+ 50. Clock to Output Times
+ 51. Minimum Clock to Output Times
+ 52. Propagation Delay
+ 53. Minimum Propagation Delay
+ 54. Board Trace Model Assignments
+ 55. Input Transition Times
+ 56. Signal Integrity Metrics (Slow 1100mv 0c Model)
+ 57. Signal Integrity Metrics (Slow 1100mv 85c Model)
+ 58. Signal Integrity Metrics (Fast 1100mv 0c Model)
+ 59. Signal Integrity Metrics (Fast 1100mv 85c Model)
+ 60. Setup Transfers
+ 61. Hold Transfers
+ 62. Report TCCS
+ 63. Report RSKM
+ 64. Unconstrained Paths
+ 65. TimeQuest Timing Analyzer Messages
 
 
 
@@ -77,28 +94,35 @@ agreement for further details.
 
 
 
-+-------------------------------------------------------------------------+
-; TimeQuest Timing Analyzer Summary                                       ;
-+--------------------+----------------------------------------------------+
-; Quartus II Version ; Version 15.0.0 Build 145 04/22/2015 SJ Web Edition ;
-; Revision Name      ; eecs301_lab1                                       ;
-; Device Family      ; Cyclone V                                          ;
-; Device Name        ; 5CSEMA5F31C6                                       ;
-; Timing Models      ; Final                                              ;
-; Delay Model        ; Combined                                           ;
-; Rise/Fall Delays   ; Enabled                                            ;
-+--------------------+----------------------------------------------------+
++--------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                        ;
++--------------------+-----------------------------------------------------+
+; Quartus II Version ; Version 15.0.0 Build 145 04/22/2015 SJ Full Version ;
+; Revision Name      ; eecs301_lab1                                        ;
+; Device Family      ; Cyclone V                                           ;
+; Device Name        ; 5CSEMA5F31C6                                        ;
+; Timing Models      ; Final                                               ;
+; Delay Model        ; Combined                                            ;
+; Rise/Fall Delays   ; Enabled                                             ;
++--------------------+-----------------------------------------------------+
 
 
-Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
-+-------------------------------------+
-; Parallel Compilation                ;
-+----------------------------+--------+
-; Processors                 ; Number ;
-+----------------------------+--------+
-; Number detected on machine ; 4      ;
-; Maximum allowed            ; 1      ;
-+----------------------------+--------+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ; < 0.1%      ;
+;     Processors 5-8         ;   0.0%      ;
++----------------------------+-------------+
 
 
 +------------------------------------------------------+
@@ -106,7 +130,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------------+--------+--------------------------+
 ; SDC File Path    ; Status ; Read at                  ;
 +------------------+--------+--------------------------+
-; eecs301_lab1.sdc ; OK     ; Fri Sep 04 16:50:20 2015 ;
+; eecs301_lab1.sdc ; OK     ; Mon Sep 07 05:11:47 2015 ;
 +------------------+--------+--------------------------+
 
 
@@ -123,10 +147,14 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------+
 
 
---------------------------------------
-; Slow 1100mV 85C Model Fmax Summary ;
---------------------------------------
-No paths to report.
++--------------------------------------------------+
+; Slow 1100mV 85C Model Fmax Summary               ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 274.95 MHz ; 274.95 MHz      ; CLOCK_50   ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
 ----------------------------------
@@ -135,16 +163,22 @@ No paths to report.
 HTML report is unavailable in plain text report export.
 
 
----------------------------------------
++-------------------------------------+
 ; Slow 1100mV 85C Model Setup Summary ;
----------------------------------------
-No paths to report.
++----------+--------+-----------------+
+; Clock    ; Slack  ; End Point TNS   ;
++----------+--------+-----------------+
+; CLOCK_50 ; 16.363 ; 0.000           ;
++----------+--------+-----------------+
 
 
---------------------------------------
++------------------------------------+
 ; Slow 1100mV 85C Model Hold Summary ;
---------------------------------------
-No paths to report.
++----------+-------+-----------------+
+; Clock    ; Slack ; End Point TNS   ;
++----------+-------+-----------------+
+; CLOCK_50 ; 0.481 ; 0.000           ;
++----------+-------+-----------------+
 
 
 ------------------------------------------
@@ -159,16 +193,69 @@ No paths to report.
 No paths to report.
 
 
------------------------------------------------------
++---------------------------------------------------+
 ; Slow 1100mV 85C Model Minimum Pulse Width Summary ;
------------------------------------------------------
-No paths to report.
++----------+-------+--------------------------------+
+; Clock    ; Slack ; End Point TNS                  ;
++----------+-------+--------------------------------+
+; CLOCK_50 ; 8.882 ; 0.000                          ;
++----------+-------+--------------------------------+
 
 
-------------------------------------------
-; Slow 1100mV 85C Model Datasheet Report ;
-------------------------------------------
-Nothing to report.
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; HEX0[*]   ; CLOCK_50   ; 9.397 ; 9.957 ; Rise       ; CLOCK_50        ;
+;  HEX0[3]  ; CLOCK_50   ; 9.397 ; 9.957 ; Rise       ; CLOCK_50        ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; HEX0[*]   ; CLOCK_50   ; 8.458 ; 8.811 ; Rise       ; CLOCK_50        ;
+;  HEX0[3]  ; CLOCK_50   ; 8.458 ; 8.811 ; Rise       ; CLOCK_50        ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------+
+; Propagation Delay                                    ;
++------------+-------------+----+--------+--------+----+
+; Input Port ; Output Port ; RR ; RF     ; FR     ; FF ;
++------------+-------------+----+--------+--------+----+
+; SW[0]      ; HEX2[0]     ;    ; 10.052 ; 11.459 ;    ;
+; SW[0]      ; HEX2[3]     ;    ; 11.712 ; 13.689 ;    ;
+; SW[0]      ; HEX2[4]     ;    ; 11.202 ; 13.010 ;    ;
+; SW[0]      ; HEX2[5]     ;    ; 11.676 ; 13.648 ;    ;
+; SW[0]      ; HEX2[6]     ;    ; 11.188 ; 12.992 ;    ;
+; SW[1]      ; HEX2[0]     ;    ; 9.036  ; 10.063 ;    ;
+; SW[1]      ; HEX2[3]     ;    ; 10.696 ; 12.293 ;    ;
+; SW[1]      ; HEX2[4]     ;    ; 10.186 ; 11.614 ;    ;
+; SW[1]      ; HEX2[5]     ;    ; 10.660 ; 12.252 ;    ;
+; SW[1]      ; HEX2[6]     ;    ; 10.172 ; 11.596 ;    ;
++------------+-------------+----+--------+--------+----+
+
+
++------------------------------------------------------+
+; Minimum Propagation Delay                            ;
++------------+-------------+----+--------+--------+----+
+; Input Port ; Output Port ; RR ; RF     ; FR     ; FF ;
++------------+-------------+----+--------+--------+----+
+; SW[0]      ; HEX2[0]     ;    ; 9.017  ; 10.024 ;    ;
+; SW[0]      ; HEX2[3]     ;    ; 10.504 ; 12.004 ;    ;
+; SW[0]      ; HEX2[4]     ;    ; 10.072 ; 11.444 ;    ;
+; SW[0]      ; HEX2[5]     ;    ; 10.468 ; 11.963 ;    ;
+; SW[0]      ; HEX2[6]     ;    ; 10.057 ; 11.425 ;    ;
+; SW[1]      ; HEX2[0]     ;    ; 8.234  ; 9.014  ;    ;
+; SW[1]      ; HEX2[3]     ;    ; 9.721  ; 10.994 ;    ;
+; SW[1]      ; HEX2[4]     ;    ; 9.289  ; 10.434 ;    ;
+; SW[1]      ; HEX2[5]     ;    ; 9.685  ; 10.953 ;    ;
+; SW[1]      ; HEX2[6]     ;    ; 9.274  ; 10.415 ;    ;
++------------+-------------+----+--------+--------+----+
 
 
 -----------------------------------------------
@@ -177,22 +264,32 @@ Nothing to report.
 No synchronizer chains to report.
 
 
--------------------------------------
-; Slow 1100mV 0C Model Fmax Summary ;
--------------------------------------
-No paths to report.
++--------------------------------------------------+
+; Slow 1100mV 0C Model Fmax Summary                ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 251.51 MHz ; 251.51 MHz      ; CLOCK_50   ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
---------------------------------------
++------------------------------------+
 ; Slow 1100mV 0C Model Setup Summary ;
---------------------------------------
-No paths to report.
++----------+--------+----------------+
+; Clock    ; Slack  ; End Point TNS  ;
++----------+--------+----------------+
+; CLOCK_50 ; 16.024 ; 0.000          ;
++----------+--------+----------------+
 
 
--------------------------------------
++-----------------------------------+
 ; Slow 1100mV 0C Model Hold Summary ;
--------------------------------------
-No paths to report.
++----------+-------+----------------+
+; Clock    ; Slack ; End Point TNS  ;
++----------+-------+----------------+
+; CLOCK_50 ; 0.505 ; 0.000          ;
++----------+-------+----------------+
 
 
 -----------------------------------------
@@ -207,16 +304,69 @@ No paths to report.
 No paths to report.
 
 
-----------------------------------------------------
++--------------------------------------------------+
 ; Slow 1100mV 0C Model Minimum Pulse Width Summary ;
-----------------------------------------------------
-No paths to report.
++----------+-------+-------------------------------+
+; Clock    ; Slack ; End Point TNS                 ;
++----------+-------+-------------------------------+
+; CLOCK_50 ; 8.846 ; 0.000                         ;
++----------+-------+-------------------------------+
 
 
------------------------------------------
-; Slow 1100mV 0C Model Datasheet Report ;
------------------------------------------
-Nothing to report.
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; HEX0[*]   ; CLOCK_50   ; 8.864 ; 9.377 ; Rise       ; CLOCK_50        ;
+;  HEX0[3]  ; CLOCK_50   ; 8.864 ; 9.377 ; Rise       ; CLOCK_50        ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; HEX0[*]   ; CLOCK_50   ; 7.965 ; 8.300 ; Rise       ; CLOCK_50        ;
+;  HEX0[3]  ; CLOCK_50   ; 7.965 ; 8.300 ; Rise       ; CLOCK_50        ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------+
+; Propagation Delay                                    ;
++------------+-------------+----+--------+--------+----+
+; Input Port ; Output Port ; RR ; RF     ; FR     ; FF ;
++------------+-------------+----+--------+--------+----+
+; SW[0]      ; HEX2[0]     ;    ; 9.553  ; 10.946 ;    ;
+; SW[0]      ; HEX2[3]     ;    ; 11.136 ; 13.084 ;    ;
+; SW[0]      ; HEX2[4]     ;    ; 10.673 ; 12.437 ;    ;
+; SW[0]      ; HEX2[5]     ;    ; 11.098 ; 13.040 ;    ;
+; SW[0]      ; HEX2[6]     ;    ; 10.656 ; 12.415 ;    ;
+; SW[1]      ; HEX2[0]     ;    ; 8.562  ; 9.601  ;    ;
+; SW[1]      ; HEX2[3]     ;    ; 10.145 ; 11.739 ;    ;
+; SW[1]      ; HEX2[4]     ;    ; 9.682  ; 11.092 ;    ;
+; SW[1]      ; HEX2[5]     ;    ; 10.107 ; 11.695 ;    ;
+; SW[1]      ; HEX2[6]     ;    ; 9.665  ; 11.070 ;    ;
++------------+-------------+----+--------+--------+----+
+
+
++-----------------------------------------------------+
+; Minimum Propagation Delay                           ;
++------------+-------------+----+-------+--------+----+
+; Input Port ; Output Port ; RR ; RF    ; FR     ; FF ;
++------------+-------------+----+-------+--------+----+
+; SW[0]      ; HEX2[0]     ;    ; 8.544 ; 9.580  ;    ;
+; SW[0]      ; HEX2[3]     ;    ; 9.964 ; 11.466 ;    ;
+; SW[0]      ; HEX2[4]     ;    ; 9.570 ; 10.932 ;    ;
+; SW[0]      ; HEX2[5]     ;    ; 9.926 ; 11.422 ;    ;
+; SW[0]      ; HEX2[6]     ;    ; 9.554 ; 10.911 ;    ;
+; SW[1]      ; HEX2[0]     ;    ; 7.788 ; 8.594  ;    ;
+; SW[1]      ; HEX2[3]     ;    ; 9.208 ; 10.480 ;    ;
+; SW[1]      ; HEX2[4]     ;    ; 8.814 ; 9.946  ;    ;
+; SW[1]      ; HEX2[5]     ;    ; 9.170 ; 10.436 ;    ;
+; SW[1]      ; HEX2[6]     ;    ; 8.798 ; 9.925  ;    ;
++------------+-------------+----+-------+--------+----+
 
 
 ----------------------------------------------
@@ -225,16 +375,22 @@ Nothing to report.
 No synchronizer chains to report.
 
 
----------------------------------------
++-------------------------------------+
 ; Fast 1100mV 85C Model Setup Summary ;
----------------------------------------
-No paths to report.
++----------+--------+-----------------+
+; Clock    ; Slack  ; End Point TNS   ;
++----------+--------+-----------------+
+; CLOCK_50 ; 17.962 ; 0.000           ;
++----------+--------+-----------------+
 
 
---------------------------------------
++------------------------------------+
 ; Fast 1100mV 85C Model Hold Summary ;
---------------------------------------
-No paths to report.
++----------+-------+-----------------+
+; Clock    ; Slack ; End Point TNS   ;
++----------+-------+-----------------+
+; CLOCK_50 ; 0.226 ; 0.000           ;
++----------+-------+-----------------+
 
 
 ------------------------------------------
@@ -249,16 +405,69 @@ No paths to report.
 No paths to report.
 
 
------------------------------------------------------
++---------------------------------------------------+
 ; Fast 1100mV 85C Model Minimum Pulse Width Summary ;
------------------------------------------------------
-No paths to report.
++----------+-------+--------------------------------+
+; Clock    ; Slack ; End Point TNS                  ;
++----------+-------+--------------------------------+
+; CLOCK_50 ; 8.779 ; 0.000                          ;
++----------+-------+--------------------------------+
 
 
-------------------------------------------
-; Fast 1100mV 85C Model Datasheet Report ;
-------------------------------------------
-Nothing to report.
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; HEX0[*]   ; CLOCK_50   ; 5.812 ; 6.331 ; Rise       ; CLOCK_50        ;
+;  HEX0[3]  ; CLOCK_50   ; 5.812 ; 6.331 ; Rise       ; CLOCK_50        ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; HEX0[*]   ; CLOCK_50   ; 5.244 ; 5.598 ; Rise       ; CLOCK_50        ;
+;  HEX0[3]  ; CLOCK_50   ; 5.244 ; 5.598 ; Rise       ; CLOCK_50        ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------+
+; Propagation Delay                                  ;
++------------+-------------+----+-------+-------+----+
+; Input Port ; Output Port ; RR ; RF    ; FR    ; FF ;
++------------+-------------+----+-------+-------+----+
+; SW[0]      ; HEX2[0]     ;    ; 6.286 ; 8.009 ;    ;
+; SW[0]      ; HEX2[3]     ;    ; 7.373 ; 9.614 ;    ;
+; SW[0]      ; HEX2[4]     ;    ; 7.065 ; 9.145 ;    ;
+; SW[0]      ; HEX2[5]     ;    ; 7.362 ; 9.599 ;    ;
+; SW[0]      ; HEX2[6]     ;    ; 7.075 ; 9.151 ;    ;
+; SW[1]      ; HEX2[0]     ;    ; 5.618 ; 7.016 ;    ;
+; SW[1]      ; HEX2[3]     ;    ; 6.705 ; 8.621 ;    ;
+; SW[1]      ; HEX2[4]     ;    ; 6.397 ; 8.152 ;    ;
+; SW[1]      ; HEX2[5]     ;    ; 6.694 ; 8.606 ;    ;
+; SW[1]      ; HEX2[6]     ;    ; 6.407 ; 8.158 ;    ;
++------------+-------------+----+-------+-------+----+
+
+
++----------------------------------------------------+
+; Minimum Propagation Delay                          ;
++------------+-------------+----+-------+-------+----+
+; Input Port ; Output Port ; RR ; RF    ; FR    ; FF ;
++------------+-------------+----+-------+-------+----+
+; SW[0]      ; HEX2[0]     ;    ; 5.714 ; 7.105 ;    ;
+; SW[0]      ; HEX2[3]     ;    ; 6.695 ; 8.541 ;    ;
+; SW[0]      ; HEX2[4]     ;    ; 6.431 ; 8.149 ;    ;
+; SW[0]      ; HEX2[5]     ;    ; 6.685 ; 8.526 ;    ;
+; SW[0]      ; HEX2[6]     ;    ; 6.442 ; 8.155 ;    ;
+; SW[1]      ; HEX2[0]     ;    ; 5.183 ; 6.379 ;    ;
+; SW[1]      ; HEX2[3]     ;    ; 6.164 ; 7.815 ;    ;
+; SW[1]      ; HEX2[4]     ;    ; 5.900 ; 7.423 ;    ;
+; SW[1]      ; HEX2[5]     ;    ; 6.154 ; 7.800 ;    ;
+; SW[1]      ; HEX2[6]     ;    ; 5.911 ; 7.429 ;    ;
++------------+-------------+----+-------+-------+----+
 
 
 -----------------------------------------------
@@ -267,16 +476,22 @@ Nothing to report.
 No synchronizer chains to report.
 
 
---------------------------------------
++------------------------------------+
 ; Fast 1100mV 0C Model Setup Summary ;
---------------------------------------
-No paths to report.
++----------+--------+----------------+
+; Clock    ; Slack  ; End Point TNS  ;
++----------+--------+----------------+
+; CLOCK_50 ; 17.926 ; 0.000          ;
++----------+--------+----------------+
 
 
--------------------------------------
++-----------------------------------+
 ; Fast 1100mV 0C Model Hold Summary ;
--------------------------------------
-No paths to report.
++----------+-------+----------------+
+; Clock    ; Slack ; End Point TNS  ;
++----------+-------+----------------+
+; CLOCK_50 ; 0.222 ; 0.000          ;
++----------+-------+----------------+
 
 
 -----------------------------------------
@@ -291,16 +506,69 @@ No paths to report.
 No paths to report.
 
 
-----------------------------------------------------
++--------------------------------------------------+
 ; Fast 1100mV 0C Model Minimum Pulse Width Summary ;
-----------------------------------------------------
-No paths to report.
++----------+-------+-------------------------------+
+; Clock    ; Slack ; End Point TNS                 ;
++----------+-------+-------------------------------+
+; CLOCK_50 ; 8.738 ; 0.000                         ;
++----------+-------+-------------------------------+
 
 
------------------------------------------
-; Fast 1100mV 0C Model Datasheet Report ;
------------------------------------------
-Nothing to report.
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; HEX0[*]   ; CLOCK_50   ; 5.309 ; 5.711 ; Rise       ; CLOCK_50        ;
+;  HEX0[3]  ; CLOCK_50   ; 5.309 ; 5.711 ; Rise       ; CLOCK_50        ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; HEX0[*]   ; CLOCK_50   ; 4.777 ; 5.053 ; Rise       ; CLOCK_50        ;
+;  HEX0[3]  ; CLOCK_50   ; 4.777 ; 5.053 ; Rise       ; CLOCK_50        ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------+
+; Propagation Delay                                  ;
++------------+-------------+----+-------+-------+----+
+; Input Port ; Output Port ; RR ; RF    ; FR    ; FF ;
++------------+-------------+----+-------+-------+----+
+; SW[0]      ; HEX2[0]     ;    ; 5.721 ; 7.293 ;    ;
+; SW[0]      ; HEX2[3]     ;    ; 6.720 ; 8.709 ;    ;
+; SW[0]      ; HEX2[4]     ;    ; 6.450 ; 8.301 ;    ;
+; SW[0]      ; HEX2[5]     ;    ; 6.697 ; 8.682 ;    ;
+; SW[0]      ; HEX2[6]     ;    ; 6.448 ; 8.295 ;    ;
+; SW[1]      ; HEX2[0]     ;    ; 5.113 ; 6.440 ;    ;
+; SW[1]      ; HEX2[3]     ;    ; 6.112 ; 7.856 ;    ;
+; SW[1]      ; HEX2[4]     ;    ; 5.842 ; 7.448 ;    ;
+; SW[1]      ; HEX2[5]     ;    ; 6.089 ; 7.829 ;    ;
+; SW[1]      ; HEX2[6]     ;    ; 5.840 ; 7.442 ;    ;
++------------+-------------+----+-------+-------+----+
+
+
++----------------------------------------------------+
+; Minimum Propagation Delay                          ;
++------------+-------------+----+-------+-------+----+
+; Input Port ; Output Port ; RR ; RF    ; FR    ; FF ;
++------------+-------------+----+-------+-------+----+
+; SW[0]      ; HEX2[0]     ;    ; 5.188 ; 6.501 ;    ;
+; SW[0]      ; HEX2[3]     ;    ; 6.096 ; 7.764 ;    ;
+; SW[0]      ; HEX2[4]     ;    ; 5.863 ; 7.422 ;    ;
+; SW[0]      ; HEX2[5]     ;    ; 6.073 ; 7.737 ;    ;
+; SW[0]      ; HEX2[6]     ;    ; 5.861 ; 7.416 ;    ;
+; SW[1]      ; HEX2[0]     ;    ; 4.706 ; 5.869 ;    ;
+; SW[1]      ; HEX2[3]     ;    ; 5.614 ; 7.132 ;    ;
+; SW[1]      ; HEX2[4]     ;    ; 5.381 ; 6.790 ;    ;
+; SW[1]      ; HEX2[5]     ;    ; 5.591 ; 7.105 ;    ;
+; SW[1]      ; HEX2[6]     ;    ; 5.379 ; 6.784 ;    ;
++------------+-------------+----+-------+-------+----+
 
 
 ----------------------------------------------
@@ -309,14 +577,72 @@ Nothing to report.
 No synchronizer chains to report.
 
 
-+----------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                        ;
-+------------------+-------+------+----------+---------+---------------------+
-; Clock            ; Setup ; Hold ; Recovery ; Removal ; Minimum Pulse Width ;
-+------------------+-------+------+----------+---------+---------------------+
-; Worst-case Slack ; N/A   ; N/A  ; N/A      ; N/A     ; N/A                 ;
-; Design-wide TNS  ; 0.0   ; 0.0  ; 0.0      ; 0.0     ; 0.0                 ;
-+------------------+-------+------+----------+---------+---------------------+
++------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                          ;
++------------------+--------+-------+----------+---------+---------------------+
+; Clock            ; Setup  ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+--------+-------+----------+---------+---------------------+
+; Worst-case Slack ; 16.024 ; 0.222 ; N/A      ; N/A     ; 8.738               ;
+;  CLOCK_50        ; 16.024 ; 0.222 ; N/A      ; N/A     ; 8.738               ;
+; Design-wide TNS  ; 0.0    ; 0.0   ; 0.0      ; 0.0     ; 0.0                 ;
+;  CLOCK_50        ; 0.000  ; 0.000 ; N/A      ; N/A     ; 0.000               ;
++------------------+--------+-------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; HEX0[*]   ; CLOCK_50   ; 9.397 ; 9.957 ; Rise       ; CLOCK_50        ;
+;  HEX0[3]  ; CLOCK_50   ; 9.397 ; 9.957 ; Rise       ; CLOCK_50        ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; HEX0[*]   ; CLOCK_50   ; 4.777 ; 5.053 ; Rise       ; CLOCK_50        ;
+;  HEX0[3]  ; CLOCK_50   ; 4.777 ; 5.053 ; Rise       ; CLOCK_50        ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------+
+; Propagation Delay                                    ;
++------------+-------------+----+--------+--------+----+
+; Input Port ; Output Port ; RR ; RF     ; FR     ; FF ;
++------------+-------------+----+--------+--------+----+
+; SW[0]      ; HEX2[0]     ;    ; 10.052 ; 11.459 ;    ;
+; SW[0]      ; HEX2[3]     ;    ; 11.712 ; 13.689 ;    ;
+; SW[0]      ; HEX2[4]     ;    ; 11.202 ; 13.010 ;    ;
+; SW[0]      ; HEX2[5]     ;    ; 11.676 ; 13.648 ;    ;
+; SW[0]      ; HEX2[6]     ;    ; 11.188 ; 12.992 ;    ;
+; SW[1]      ; HEX2[0]     ;    ; 9.036  ; 10.063 ;    ;
+; SW[1]      ; HEX2[3]     ;    ; 10.696 ; 12.293 ;    ;
+; SW[1]      ; HEX2[4]     ;    ; 10.186 ; 11.614 ;    ;
+; SW[1]      ; HEX2[5]     ;    ; 10.660 ; 12.252 ;    ;
+; SW[1]      ; HEX2[6]     ;    ; 10.172 ; 11.596 ;    ;
++------------+-------------+----+--------+--------+----+
+
+
++----------------------------------------------------+
+; Minimum Propagation Delay                          ;
++------------+-------------+----+-------+-------+----+
+; Input Port ; Output Port ; RR ; RF    ; FR    ; FF ;
++------------+-------------+----+-------+-------+----+
+; SW[0]      ; HEX2[0]     ;    ; 5.188 ; 6.501 ;    ;
+; SW[0]      ; HEX2[3]     ;    ; 6.096 ; 7.764 ;    ;
+; SW[0]      ; HEX2[4]     ;    ; 5.863 ; 7.422 ;    ;
+; SW[0]      ; HEX2[5]     ;    ; 6.073 ; 7.737 ;    ;
+; SW[0]      ; HEX2[6]     ;    ; 5.861 ; 7.416 ;    ;
+; SW[1]      ; HEX2[0]     ;    ; 4.706 ; 5.869 ;    ;
+; SW[1]      ; HEX2[3]     ;    ; 5.614 ; 7.132 ;    ;
+; SW[1]      ; HEX2[4]     ;    ; 5.381 ; 6.790 ;    ;
+; SW[1]      ; HEX2[5]     ;    ; 5.591 ; 7.105 ;    ;
+; SW[1]      ; HEX2[6]     ;    ; 5.379 ; 6.784 ;    ;
++------------+-------------+----+-------+-------+----+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -489,16 +815,12 @@ No synchronizer chains to report.
 ; Pin        ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
 +------------+--------------+-----------------+-----------------+
 ; ADC_DOUT   ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
-; CLOCK_50   ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; CLOCK2_50  ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; CLOCK3_50  ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; CLOCK4_50  ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; KEY[0]     ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; KEY[1]     ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
-; KEY[2]     ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; KEY[3]     ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
-; SW[0]      ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
-; SW[1]      ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; SW[2]      ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; SW[3]      ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; SW[4]      ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
@@ -579,6 +901,10 @@ No synchronizer chains to report.
 ; GPIO_1[33] ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; GPIO_1[34] ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; GPIO_1[35] ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; SW[0]      ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; SW[1]      ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; CLOCK_50   ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; KEY[2]     ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 +------------+--------------+-----------------+-----------------+
 
 
@@ -1238,10 +1564,24 @@ No synchronizer chains to report.
 +-------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
--------------------
-; Clock Transfers ;
--------------------
-Nothing to report.
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLOCK_50   ; CLOCK_50 ; 300      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLOCK_50   ; CLOCK_50 ; 300      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
 ---------------
@@ -1262,11 +1602,11 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Property                        ; Setup ; Hold ;
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
-; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 0     ; 0    ;
-; Unconstrained Input Port Paths  ; 0     ; 0    ;
-; Unconstrained Output Ports      ; 0     ; 0    ;
-; Unconstrained Output Port Paths ; 0     ; 0    ;
+; Unconstrained Clocks            ; 1     ; 1    ;
+; Unconstrained Input Ports       ; 3     ; 3    ;
+; Unconstrained Input Port Paths  ; 68    ; 68   ;
+; Unconstrained Output Ports      ; 14    ; 14   ;
+; Unconstrained Output Port Paths ; 19    ; 19   ;
 +---------------------------------+-------+------+
 
 
@@ -1275,11 +1615,11 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +------------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
-    Info: Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
-    Info: Processing started: Fri Sep 04 16:50:17 2015
+    Info: Version 15.0.0 Build 145 04/22/2015 SJ Full Version
+    Info: Processing started: Mon Sep 07 05:11:37 2015
 Info: Command: quartus_sta eecs301_lab1 -c eecs301_lab1
 Info: qsta_default_script.tcl version: #11
-Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Info (332104): Reading SDC File: 'eecs301_lab1.sdc'
@@ -1305,47 +1645,89 @@ Warning (332049): Ignored set_output_delay at eecs301_lab1.sdc(66): Argument <ta
     Info (332050): set_output_delay -max -clock clk_vga 0.215 [get_ports VGA_BLANK]
 Warning (332049): Ignored set_output_delay at eecs301_lab1.sdc(67): Argument <targets> is an empty collection
     Info (332050): set_output_delay -min -clock clk_vga -1.485 [get_ports VGA_BLANK]
-Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
+Warning (332060): Node: counter:count|internal_counter[23] was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register brake:braking|delay_count[30] is being clocked by counter:count|internal_counter[23]
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
-Info (332140): No fmax paths to report
-Info (332140): No Setup paths to report
-Info (332140): No Hold paths to report
+Info (332146): Worst-case setup slack is 16.363
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    16.363               0.000 CLOCK_50 
+Info (332146): Worst-case hold slack is 0.481
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.481               0.000 CLOCK_50 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332140): No Minimum Pulse Width paths to report
+Info (332146): Worst-case minimum pulse width slack is 8.882
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     8.882               0.000 CLOCK_50 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
-Info (332140): No fmax paths to report
-Info (332140): No Setup paths to report
-Info (332140): No Hold paths to report
+Warning (332060): Node: counter:count|internal_counter[23] was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register brake:braking|delay_count[30] is being clocked by counter:count|internal_counter[23]
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Info (332146): Worst-case setup slack is 16.024
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    16.024               0.000 CLOCK_50 
+Info (332146): Worst-case hold slack is 0.505
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.505               0.000 CLOCK_50 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332140): No Minimum Pulse Width paths to report
+Info (332146): Worst-case minimum pulse width slack is 8.846
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     8.846               0.000 CLOCK_50 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
-Info (332140): No Setup paths to report
-Info (332140): No Hold paths to report
+Warning (332060): Node: counter:count|internal_counter[23] was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register brake:braking|delay_count[30] is being clocked by counter:count|internal_counter[23]
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Info (332146): Worst-case setup slack is 17.962
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    17.962               0.000 CLOCK_50 
+Info (332146): Worst-case hold slack is 0.226
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.226               0.000 CLOCK_50 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332140): No Minimum Pulse Width paths to report
+Info (332146): Worst-case minimum pulse width slack is 8.779
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     8.779               0.000 CLOCK_50 
 Info: Analyzing Fast 1100mV 0C Model
-Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
-Info (332140): No Setup paths to report
-Info (332140): No Hold paths to report
+Warning (332060): Node: counter:count|internal_counter[23] was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register brake:braking|delay_count[30] is being clocked by counter:count|internal_counter[23]
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Info (332146): Worst-case setup slack is 17.926
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    17.926               0.000 CLOCK_50 
+Info (332146): Worst-case hold slack is 0.222
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.222               0.000 CLOCK_50 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332140): No Minimum Pulse Width paths to report
-Info (332101): Design is fully constrained for setup requirements
-Info (332101): Design is fully constrained for hold requirements
-Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 16 warnings
-    Info: Peak virtual memory: 976 megabytes
-    Info: Processing ended: Fri Sep 04 16:50:27 2015
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:09
+Info (332146): Worst-case minimum pulse width slack is 8.738
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     8.738               0.000 CLOCK_50 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 19 warnings
+    Info: Peak virtual memory: 1115 megabytes
+    Info: Processing ended: Mon Sep 07 05:11:55 2015
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:11
 
 
