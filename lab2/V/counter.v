@@ -1,7 +1,7 @@
 module counter(clk, reset, count);
 
 	input clk, reset;
-	output reg [7:0] count;
+	output reg [8:0] count;
 	
 	always @(posedge clk)
 		begin

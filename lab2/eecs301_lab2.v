@@ -59,23 +59,42 @@ wire motor_en;
 wire encoder_a, encoder_b;
 wire [3:0] buttons;
 wire reset_count;
-wire pwm_count;
+wire [8:0] pwm_count;
+wire [7:0] k;
+wire [8:0] g;
+wire slow_clk;
 
 //=======================================================
-//  Structural coding
+//  Structural
 //=======================================================
 // Connect the motor signals to the GPIO
 assign {GPIO_0[3], GPIO_0[1]} = motor_in;
 assign GPIO_0[4] = motor_en;
+assign motor_en = SW[0];
 assign {encoder_b, encoder_a} = GPIO_0[7:6];
 assign buttons = ~KEY;
-
+assign k = SW[9:2];
+assign LEDR[8:0] = g;
+assign motor_in[0] = pwm_count[7];
 
 
 counter count(
-	.clk(CLOCK_50);
-	.reset(reset_count);
+	.clk(CLOCK_50),
+	.reset(reset_count),
 	.count(pwm_count)
-)
+);
+
+goal_counter goal(
+	.clk(slow_clk),
+	.up(buttons[0]),
+	.down(buttons[1]),
+	.reset(buttons[2]),
+	.goal_speed(g)
+);
+
+slow_counter slow(
+	.clk(CLOCK_50),
+	.counter_msb(slow_clk)
+);
 
 endmodule

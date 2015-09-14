@@ -1,3 +1,3 @@
-module speed_counter()
+module speed_counter();
 
 endmodule
