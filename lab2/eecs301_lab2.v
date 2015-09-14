@@ -58,6 +58,8 @@ wire [1:0] motor_in;
 wire motor_en;
 wire encoder_a, encoder_b;
 wire [3:0] buttons;
+wire reset_count;
+wire pwm_count;
 
 //=======================================================
 //  Structural coding
@@ -68,5 +70,12 @@ assign GPIO_0[4] = motor_en;
 assign {encoder_b, encoder_a} = GPIO_0[7:6];
 assign buttons = ~KEY;
 
+
+
+counter count(
+	.clk(CLOCK_50);
+	.reset(reset_count);
+	.count(pwm_count)
+)
 
 endmodule
