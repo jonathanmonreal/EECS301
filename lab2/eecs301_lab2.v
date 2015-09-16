@@ -106,10 +106,11 @@ goal_counter goal(
 	.goal_speed(g)
 );
 
-slow_counter slow(
-	.clk(CLOCK_50),
-	.counter_msb(slow_clk)
-);
+clock_divider slow(
+	.n(22),
+	.clk(CLOCK_50)
+	.clk_out(slow_clk))
+)
 
 speed_counter find(
 	.input_a(encoder_a),
