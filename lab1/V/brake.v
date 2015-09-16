@@ -4,9 +4,9 @@ output [2:0] l_lights, output [2:0] r_lights, output [1:0] c_lights);
 reg brake_active = 0;
 reg [2:0] ltemp, rtemp;
 reg [1:0] ctemp = 'b00;
-
 //this var is created to achieve the two cycle of delays of existing brake.
 integer delay_count = 0;
+
 assign l_lights = ltemp;
 assign r_lights = rtemp;
 assign c_lights = ctemp;
