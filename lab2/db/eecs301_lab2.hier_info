@@ -207,35 +207,35 @@ count[8] <= count[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |eecs301_lab2|goal_counter:goal
-clk => goal_speed[0]~reg0.CLK
-clk => goal_speed[1]~reg0.CLK
-clk => goal_speed[2]~reg0.CLK
-clk => goal_speed[3]~reg0.CLK
-clk => goal_speed[4]~reg0.CLK
-clk => goal_speed[5]~reg0.CLK
-clk => goal_speed[6]~reg0.CLK
-clk => goal_speed[7]~reg0.CLK
-clk => goal_speed[8]~reg0.CLK
+clk => counter[0].CLK
+clk => counter[1].CLK
+clk => counter[2].CLK
+clk => counter[3].CLK
+clk => counter[4].CLK
+clk => counter[5].CLK
+clk => counter[6].CLK
+clk => counter[7].CLK
+clk => counter[8].CLK
 up => always0.IN1
 down => always0.IN1
-reset => goal_speed.OUTPUTSELECT
-reset => goal_speed.OUTPUTSELECT
-reset => goal_speed.OUTPUTSELECT
-reset => goal_speed.OUTPUTSELECT
-reset => goal_speed.OUTPUTSELECT
-reset => goal_speed.OUTPUTSELECT
-reset => goal_speed.OUTPUTSELECT
-reset => goal_speed.OUTPUTSELECT
-reset => goal_speed.OUTPUTSELECT
-goal_speed[0] <= goal_speed[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-goal_speed[1] <= goal_speed[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-goal_speed[2] <= goal_speed[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-goal_speed[3] <= goal_speed[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-goal_speed[4] <= goal_speed[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-goal_speed[5] <= goal_speed[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-goal_speed[6] <= goal_speed[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-goal_speed[7] <= goal_speed[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-goal_speed[8] <= goal_speed[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+reset => counter.OUTPUTSELECT
+reset => counter.OUTPUTSELECT
+reset => counter.OUTPUTSELECT
+reset => counter.OUTPUTSELECT
+reset => counter.OUTPUTSELECT
+reset => counter.OUTPUTSELECT
+reset => counter.OUTPUTSELECT
+reset => counter.OUTPUTSELECT
+reset => counter.OUTPUTSELECT
+msb <= counter[8].DB_MAX_OUTPUT_PORT_TYPE
+goal_speed[0] <= counter[0].DB_MAX_OUTPUT_PORT_TYPE
+goal_speed[1] <= counter[1].DB_MAX_OUTPUT_PORT_TYPE
+goal_speed[2] <= counter[2].DB_MAX_OUTPUT_PORT_TYPE
+goal_speed[3] <= counter[3].DB_MAX_OUTPUT_PORT_TYPE
+goal_speed[4] <= counter[4].DB_MAX_OUTPUT_PORT_TYPE
+goal_speed[5] <= counter[5].DB_MAX_OUTPUT_PORT_TYPE
+goal_speed[6] <= counter[6].DB_MAX_OUTPUT_PORT_TYPE
+goal_speed[7] <= counter[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |eecs301_lab2|slow_counter:slow

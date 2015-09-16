@@ -1,5 +1,5 @@
 Analysis & Synthesis report for eecs301_lab2
-Mon Sep 14 15:32:08 2015
+Wed Sep 16 09:34:20 2015
 Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
 
 
@@ -16,10 +16,11 @@ Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
   8. Registers Removed During Synthesis
   9. General Register Statistics
  10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Port Connectivity Checks: "counter:count"
- 12. Post-Synthesis Netlist Statistics for Top Partition
- 13. Elapsed Time Per Partition
- 14. Analysis & Synthesis Messages
+ 11. Port Connectivity Checks: "goal_counter:goal"
+ 12. Port Connectivity Checks: "counter:count"
+ 13. Post-Synthesis Netlist Statistics for Top Partition
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
 
 
 
@@ -46,7 +47,7 @@ agreement for further details.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +---------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Sep 14 15:32:08 2015      ;
+; Analysis & Synthesis Status     ; Successful - Wed Sep 16 09:34:20 2015      ;
 ; Quartus II 64-Bit Version       ; 15.0.0 Build 145 04/22/2015 SJ Web Edition ;
 ; Revision Name                   ; eecs301_lab2                               ;
 ; Top-level Entity Name           ; eecs301_lab2                               ;
@@ -199,7 +200,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
 ; Maximum fan-out                             ; 30             ;
-; Total fan-out                               ; 478            ;
+; Total fan-out                               ; 477            ;
 ; Average fan-out                             ; 0.94           ;
 +---------------------------------------------+----------------+
 
@@ -243,13 +244,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                              ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
-; 4:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |eecs301_lab2|goal_counter:goal|goal_speed[0] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
+; 4:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |eecs301_lab2|goal_counter:goal|counter[0] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "goal_counter:goal"                                                                                                                                                          ;
++------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                                                                                                               ;
++------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; msb        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                   ;
+; goal_speed ; Output ; Warning  ; Output or bidir port (8 bits) is smaller than the port expression (9 bits) it drives.  The 1 most-significant bit(s) in the port expression will be connected to GND. ;
++------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------+
@@ -294,7 +305,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:03     ;
 +----------------+--------------+
 
 
@@ -304,7 +315,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
-    Info: Processing started: Mon Sep 14 15:31:55 2015
+    Info: Processing started: Wed Sep 16 09:33:57 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off eecs301_lab2 -c eecs301_lab2
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file v/slow_counter.v
@@ -346,9 +357,10 @@ Warning (10034): Output port "VGA_SYNC_N" at eecs301_lab2.v(43) has no driver
 Warning (10034): Output port "VGA_VS" at eecs301_lab2.v(44) has no driver
 Info (12128): Elaborating entity "counter" for hierarchy "counter:count"
 Info (12128): Elaborating entity "goal_counter" for hierarchy "goal_counter:goal"
-Warning (10230): Verilog HDL assignment warning at goal_counter.v(10): truncated value with size 32 to match size of target (9)
-Warning (10230): Verilog HDL assignment warning at goal_counter.v(11): truncated value with size 32 to match size of target (9)
+Warning (10230): Verilog HDL assignment warning at goal_counter.v(15): truncated value with size 32 to match size of target (9)
+Warning (10230): Verilog HDL assignment warning at goal_counter.v(16): truncated value with size 32 to match size of target (9)
 Info (12128): Elaborating entity "slow_counter" for hierarchy "slow_counter:slow"
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13034): The following nodes have both tri-state and non-tri-state drivers
     Warning (13035): Inserted always-enabled tri-state buffer between "GPIO_0[1]" and its non-tri-state driver.
     Warning (13035): Inserted always-enabled tri-state buffer between "GPIO_0[4]" and its non-tri-state driver.
@@ -473,6 +485,7 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX5[4]" is stuck at GND
     Warning (13410): Pin "HEX5[5]" is stuck at GND
     Warning (13410): Pin "HEX5[6]" is stuck at GND
+    Warning (13410): Pin "LEDR[8]" is stuck at GND
     Warning (13410): Pin "LEDR[9]" is stuck at GND
     Warning (13410): Pin "VGA_B[0]" is stuck at GND
     Warning (13410): Pin "VGA_B[1]" is stuck at GND
@@ -527,10 +540,10 @@ Info (21057): Implemented 221 device resources after synthesis - the final resou
     Info (21059): Implemented 84 output pins
     Info (21060): Implemented 72 bidirectional pins
     Info (21061): Implemented 46 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 194 warnings
-    Info: Peak virtual memory: 720 megabytes
-    Info: Processing ended: Mon Sep 14 15:32:08 2015
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:30
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 196 warnings
+    Info: Peak virtual memory: 715 megabytes
+    Info: Processing ended: Wed Sep 16 09:34:20 2015
+    Info: Elapsed time: 00:00:23
+    Info: Total CPU time (on all processors): 00:00:34
 
 

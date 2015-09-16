@@ -62,6 +62,7 @@ wire reset_count;
 wire [8:0] pwm_count;
 wire [7:0] k;
 wire [8:0] g;
+wire direction;
 wire slow_clk;
 
 //=======================================================
@@ -89,6 +90,7 @@ goal_counter goal(
 	.up(buttons[0]),
 	.down(buttons[1]),
 	.reset(buttons[2]),
+	.msb(direction),
 	.goal_speed(g)
 );
 

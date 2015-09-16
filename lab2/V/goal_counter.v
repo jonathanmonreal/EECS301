@@ -1,14 +1,19 @@
-module goal_counter(clk, up, down, reset, goal_speed);
+module goal_counter(clk, up, down, reset, msb, goal_speed);
 	input clk, up, down, reset;
-	output reg signed [8:0] goal_speed;
+	output msb;
+	output [7:0] goal_speed;
 	
-	initial goal_speed = 'b000000000;
+	reg [8:0] counter;
+	assign msb = counter[8];
+	assign goal_speed = counter[7:0];
+	
+	initial counter = 'b000000000;
 	
 	always @(posedge clk)
 		begin
-			if (reset) goal_speed <= 0;
-			if (up & goal_speed != 'b011111111) goal_speed <= goal_speed + 1;
-			if (down & goal_speed != 'b100000000) goal_speed <= goal_speed - 1;
+			if (reset) counter <= 0;
+			if (up & counter != 'b011111111) counter <= counter + 1;
+			if (down & counter != 'b100000000) counter <= counter - 1;
 		end
 
 endmodule
