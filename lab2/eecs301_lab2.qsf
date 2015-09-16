@@ -442,6 +442,7 @@ set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 # end ENTITY(eecs301_lab2)
 # -----------------------
 
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name VERILOG_FILE V/slow_counter.v
 set_global_assignment -name VERILOG_FILE V/speed_counter.v
 set_global_assignment -name VERILOG_FILE V/pwm.v
@@ -450,4 +451,3 @@ set_global_assignment -name VERILOG_FILE V/flipflop.v
 set_global_assignment -name VERILOG_FILE V/counter.v
 set_global_assignment -name VERILOG_FILE eecs301_lab2.v
 set_global_assignment -name SDC_FILE eecs301_lab2.sdc
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
