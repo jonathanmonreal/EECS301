@@ -68,9 +68,11 @@ wire [8:0] pwm_count;
 
 // Assignments for k, g, m, and direction
 wire [7:0] k;
-wire [8:0] g;
-wire m;
+wire [7:0] g;
+wire [7:0] m;
+wire [11:0] r;
 wire direction;
+wire pwm_out;
 
 // Assignment for a slow clock
 wire slow_clk;
@@ -87,9 +89,7 @@ assign {encoder_b, encoder_a} = GPIO_0[7:6];
 // Assign the buttons to be the inverse of the active low keys
 assign buttons = ~KEY;
 assign k = SW[9:2];
-assign LEDR[8:0] = g;
-assign motor_in[0] = pwm_count[7];
-
+assign LEDR[8:0] = m;
 
 counter count(
 	.clk(CLOCK_50),
@@ -107,12 +107,34 @@ goal_counter goal(
 );
 
 clock_divider slow(
-	.n(22),
-	.clk(CLOCK_50)
-	.clk_out(slow_clk))
-)
+	.clk(CLOCK_50),
+	.clk_out(slow_clk)
+);
 
-speed_counter find(
+func f(
+	.clk(slow_clk),
+	.k(k),
+	.g(g),
+	.m(m),
+	.out(r)
+);
+
+pwm controller(
+	.clk(pwm_count),
+	.rst(reset_count),
+	.compare(r),
+	.m(pwm_out)
+);
+
+direction_handler direct(
+	.direction(direction),
+	.pwm_in(pwm_out),
+	.out(motor_in)
+);
+
+speed_counter sc(
+	.clk(slow_clk),
+	.reset(buttons[2]),
 	.input_a(encoder_a),
 	.input_b(encoder_b),
 	.speed(m)

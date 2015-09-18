@@ -1,0 +1,6 @@
+module function();
+
+	input input_a, input_b;
+	output speed;
+
+endmodule

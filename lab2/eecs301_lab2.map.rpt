@@ -1,5 +1,5 @@
 Analysis & Synthesis report for eecs301_lab2
-Wed Sep 16 09:34:20 2015
+Fri Sep 18 02:38:15 2015
 Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
 
 
@@ -13,14 +13,20 @@ Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. General Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Port Connectivity Checks: "goal_counter:goal"
- 12. Port Connectivity Checks: "counter:count"
- 13. Post-Synthesis Netlist Statistics for Top Partition
- 14. Elapsed Time Per Partition
- 15. Analysis & Synthesis Messages
+  8. Analysis & Synthesis DSP Block Usage Summary
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for User Entity Instance: clock_divider:slow
+ 14. Parameter Settings for User Entity Instance: display_digit:display
+ 15. Port Connectivity Checks: "speed_counter:sc|dff3x2:dffs"
+ 16. Port Connectivity Checks: "pwm:controller"
+ 17. Port Connectivity Checks: "counter:count"
+ 18. Post-Synthesis Netlist Statistics for Top Partition
+ 19. Elapsed Time Per Partition
+ 20. Analysis & Synthesis Messages
+ 21. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -47,17 +53,17 @@ agreement for further details.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +---------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Sep 16 09:34:20 2015      ;
+; Analysis & Synthesis Status     ; Successful - Fri Sep 18 02:38:15 2015      ;
 ; Quartus II 64-Bit Version       ; 15.0.0 Build 145 04/22/2015 SJ Web Edition ;
 ; Revision Name                   ; eecs301_lab2                               ;
 ; Top-level Entity Name           ; eecs301_lab2                               ;
 ; Family                          ; Cyclone V                                  ;
 ; Logic utilization (in ALMs)     ; N/A                                        ;
-; Total registers                 ; 39                                         ;
+; Total registers                 ; 72                                         ;
 ; Total pins                      ; 175                                        ;
 ; Total virtual pins              ; 0                                          ;
 ; Total block memory bits         ; 0                                          ;
-; Total DSP Blocks                ; 0                                          ;
+; Total DSP Blocks                ; 2                                          ;
 ; Total HSSI RX PCSs              ; 0                                          ;
 ; Total HSSI PMA RX Deserializers ; 0                                          ;
 ; Total HSSI TX PCSs              ; 0                                          ;
@@ -166,67 +172,120 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                   ;
-+----------------------------------+-----------------+------------------------+------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                     ; Library ;
-+----------------------------------+-----------------+------------------------+------------------------------------------------------------------+---------+
-; V/slow_counter.v                 ; yes             ; User Verilog HDL File  ; C:/Users/Jonathan Monreal/Desktop/EECS 301/lab2/V/slow_counter.v ;         ;
-; V/goal_counter.v                 ; yes             ; User Verilog HDL File  ; C:/Users/Jonathan Monreal/Desktop/EECS 301/lab2/V/goal_counter.v ;         ;
-; V/counter.v                      ; yes             ; User Verilog HDL File  ; C:/Users/Jonathan Monreal/Desktop/EECS 301/lab2/V/counter.v      ;         ;
-; eecs301_lab2.v                   ; yes             ; User Verilog HDL File  ; C:/Users/Jonathan Monreal/Desktop/EECS 301/lab2/eecs301_lab2.v   ;         ;
-+----------------------------------+-----------------+------------------------+------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                        ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                          ; Library ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------+---------+
+; V/dff3x2.v                       ; yes             ; User Verilog HDL File  ; C:/Users/Jonathan Monreal/Desktop/EECS 301/lab2/V/dff3x2.v            ;         ;
+; V/func.v                         ; yes             ; User Verilog HDL File  ; C:/Users/Jonathan Monreal/Desktop/EECS 301/lab2/V/func.v              ;         ;
+; V/clock_divider.v                ; yes             ; User Verilog HDL File  ; C:/Users/Jonathan Monreal/Desktop/EECS 301/lab2/V/clock_divider.v     ;         ;
+; V/speed_counter.v                ; yes             ; User Verilog HDL File  ; C:/Users/Jonathan Monreal/Desktop/EECS 301/lab2/V/speed_counter.v     ;         ;
+; V/pwm.v                          ; yes             ; User Verilog HDL File  ; C:/Users/Jonathan Monreal/Desktop/EECS 301/lab2/V/pwm.v               ;         ;
+; V/goal_counter.v                 ; yes             ; User Verilog HDL File  ; C:/Users/Jonathan Monreal/Desktop/EECS 301/lab2/V/goal_counter.v      ;         ;
+; V/flipflop.v                     ; yes             ; User Verilog HDL File  ; C:/Users/Jonathan Monreal/Desktop/EECS 301/lab2/V/flipflop.v          ;         ;
+; V/counter.v                      ; yes             ; User Verilog HDL File  ; C:/Users/Jonathan Monreal/Desktop/EECS 301/lab2/V/counter.v           ;         ;
+; eecs301_lab2.v                   ; yes             ; User Verilog HDL File  ; C:/Users/Jonathan Monreal/Desktop/EECS 301/lab2/eecs301_lab2.v        ;         ;
+; V/direction_handler.v            ; yes             ; User Verilog HDL File  ; C:/Users/Jonathan Monreal/Desktop/EECS 301/lab2/V/direction_handler.v ;         ;
+; V/display_digit.v                ; yes             ; User Verilog HDL File  ; C:/Users/Jonathan Monreal/Desktop/EECS 301/lab2/V/display_digit.v     ;         ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------+---------+
 
 
-+--------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                  ;
-+---------------------------------------------+----------------+
-; Resource                                    ; Usage          ;
-+---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 25             ;
-;                                             ;                ;
-; Combinational ALUT usage for logic          ; 46             ;
-;     -- 7 input functions                    ; 0              ;
-;     -- 6 input functions                    ; 4              ;
-;     -- 5 input functions                    ; 0              ;
-;     -- 4 input functions                    ; 0              ;
-;     -- <=3 input functions                  ; 42             ;
-;                                             ;                ;
-; Dedicated logic registers                   ; 39             ;
-;                                             ;                ;
-; I/O pins                                    ; 175            ;
-;                                             ;                ;
-; Total DSP Blocks                            ; 0              ;
-;                                             ;                ;
-; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 30             ;
-; Total fan-out                               ; 477            ;
-; Average fan-out                             ; 0.94           ;
-+---------------------------------------------+----------------+
++------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                  ;
++---------------------------------------------+--------------------------------+
+; Resource                                    ; Usage                          ;
++---------------------------------------------+--------------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 71                             ;
+;                                             ;                                ;
+; Combinational ALUT usage for logic          ; 119                            ;
+;     -- 7 input functions                    ; 0                              ;
+;     -- 6 input functions                    ; 22                             ;
+;     -- 5 input functions                    ; 5                              ;
+;     -- 4 input functions                    ; 6                              ;
+;     -- <=3 input functions                  ; 86                             ;
+;                                             ;                                ;
+; Dedicated logic registers                   ; 72                             ;
+;                                             ;                                ;
+; I/O pins                                    ; 175                            ;
+;                                             ;                                ;
+; Total DSP Blocks                            ; 2                              ;
+;                                             ;                                ;
+; Maximum fan-out node                        ; clock_divider:slow|counter[22] ;
+; Maximum fan-out                             ; 36                             ;
+; Total fan-out                               ; 871                            ;
+; Average fan-out                             ; 1.42                           ;
++---------------------------------------------+--------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                   ;
-+----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name             ; Library Name ;
-+----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------------------+--------------+
-; |eecs301_lab2              ; 46 (0)            ; 39 (0)       ; 0                 ; 0          ; 175  ; 0            ; |eecs301_lab2                   ; work         ;
-;    |counter:count|         ; 7 (7)             ; 7 (7)        ; 0                 ; 0          ; 0    ; 0            ; |eecs301_lab2|counter:count     ; work         ;
-;    |goal_counter:goal|     ; 16 (16)           ; 9 (9)        ; 0                 ; 0          ; 0    ; 0            ; |eecs301_lab2|goal_counter:goal ; work         ;
-;    |slow_counter:slow|     ; 23 (23)           ; 23 (23)      ; 0                 ; 0          ; 0    ; 0            ; |eecs301_lab2|slow_counter:slow ; work         ;
-+----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                             ;
++-------------------------------+-------------------+--------------+-------------------+------------+------+--------------+--------------------------------------------------------+--------------+
+; Compilation Hierarchy Node    ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                    ; Library Name ;
++-------------------------------+-------------------+--------------+-------------------+------------+------+--------------+--------------------------------------------------------+--------------+
+; |eecs301_lab2                 ; 119 (0)           ; 72 (0)       ; 0                 ; 2          ; 175  ; 0            ; |eecs301_lab2                                          ; work         ;
+;    |clock_divider:slow|       ; 23 (23)           ; 23 (23)      ; 0                 ; 0          ; 0    ; 0            ; |eecs301_lab2|clock_divider:slow                       ; work         ;
+;    |counter:count|            ; 1 (1)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |eecs301_lab2|counter:count                            ; work         ;
+;    |direction_handler:direct| ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |eecs301_lab2|direction_handler:direct                 ; work         ;
+;    |func:f|                   ; 28 (28)           ; 12 (12)      ; 0                 ; 2          ; 0    ; 0            ; |eecs301_lab2|func:f                                   ; work         ;
+;    |goal_counter:goal|        ; 24 (24)           ; 9 (9)        ; 0                 ; 0          ; 0    ; 0            ; |eecs301_lab2|goal_counter:goal                        ; work         ;
+;    |pwm:controller|           ; 23 (23)           ; 13 (13)      ; 0                 ; 0          ; 0    ; 0            ; |eecs301_lab2|pwm:controller                           ; work         ;
+;    |speed_counter:sc|         ; 18 (18)           ; 14 (8)       ; 0                 ; 0          ; 0    ; 0            ; |eecs301_lab2|speed_counter:sc                         ; work         ;
+;       |dff3x2:dffs|           ; 0 (0)             ; 6 (0)        ; 0                 ; 0          ; 0    ; 0            ; |eecs301_lab2|speed_counter:sc|dff3x2:dffs             ; work         ;
+;          |flipflop:a0|        ; 0 (0)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |eecs301_lab2|speed_counter:sc|dff3x2:dffs|flipflop:a0 ; work         ;
+;          |flipflop:a1|        ; 0 (0)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |eecs301_lab2|speed_counter:sc|dff3x2:dffs|flipflop:a1 ; work         ;
+;          |flipflop:a2|        ; 0 (0)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |eecs301_lab2|speed_counter:sc|dff3x2:dffs|flipflop:a2 ; work         ;
+;          |flipflop:b0|        ; 0 (0)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |eecs301_lab2|speed_counter:sc|dff3x2:dffs|flipflop:b0 ; work         ;
+;          |flipflop:b1|        ; 0 (0)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |eecs301_lab2|speed_counter:sc|dff3x2:dffs|flipflop:b1 ; work         ;
+;          |flipflop:b2|        ; 0 (0)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |eecs301_lab2|speed_counter:sc|dff3x2:dffs|flipflop:b2 ; work         ;
++-------------------------------+-------------------+--------------+-------------------+------------+------+--------------+--------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                        ;
-+---------------------------------------+---------------------------------------------------+
-; Register name                         ; Reason for Removal                                ;
-+---------------------------------------+---------------------------------------------------+
-; counter:count|count[0]                ; Merged with slow_counter:slow|internal_counter[0] ;
-; counter:count|count[8]                ; Lost fanout                                       ;
-; Total Number of Removed Registers = 2 ;                                                   ;
-+---------------------------------------+---------------------------------------------------+
++-----------------------------------------------+
+; Analysis & Synthesis DSP Block Usage Summary  ;
++---------------------------------+-------------+
+; Statistic                       ; Number Used ;
++---------------------------------+-------------+
+; Independent 9x9                 ; 1           ;
+; Independent 18x18               ; 1           ;
+; Total number of DSP blocks      ; 2           ;
+;                                 ;             ;
+; Fixed Point Unsigned Multiplier ; 2           ;
++---------------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                      ;
++------------------------------------------------+----------------------------------------+
+; Register name                                  ; Reason for Removal                     ;
++------------------------------------------------+----------------------------------------+
+; display_digit:display|out[12]                  ; Stuck at VCC due to stuck port data_in ;
+; display_digit:display|out[10,11]               ; Stuck at GND due to stuck port data_in ;
+; display_digit:display|out[6]                   ; Stuck at VCC due to stuck port data_in ;
+; display_digit:display|out[4,5]                 ; Stuck at GND due to stuck port data_in ;
+; display_digit:display|out[0]                   ; Stuck at VCC due to stuck port data_in ;
+; display_digit:display|out[16,17]               ; Stuck at GND due to stuck port data_in ;
+; display_digit:display|number                   ; Stuck at GND due to stuck port data_in ;
+; counter:count|count[1..8]                      ; Lost fanout                            ;
+; display_digit:display|digit                    ; Stuck at GND due to stuck port data_in ;
+; display_digit:display|out[1..3,7..9,13..15,18] ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 29         ;                                        ;
++------------------------------------------------+----------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                             ;
++------------------------------+---------------------------+--------------------------------------------------------------+
+; Register name                ; Reason for Removal        ; Registers Removed due to This Register                       ;
++------------------------------+---------------------------+--------------------------------------------------------------+
+; display_digit:display|number ; Stuck at GND              ; display_digit:display|digit, display_digit:display|out[14],  ;
+;                              ; due to stuck port data_in ; display_digit:display|out[13], display_digit:display|out[9], ;
+;                              ;                           ; display_digit:display|out[8], display_digit:display|out[7],  ;
+;                              ;                           ; display_digit:display|out[3], display_digit:display|out[2],  ;
+;                              ;                           ; display_digit:display|out[1], display_digit:display|out[15], ;
+;                              ;                           ; display_digit:display|out[18]                                ;
++------------------------------+---------------------------+--------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -234,12 +293,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 39    ;
+; Total registers                              ; 72    ;
 ; Number of registers using Synchronous Clear  ; 9     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Clear ; 14    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 9     ;
+; Number of registers using Clock Enable       ; 17    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -249,18 +308,56 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
-; 4:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |eecs301_lab2|goal_counter:goal|counter[0] ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |eecs301_lab2|goal_counter:goal|counter[8] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "goal_counter:goal"                                                                                                                                                          ;
-+------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port       ; Type   ; Severity ; Details                                                                                                                                                               ;
-+------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; msb        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                   ;
-; goal_speed ; Output ; Warning  ; Output or bidir port (8 bits) is smaller than the port expression (9 bits) it drives.  The 1 most-significant bit(s) in the port expression will be connected to GND. ;
-+------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: clock_divider:slow ;
++----------------+-------+----------------------------------------+
+; Parameter Name ; Value ; Type                                   ;
++----------------+-------+----------------------------------------+
+; n              ; 22    ; Signed Integer                         ;
++----------------+-------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: display_digit:display ;
++----------------+---------+-----------------------------------------+
+; Parameter Name ; Value   ; Type                                    ;
++----------------+---------+-----------------------------------------+
+; zero           ; 0000001 ; Unsigned Binary                         ;
+; one            ; 1001111 ; Unsigned Binary                         ;
+; two            ; 0010010 ; Unsigned Binary                         ;
+; three          ; 0000110 ; Unsigned Binary                         ;
+; four           ; 1001100 ; Unsigned Binary                         ;
+; five           ; 0100100 ; Unsigned Binary                         ;
+; six            ; 1100000 ; Unsigned Binary                         ;
+; seven          ; 0001111 ; Unsigned Binary                         ;
+; eight          ; 0000000 ; Unsigned Binary                         ;
+; nine           ; 0001100 ; Unsigned Binary                         ;
++----------------+---------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "speed_counter:sc|dff3x2:dffs"                                                           ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; a_dff[0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; b_dff[0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "pwm:controller"                                                                                                                                                                 ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                          ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; clk  ; Input ; Warning  ; Input port expression (9 bits) is wider than the input port (1 bits) it drives.  The 8 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------+
@@ -268,8 +365,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port        ; Type   ; Severity ; Details                                                                             ;
 +-------------+--------+----------+-------------------------------------------------------------------------------------+
-; count[6..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; count[8]    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; count[8..1] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +-------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
@@ -278,25 +374,31 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 39                          ;
+; arriav_ff             ; 72                          ;
+;     CLR               ; 6                           ;
+;     ENA CLR           ; 8                           ;
 ;     ENA SCLR          ; 9                           ;
-;     plain             ; 30                          ;
+;     plain             ; 49                          ;
 ; arriav_io_obuf        ; 72                          ;
-; arriav_lcell_comb     ; 47                          ;
-;     arith             ; 38                          ;
-;         1 data inputs ; 28                          ;
-;         2 data inputs ; 2                           ;
-;         3 data inputs ; 8                           ;
-;     normal            ; 9                           ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 1                           ;
-;         2 data inputs ; 1                           ;
-;         3 data inputs ; 2                           ;
-;         6 data inputs ; 4                           ;
+; arriav_lcell_comb     ; 121                         ;
+;     arith             ; 68                          ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 37                          ;
+;         2 data inputs ; 6                           ;
+;         3 data inputs ; 23                          ;
+;     normal            ; 53                          ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 4                           ;
+;         2 data inputs ; 11                          ;
+;         3 data inputs ; 3                           ;
+;         4 data inputs ; 6                           ;
+;         5 data inputs ; 5                           ;
+;         6 data inputs ; 22                          ;
+; arriav_mac            ; 2                           ;
 ; boundary_port         ; 175                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 3.70                        ;
-; Average LUT depth     ; 1.51                        ;
+; Max LUT depth         ; 4.20                        ;
+; Average LUT depth     ; 1.88                        ;
 +-----------------------+-----------------------------+
 
 
@@ -305,7 +407,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:03     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -315,11 +417,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
-    Info: Processing started: Wed Sep 16 09:33:57 2015
+    Info: Processing started: Fri Sep 18 02:38:00 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off eecs301_lab2 -c eecs301_lab2
 Warning (20028): Parallel compilation is not licensed and has been disabled
-Info (12021): Found 1 design units, including 1 entities, in source file v/slow_counter.v
-    Info (12023): Found entity 1: slow_counter
+Info (12021): Found 1 design units, including 1 entities, in source file v/dff3x2.v
+    Info (12023): Found entity 1: dff3x2
+Info (12021): Found 1 design units, including 1 entities, in source file v/func.v
+    Info (12023): Found entity 1: func
+Info (12021): Found 1 design units, including 1 entities, in source file v/clock_divider.v
+    Info (12023): Found entity 1: clock_divider
 Info (12021): Found 1 design units, including 1 entities, in source file v/speed_counter.v
     Info (12023): Found entity 1: speed_counter
 Info (12021): Found 1 design units, including 1 entities, in source file v/pwm.v
@@ -332,44 +438,69 @@ Info (12021): Found 1 design units, including 1 entities, in source file v/count
     Info (12023): Found entity 1: counter
 Info (12021): Found 1 design units, including 1 entities, in source file eecs301_lab2.v
     Info (12023): Found entity 1: eecs301_lab2
+Info (12021): Found 1 design units, including 1 entities, in source file v/direction_handler.v
+    Info (12023): Found entity 1: direction_handler
+Info (12021): Found 1 design units, including 1 entities, in source file v/display_digit.v
+    Info (12023): Found entity 1: display_digit
 Info (12127): Elaborating entity "eecs301_lab2" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at eecs301_lab2.v(59): object "encoder_a" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at eecs301_lab2.v(59): object "encoder_b" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at eecs301_lab2.v(63): object "k" assigned a value but never read
-Warning (10030): Net "motor_in[1]" at eecs301_lab2.v(57) has no driver or initial value, using a default initial value '0'
-Warning (10034): Output port "HEX0" at eecs301_lab2.v(20) has no driver
-Warning (10034): Output port "HEX1" at eecs301_lab2.v(21) has no driver
-Warning (10034): Output port "HEX2" at eecs301_lab2.v(22) has no driver
-Warning (10034): Output port "HEX3" at eecs301_lab2.v(23) has no driver
-Warning (10034): Output port "HEX4" at eecs301_lab2.v(24) has no driver
-Warning (10034): Output port "HEX5" at eecs301_lab2.v(25) has no driver
-Warning (10034): Output port "LEDR[9]" at eecs301_lab2.v(31) has no driver
-Warning (10034): Output port "VGA_B" at eecs301_lab2.v(37) has no driver
-Warning (10034): Output port "VGA_G" at eecs301_lab2.v(40) has no driver
-Warning (10034): Output port "VGA_R" at eecs301_lab2.v(42) has no driver
-Warning (10034): Output port "ADC_CONVST" at eecs301_lab2.v(8) has no driver
-Warning (10034): Output port "ADC_DIN" at eecs301_lab2.v(9) has no driver
-Warning (10034): Output port "ADC_SCLK" at eecs301_lab2.v(11) has no driver
-Warning (10034): Output port "VGA_BLANK_N" at eecs301_lab2.v(38) has no driver
-Warning (10034): Output port "VGA_CLK" at eecs301_lab2.v(39) has no driver
-Warning (10034): Output port "VGA_HS" at eecs301_lab2.v(41) has no driver
-Warning (10034): Output port "VGA_SYNC_N" at eecs301_lab2.v(43) has no driver
-Warning (10034): Output port "VGA_VS" at eecs301_lab2.v(44) has no driver
+Warning (10034): Output port "HEX3" at eecs301_lab2.v(24) has no driver
+Warning (10034): Output port "HEX4" at eecs301_lab2.v(25) has no driver
+Warning (10034): Output port "HEX5" at eecs301_lab2.v(26) has no driver
+Warning (10034): Output port "LEDR[9]" at eecs301_lab2.v(32) has no driver
+Warning (10034): Output port "VGA_B" at eecs301_lab2.v(38) has no driver
+Warning (10034): Output port "VGA_G" at eecs301_lab2.v(41) has no driver
+Warning (10034): Output port "VGA_R" at eecs301_lab2.v(43) has no driver
+Warning (10034): Output port "ADC_CONVST" at eecs301_lab2.v(9) has no driver
+Warning (10034): Output port "ADC_DIN" at eecs301_lab2.v(10) has no driver
+Warning (10034): Output port "ADC_SCLK" at eecs301_lab2.v(12) has no driver
+Warning (10034): Output port "VGA_BLANK_N" at eecs301_lab2.v(39) has no driver
+Warning (10034): Output port "VGA_CLK" at eecs301_lab2.v(40) has no driver
+Warning (10034): Output port "VGA_HS" at eecs301_lab2.v(42) has no driver
+Warning (10034): Output port "VGA_SYNC_N" at eecs301_lab2.v(44) has no driver
+Warning (10034): Output port "VGA_VS" at eecs301_lab2.v(45) has no driver
 Info (12128): Elaborating entity "counter" for hierarchy "counter:count"
 Info (12128): Elaborating entity "goal_counter" for hierarchy "goal_counter:goal"
-Warning (10230): Verilog HDL assignment warning at goal_counter.v(15): truncated value with size 32 to match size of target (9)
-Warning (10230): Verilog HDL assignment warning at goal_counter.v(16): truncated value with size 32 to match size of target (9)
-Info (12128): Elaborating entity "slow_counter" for hierarchy "slow_counter:slow"
+Warning (10230): Verilog HDL assignment warning at goal_counter.v(20): truncated value with size 32 to match size of target (9)
+Warning (10230): Verilog HDL assignment warning at goal_counter.v(21): truncated value with size 32 to match size of target (9)
+Info (12128): Elaborating entity "clock_divider" for hierarchy "clock_divider:slow"
+Warning (10230): Verilog HDL assignment warning at clock_divider.v(11): truncated value with size 32 to match size of target (23)
+Info (12128): Elaborating entity "func" for hierarchy "func:f"
+Warning (10036): Verilog HDL or VHDL warning at func.v(8): object "last_m" assigned a value but never read
+Info (12128): Elaborating entity "pwm" for hierarchy "pwm:controller"
+Info (12128): Elaborating entity "direction_handler" for hierarchy "direction_handler:direct"
+Info (12128): Elaborating entity "speed_counter" for hierarchy "speed_counter:sc"
+Warning (10230): Verilog HDL assignment warning at speed_counter.v(27): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at speed_counter.v(28): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at speed_counter.v(31): truncated value with size 32 to match size of target (8)
+Critical Warning (10237): Verilog HDL warning at speed_counter.v(31): can't infer register for assignment in edge-triggered always construct because the clock isn't obvious. Generated combinational logic instead
+Info (12128): Elaborating entity "dff3x2" for hierarchy "speed_counter:sc|dff3x2:dffs"
+Info (12128): Elaborating entity "flipflop" for hierarchy "speed_counter:sc|dff3x2:dffs|flipflop:a0"
+Info (12128): Elaborating entity "display_digit" for hierarchy "display_digit:display"
+Warning (10230): Verilog HDL assignment warning at display_digit.v(24): truncated value with size 8 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at display_digit.v(27): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at display_digit.v(28): truncated value with size 32 to match size of target (1)
+Warning (10199): Verilog HDL Case Statement warning at display_digit.v(32): case item expression never matches the case expression
+Warning (10199): Verilog HDL Case Statement warning at display_digit.v(33): case item expression never matches the case expression
+Warning (10199): Verilog HDL Case Statement warning at display_digit.v(34): case item expression never matches the case expression
+Warning (10199): Verilog HDL Case Statement warning at display_digit.v(35): case item expression never matches the case expression
+Warning (10199): Verilog HDL Case Statement warning at display_digit.v(36): case item expression never matches the case expression
+Warning (10199): Verilog HDL Case Statement warning at display_digit.v(37): case item expression never matches the case expression
+Warning (10199): Verilog HDL Case Statement warning at display_digit.v(38): case item expression never matches the case expression
+Warning (10230): Verilog HDL assignment warning at display_digit.v(26): truncated value with size 32 to match size of target (3)
+Warning (10034): Output port "out[20..19]" at display_digit.v(5) has no driver
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "reset_count" is missing source, defaulting to GND
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13034): The following nodes have both tri-state and non-tri-state drivers
     Warning (13035): Inserted always-enabled tri-state buffer between "GPIO_0[1]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO_0[3]" and its non-tri-state driver.
     Warning (13035): Inserted always-enabled tri-state buffer between "GPIO_0[4]" and its non-tri-state driver.
 Warning (13039): The following bidirectional pins have no drivers
+    Warning (13040): bidirectional pin "GPIO_0[6]" has no driver
+    Warning (13040): bidirectional pin "GPIO_0[7]" has no driver
     Warning (13040): bidirectional pin "GPIO_0[0]" has no driver
     Warning (13040): bidirectional pin "GPIO_0[2]" has no driver
     Warning (13040): bidirectional pin "GPIO_0[5]" has no driver
-    Warning (13040): bidirectional pin "GPIO_0[6]" has no driver
-    Warning (13040): bidirectional pin "GPIO_0[7]" has no driver
     Warning (13040): bidirectional pin "GPIO_0[8]" has no driver
     Warning (13040): bidirectional pin "GPIO_0[9]" has no driver
     Warning (13040): bidirectional pin "GPIO_0[10]" has no driver
@@ -434,10 +565,9 @@ Warning (13039): The following bidirectional pins have no drivers
     Warning (13040): bidirectional pin "GPIO_1[33]" has no driver
     Warning (13040): bidirectional pin "GPIO_1[34]" has no driver
     Warning (13040): bidirectional pin "GPIO_1[35]" has no driver
-Warning (13032): The following tri-state nodes are fed by constants
-    Warning (13033): The pin "GPIO_0[3]" is fed by GND
 Warning (13009): TRI or OPNDRN buffers permanently enabled
     Warning (13010): Node "GPIO_0[1]~synth"
+    Warning (13010): Node "GPIO_0[3]~synth"
     Warning (13010): Node "GPIO_0[4]~synth"
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "ADC_CONVST" is stuck at GND
@@ -455,15 +585,15 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX1[2]" is stuck at GND
     Warning (13410): Pin "HEX1[3]" is stuck at GND
     Warning (13410): Pin "HEX1[4]" is stuck at GND
-    Warning (13410): Pin "HEX1[5]" is stuck at GND
+    Warning (13410): Pin "HEX1[5]" is stuck at VCC
     Warning (13410): Pin "HEX1[6]" is stuck at GND
-    Warning (13410): Pin "HEX2[0]" is stuck at GND
+    Warning (13410): Pin "HEX2[0]" is stuck at VCC
     Warning (13410): Pin "HEX2[1]" is stuck at GND
     Warning (13410): Pin "HEX2[2]" is stuck at GND
     Warning (13410): Pin "HEX2[3]" is stuck at GND
     Warning (13410): Pin "HEX2[4]" is stuck at GND
     Warning (13410): Pin "HEX2[5]" is stuck at GND
-    Warning (13410): Pin "HEX2[6]" is stuck at GND
+    Warning (13410): Pin "HEX2[6]" is stuck at VCC
     Warning (13410): Pin "HEX3[0]" is stuck at GND
     Warning (13410): Pin "HEX3[1]" is stuck at GND
     Warning (13410): Pin "HEX3[2]" is stuck at GND
@@ -517,33 +647,33 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "VGA_SYNC_N" is stuck at GND
     Warning (13410): Pin "VGA_VS" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 1 registers lost all their fanouts during netlist optimizations.
+Info (17049): 8 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file C:/Users/Jonathan Monreal/Desktop/EECS 301/lab2/eecs301_lab2.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 14 input pin(s) that do not drive logic
+Warning (21074): Design contains 6 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "ADC_DOUT"
     Warning (15610): No output dependent on input pin "CLOCK2_50"
     Warning (15610): No output dependent on input pin "CLOCK3_50"
     Warning (15610): No output dependent on input pin "CLOCK4_50"
     Warning (15610): No output dependent on input pin "KEY[3]"
     Warning (15610): No output dependent on input pin "SW[1]"
-    Warning (15610): No output dependent on input pin "SW[2]"
-    Warning (15610): No output dependent on input pin "SW[3]"
-    Warning (15610): No output dependent on input pin "SW[4]"
-    Warning (15610): No output dependent on input pin "SW[5]"
-    Warning (15610): No output dependent on input pin "SW[6]"
-    Warning (15610): No output dependent on input pin "SW[7]"
-    Warning (15610): No output dependent on input pin "SW[8]"
-    Warning (15610): No output dependent on input pin "SW[9]"
-Info (21057): Implemented 221 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 302 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 19 input pins
     Info (21059): Implemented 84 output pins
     Info (21060): Implemented 72 bidirectional pins
-    Info (21061): Implemented 46 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 196 warnings
-    Info: Peak virtual memory: 715 megabytes
-    Info: Processing ended: Wed Sep 16 09:34:20 2015
-    Info: Elapsed time: 00:00:23
-    Info: Total CPU time (on all processors): 00:00:34
+    Info (21061): Implemented 125 logic cells
+    Info (21062): Implemented 2 DSP elements
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 201 warnings
+    Info: Peak virtual memory: 718 megabytes
+    Info: Processing ended: Fri Sep 18 02:38:15 2015
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:33
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/Jonathan Monreal/Desktop/EECS 301/lab2/eecs301_lab2.map.smsg.
 
 

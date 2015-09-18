@@ -1,11 +1,16 @@
 module goal_counter(clk, up, down, reset, msb, goal_speed);
 	input clk, up, down, reset;
 	output msb;
-	output [7:0] goal_speed;
+	output reg [7:0] goal_speed;
 	
 	reg [8:0] counter;
 	assign msb = counter[8];
-	assign goal_speed = counter[7:0];
+	
+	always
+		begin
+			if (msb) goal_speed = ~counter[7:0];
+			else goal_speed = counter[7:0];
+		end
 	
 	initial counter = 'b000000000;
 	

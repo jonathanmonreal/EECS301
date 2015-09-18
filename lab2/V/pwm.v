@@ -1,12 +1,12 @@
 module pwm (
     input clk,
     input rst,
-    input [7:0] compare,
+    input [11:0] compare,
     output m
   );
    
   reg pwm_d, pwm_q;
-  reg [7:0] ctr_d, ctr_q;
+  reg [11:0] ctr_d, ctr_q;
    
   assign m = pwm_q;
    
