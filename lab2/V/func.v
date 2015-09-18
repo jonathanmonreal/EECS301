@@ -10,7 +10,7 @@ module func(clk, k, g, m, out);
 	always @(posedge clk)
 		begin
 			if (g > m) r = k * (g - m);
-			else r = k * g;
+			else r = k * (m - g);
 			out = r[15:4];
 		end
 

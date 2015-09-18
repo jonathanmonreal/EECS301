@@ -439,10 +439,8 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1[35]
 # end ENTITY(eecs301_lab2)
 # -----------------------
 
-set_global_assignment -name VERILOG_FILE V/dff3x2.v
 set_global_assignment -name VERILOG_FILE V/func.v
 set_global_assignment -name VERILOG_FILE V/clock_divider.v
-set_global_assignment -name VERILOG_FILE V/speed_counter.v
 set_global_assignment -name VERILOG_FILE V/pwm.v
 set_global_assignment -name VERILOG_FILE V/goal_counter.v
 set_global_assignment -name VERILOG_FILE V/flipflop.v
@@ -453,4 +451,5 @@ set_global_assignment -name VERILOG_FILE V/direction_handler.v
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name VERILOG_FILE V/speed_counter.v
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

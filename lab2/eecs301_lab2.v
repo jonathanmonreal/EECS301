@@ -133,7 +133,7 @@ direction_handler direct(
 );
 
 speed_counter sc(
-	.clk(slow_clk),
+	.clk(CLOCK_50),
 	.reset(buttons[2]),
 	.input_a(encoder_a),
 	.input_b(encoder_b),
