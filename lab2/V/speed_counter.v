@@ -29,10 +29,10 @@ module speed_counter(clk, reset, input_a, input_b, speed);
 	initial speed <= 0;
 	assign en = dff_a0 && ~dff_a1;
 	
-	reg [7:0] counter = 0;
 	
-	always @(posedge en)
+	always @(posedge clk)
 		begin
+			reg [7:0] counter = 0;
 			if (reset) counter <= 0;
 			else if (en) begin
 				if (count_dir) counter <= counter + 1;
