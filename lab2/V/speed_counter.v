@@ -28,7 +28,7 @@ module speed_counter(clk, reset, input_a, input_b, speed);
 					else counter <= counter - 1;
 				end
 			end
-			speed <= (~counter) * 'b1111;
+			speed <= (~counter);
 		end
 
 endmodule

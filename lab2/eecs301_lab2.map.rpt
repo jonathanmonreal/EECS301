@@ -1,5 +1,5 @@
 Analysis & Synthesis report for eecs301_lab2
-Fri Sep 18 02:38:15 2015
+Fri Sep 18 12:00:56 2015
 Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
 
 
@@ -15,18 +15,15 @@ Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis DSP Block Usage Summary
   9. Registers Removed During Synthesis
- 10. Removed Registers Triggering Further Register Optimizations
- 11. General Register Statistics
- 12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Parameter Settings for User Entity Instance: clock_divider:slow
- 14. Parameter Settings for User Entity Instance: display_digit:display
- 15. Port Connectivity Checks: "speed_counter:sc|dff3x2:dffs"
- 16. Port Connectivity Checks: "pwm:controller"
- 17. Port Connectivity Checks: "counter:count"
- 18. Post-Synthesis Netlist Statistics for Top Partition
- 19. Elapsed Time Per Partition
- 20. Analysis & Synthesis Messages
- 21. Analysis & Synthesis Suppressed Messages
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: clock_divider:slow
+ 13. Port Connectivity Checks: "speed_counter:sc|dff3x2:dffs"
+ 14. Port Connectivity Checks: "pwm:controller"
+ 15. Port Connectivity Checks: "counter:count"
+ 16. Post-Synthesis Netlist Statistics for Top Partition
+ 17. Elapsed Time Per Partition
+ 18. Analysis & Synthesis Messages
 
 
 
@@ -53,7 +50,7 @@ agreement for further details.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +---------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Sep 18 02:38:15 2015      ;
+; Analysis & Synthesis Status     ; Successful - Fri Sep 18 12:00:56 2015      ;
 ; Quartus II 64-Bit Version       ; 15.0.0 Build 145 04/22/2015 SJ Web Edition ;
 ; Revision Name                   ; eecs301_lab2                               ;
 ; Top-level Entity Name           ; eecs301_lab2                               ;
@@ -187,7 +184,6 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; V/counter.v                      ; yes             ; User Verilog HDL File  ; C:/Users/Jonathan Monreal/Desktop/EECS 301/lab2/V/counter.v           ;         ;
 ; eecs301_lab2.v                   ; yes             ; User Verilog HDL File  ; C:/Users/Jonathan Monreal/Desktop/EECS 301/lab2/eecs301_lab2.v        ;         ;
 ; V/direction_handler.v            ; yes             ; User Verilog HDL File  ; C:/Users/Jonathan Monreal/Desktop/EECS 301/lab2/V/direction_handler.v ;         ;
-; V/display_digit.v                ; yes             ; User Verilog HDL File  ; C:/Users/Jonathan Monreal/Desktop/EECS 301/lab2/V/display_digit.v     ;         ;
 +----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------+---------+
 
 
@@ -196,14 +192,14 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+--------------------------------+
 ; Resource                                    ; Usage                          ;
 +---------------------------------------------+--------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 71                             ;
+; Estimate of Logic utilization (ALMs needed) ; 60                             ;
 ;                                             ;                                ;
-; Combinational ALUT usage for logic          ; 119                            ;
+; Combinational ALUT usage for logic          ; 111                            ;
 ;     -- 7 input functions                    ; 0                              ;
-;     -- 6 input functions                    ; 22                             ;
-;     -- 5 input functions                    ; 5                              ;
+;     -- 6 input functions                    ; 7                              ;
+;     -- 5 input functions                    ; 21                             ;
 ;     -- 4 input functions                    ; 6                              ;
-;     -- <=3 input functions                  ; 86                             ;
+;     -- <=3 input functions                  ; 77                             ;
 ;                                             ;                                ;
 ; Dedicated logic registers                   ; 72                             ;
 ;                                             ;                                ;
@@ -213,8 +209,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;                                             ;                                ;
 ; Maximum fan-out node                        ; clock_divider:slow|counter[22] ;
 ; Maximum fan-out                             ; 36                             ;
-; Total fan-out                               ; 871                            ;
-; Average fan-out                             ; 1.42                           ;
+; Total fan-out                               ; 839                            ;
+; Average fan-out                             ; 1.38                           ;
 +---------------------------------------------+--------------------------------+
 
 
@@ -223,14 +219,14 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------+-------------------+--------------+-------------------+------------+------+--------------+--------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node    ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                    ; Library Name ;
 +-------------------------------+-------------------+--------------+-------------------+------------+------+--------------+--------------------------------------------------------+--------------+
-; |eecs301_lab2                 ; 119 (0)           ; 72 (0)       ; 0                 ; 2          ; 175  ; 0            ; |eecs301_lab2                                          ; work         ;
+; |eecs301_lab2                 ; 111 (0)           ; 72 (0)       ; 0                 ; 2          ; 175  ; 0            ; |eecs301_lab2                                          ; work         ;
 ;    |clock_divider:slow|       ; 23 (23)           ; 23 (23)      ; 0                 ; 0          ; 0    ; 0            ; |eecs301_lab2|clock_divider:slow                       ; work         ;
 ;    |counter:count|            ; 1 (1)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |eecs301_lab2|counter:count                            ; work         ;
 ;    |direction_handler:direct| ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |eecs301_lab2|direction_handler:direct                 ; work         ;
 ;    |func:f|                   ; 28 (28)           ; 12 (12)      ; 0                 ; 2          ; 0    ; 0            ; |eecs301_lab2|func:f                                   ; work         ;
 ;    |goal_counter:goal|        ; 24 (24)           ; 9 (9)        ; 0                 ; 0          ; 0    ; 0            ; |eecs301_lab2|goal_counter:goal                        ; work         ;
 ;    |pwm:controller|           ; 23 (23)           ; 13 (13)      ; 0                 ; 0          ; 0    ; 0            ; |eecs301_lab2|pwm:controller                           ; work         ;
-;    |speed_counter:sc|         ; 18 (18)           ; 14 (8)       ; 0                 ; 0          ; 0    ; 0            ; |eecs301_lab2|speed_counter:sc                         ; work         ;
+;    |speed_counter:sc|         ; 10 (10)           ; 14 (8)       ; 0                 ; 0          ; 0    ; 0            ; |eecs301_lab2|speed_counter:sc                         ; work         ;
 ;       |dff3x2:dffs|           ; 0 (0)             ; 6 (0)        ; 0                 ; 0          ; 0    ; 0            ; |eecs301_lab2|speed_counter:sc|dff3x2:dffs             ; work         ;
 ;          |flipflop:a0|        ; 0 (0)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |eecs301_lab2|speed_counter:sc|dff3x2:dffs|flipflop:a0 ; work         ;
 ;          |flipflop:a1|        ; 0 (0)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |eecs301_lab2|speed_counter:sc|dff3x2:dffs|flipflop:a1 ; work         ;
@@ -255,37 +251,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                      ;
-+------------------------------------------------+----------------------------------------+
-; Register name                                  ; Reason for Removal                     ;
-+------------------------------------------------+----------------------------------------+
-; display_digit:display|out[12]                  ; Stuck at VCC due to stuck port data_in ;
-; display_digit:display|out[10,11]               ; Stuck at GND due to stuck port data_in ;
-; display_digit:display|out[6]                   ; Stuck at VCC due to stuck port data_in ;
-; display_digit:display|out[4,5]                 ; Stuck at GND due to stuck port data_in ;
-; display_digit:display|out[0]                   ; Stuck at VCC due to stuck port data_in ;
-; display_digit:display|out[16,17]               ; Stuck at GND due to stuck port data_in ;
-; display_digit:display|number                   ; Stuck at GND due to stuck port data_in ;
-; counter:count|count[1..8]                      ; Lost fanout                            ;
-; display_digit:display|digit                    ; Stuck at GND due to stuck port data_in ;
-; display_digit:display|out[1..3,7..9,13..15,18] ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 29         ;                                        ;
-+------------------------------------------------+----------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                             ;
-+------------------------------+---------------------------+--------------------------------------------------------------+
-; Register name                ; Reason for Removal        ; Registers Removed due to This Register                       ;
-+------------------------------+---------------------------+--------------------------------------------------------------+
-; display_digit:display|number ; Stuck at GND              ; display_digit:display|digit, display_digit:display|out[14],  ;
-;                              ; due to stuck port data_in ; display_digit:display|out[13], display_digit:display|out[9], ;
-;                              ;                           ; display_digit:display|out[8], display_digit:display|out[7],  ;
-;                              ;                           ; display_digit:display|out[3], display_digit:display|out[2],  ;
-;                              ;                           ; display_digit:display|out[1], display_digit:display|out[15], ;
-;                              ;                           ; display_digit:display|out[18]                                ;
-+------------------------------+---------------------------+--------------------------------------------------------------+
++------------------------------------------------------------+
+; Registers Removed During Synthesis                         ;
++---------------------------------------+--------------------+
+; Register name                         ; Reason for Removal ;
++---------------------------------------+--------------------+
+; counter:count|count[1..8]             ; Lost fanout        ;
+; Total Number of Removed Registers = 8 ;                    ;
++---------------------------------------+--------------------+
 
 
 +------------------------------------------------------+
@@ -319,25 +292,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+-------+----------------------------------------+
 ; n              ; 22    ; Signed Integer                         ;
 +----------------+-------+----------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: display_digit:display ;
-+----------------+---------+-----------------------------------------+
-; Parameter Name ; Value   ; Type                                    ;
-+----------------+---------+-----------------------------------------+
-; zero           ; 0000001 ; Unsigned Binary                         ;
-; one            ; 1001111 ; Unsigned Binary                         ;
-; two            ; 0010010 ; Unsigned Binary                         ;
-; three          ; 0000110 ; Unsigned Binary                         ;
-; four           ; 1001100 ; Unsigned Binary                         ;
-; five           ; 0100100 ; Unsigned Binary                         ;
-; six            ; 1100000 ; Unsigned Binary                         ;
-; seven          ; 0001111 ; Unsigned Binary                         ;
-; eight          ; 0000000 ; Unsigned Binary                         ;
-; nine           ; 0001100 ; Unsigned Binary                         ;
-+----------------+---------+-----------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -380,25 +334,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA SCLR          ; 9                           ;
 ;     plain             ; 49                          ;
 ; arriav_io_obuf        ; 72                          ;
-; arriav_lcell_comb     ; 121                         ;
-;     arith             ; 68                          ;
+; arriav_lcell_comb     ; 120                         ;
+;     arith             ; 60                          ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 37                          ;
-;         2 data inputs ; 6                           ;
+;         1 data inputs ; 33                          ;
+;         2 data inputs ; 2                           ;
 ;         3 data inputs ; 23                          ;
-;     normal            ; 53                          ;
-;         0 data inputs ; 2                           ;
-;         1 data inputs ; 4                           ;
+;     normal            ; 60                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 12                          ;
 ;         2 data inputs ; 11                          ;
-;         3 data inputs ; 3                           ;
+;         3 data inputs ; 2                           ;
 ;         4 data inputs ; 6                           ;
-;         5 data inputs ; 5                           ;
-;         6 data inputs ; 22                          ;
+;         5 data inputs ; 21                          ;
+;         6 data inputs ; 7                           ;
 ; arriav_mac            ; 2                           ;
 ; boundary_port         ; 175                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.20                        ;
-; Average LUT depth     ; 1.88                        ;
+; Max LUT depth         ; 3.70                        ;
+; Average LUT depth     ; 1.65                        ;
 +-----------------------+-----------------------------+
 
 
@@ -407,7 +361,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:04     ;
 +----------------+--------------+
 
 
@@ -417,7 +371,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
-    Info: Processing started: Fri Sep 18 02:38:00 2015
+    Info: Processing started: Fri Sep 18 12:00:33 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off eecs301_lab2 -c eecs301_lab2
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file v/dff3x2.v
@@ -440,9 +394,10 @@ Info (12021): Found 1 design units, including 1 entities, in source file eecs301
     Info (12023): Found entity 1: eecs301_lab2
 Info (12021): Found 1 design units, including 1 entities, in source file v/direction_handler.v
     Info (12023): Found entity 1: direction_handler
-Info (12021): Found 1 design units, including 1 entities, in source file v/display_digit.v
-    Info (12023): Found entity 1: display_digit
 Info (12127): Elaborating entity "eecs301_lab2" for the top level hierarchy
+Warning (10034): Output port "HEX0" at eecs301_lab2.v(21) has no driver
+Warning (10034): Output port "HEX1" at eecs301_lab2.v(22) has no driver
+Warning (10034): Output port "HEX2" at eecs301_lab2.v(23) has no driver
 Warning (10034): Output port "HEX3" at eecs301_lab2.v(24) has no driver
 Warning (10034): Output port "HEX4" at eecs301_lab2.v(25) has no driver
 Warning (10034): Output port "HEX5" at eecs301_lab2.v(26) has no driver
@@ -471,23 +426,9 @@ Info (12128): Elaborating entity "direction_handler" for hierarchy "direction_ha
 Info (12128): Elaborating entity "speed_counter" for hierarchy "speed_counter:sc"
 Warning (10230): Verilog HDL assignment warning at speed_counter.v(27): truncated value with size 32 to match size of target (8)
 Warning (10230): Verilog HDL assignment warning at speed_counter.v(28): truncated value with size 32 to match size of target (8)
-Warning (10230): Verilog HDL assignment warning at speed_counter.v(31): truncated value with size 32 to match size of target (8)
 Critical Warning (10237): Verilog HDL warning at speed_counter.v(31): can't infer register for assignment in edge-triggered always construct because the clock isn't obvious. Generated combinational logic instead
 Info (12128): Elaborating entity "dff3x2" for hierarchy "speed_counter:sc|dff3x2:dffs"
 Info (12128): Elaborating entity "flipflop" for hierarchy "speed_counter:sc|dff3x2:dffs|flipflop:a0"
-Info (12128): Elaborating entity "display_digit" for hierarchy "display_digit:display"
-Warning (10230): Verilog HDL assignment warning at display_digit.v(24): truncated value with size 8 to match size of target (1)
-Warning (10230): Verilog HDL assignment warning at display_digit.v(27): truncated value with size 32 to match size of target (1)
-Warning (10230): Verilog HDL assignment warning at display_digit.v(28): truncated value with size 32 to match size of target (1)
-Warning (10199): Verilog HDL Case Statement warning at display_digit.v(32): case item expression never matches the case expression
-Warning (10199): Verilog HDL Case Statement warning at display_digit.v(33): case item expression never matches the case expression
-Warning (10199): Verilog HDL Case Statement warning at display_digit.v(34): case item expression never matches the case expression
-Warning (10199): Verilog HDL Case Statement warning at display_digit.v(35): case item expression never matches the case expression
-Warning (10199): Verilog HDL Case Statement warning at display_digit.v(36): case item expression never matches the case expression
-Warning (10199): Verilog HDL Case Statement warning at display_digit.v(37): case item expression never matches the case expression
-Warning (10199): Verilog HDL Case Statement warning at display_digit.v(38): case item expression never matches the case expression
-Warning (10230): Verilog HDL assignment warning at display_digit.v(26): truncated value with size 32 to match size of target (3)
-Warning (10034): Output port "out[20..19]" at display_digit.v(5) has no driver
 Warning (12011): Net is missing source, defaulting to GND
     Warning (12110): Net "reset_count" is missing source, defaulting to GND
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
@@ -585,15 +526,15 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX1[2]" is stuck at GND
     Warning (13410): Pin "HEX1[3]" is stuck at GND
     Warning (13410): Pin "HEX1[4]" is stuck at GND
-    Warning (13410): Pin "HEX1[5]" is stuck at VCC
+    Warning (13410): Pin "HEX1[5]" is stuck at GND
     Warning (13410): Pin "HEX1[6]" is stuck at GND
-    Warning (13410): Pin "HEX2[0]" is stuck at VCC
+    Warning (13410): Pin "HEX2[0]" is stuck at GND
     Warning (13410): Pin "HEX2[1]" is stuck at GND
     Warning (13410): Pin "HEX2[2]" is stuck at GND
     Warning (13410): Pin "HEX2[3]" is stuck at GND
     Warning (13410): Pin "HEX2[4]" is stuck at GND
     Warning (13410): Pin "HEX2[5]" is stuck at GND
-    Warning (13410): Pin "HEX2[6]" is stuck at VCC
+    Warning (13410): Pin "HEX2[6]" is stuck at GND
     Warning (13410): Pin "HEX3[0]" is stuck at GND
     Warning (13410): Pin "HEX3[1]" is stuck at GND
     Warning (13410): Pin "HEX3[2]" is stuck at GND
@@ -648,7 +589,6 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "VGA_VS" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 8 registers lost all their fanouts during netlist optimizations.
-Info (144001): Generated suppressed messages file C:/Users/Jonathan Monreal/Desktop/EECS 301/lab2/eecs301_lab2.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 6 input pin(s) that do not drive logic
@@ -658,22 +598,16 @@ Warning (21074): Design contains 6 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "CLOCK4_50"
     Warning (15610): No output dependent on input pin "KEY[3]"
     Warning (15610): No output dependent on input pin "SW[1]"
-Info (21057): Implemented 302 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 294 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 19 input pins
     Info (21059): Implemented 84 output pins
     Info (21060): Implemented 72 bidirectional pins
-    Info (21061): Implemented 125 logic cells
+    Info (21061): Implemented 117 logic cells
     Info (21062): Implemented 2 DSP elements
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 201 warnings
-    Info: Peak virtual memory: 718 megabytes
-    Info: Processing ended: Fri Sep 18 02:38:15 2015
-    Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:33
-
-
-+------------------------------------------+
-; Analysis & Synthesis Suppressed Messages ;
-+------------------------------------------+
-The suppressed messages can be found in C:/Users/Jonathan Monreal/Desktop/EECS 301/lab2/eecs301_lab2.map.smsg.
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 191 warnings
+    Info: Peak virtual memory: 719 megabytes
+    Info: Processing ended: Fri Sep 18 12:00:56 2015
+    Info: Elapsed time: 00:00:23
+    Info: Total CPU time (on all processors): 00:00:29
 
 
