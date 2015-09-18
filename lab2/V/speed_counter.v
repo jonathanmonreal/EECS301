@@ -31,7 +31,7 @@ module speed_counter(clk, reset, input_a, input_b, speed);
 	
 	reg [7:0] counter = 0;
 	
-	always @(posedge clk)
+	always @(posedge en)
 		begin
 			if (reset) counter <= 0;
 			else if (en) begin
