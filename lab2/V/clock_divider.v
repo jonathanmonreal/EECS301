@@ -1,10 +1,10 @@
 module clock_divider(clk, clk_out);
+
 	input clk;
 	output wire clk_out;
 	
-	parameter n = 22;
-	reg [n:0] counter;
-	assign clk_out = counter[n];
+	reg [22:0] counter;
+	assign clk_out = counter[22];
 	
 	always @(posedge clk)
 		begin

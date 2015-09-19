@@ -5,12 +5,12 @@ module func(clk, k, g, m, out);
 	output reg [11:0] out;
 	
 	reg [15:0] r = 0;
-	reg [7:0] last_m = 0;
 	
 	always @(posedge clk)
 		begin
 			if (g > m) r = k * (g - m);
 			else r = k * (m - g);
+			if (g == 0) r = 0;
 			out = r[15:4];
 		end
 

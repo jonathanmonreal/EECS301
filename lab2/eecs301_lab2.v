@@ -76,6 +76,7 @@ wire pwm_out;
 
 // Assignment for a slow clock
 wire slow_clk;
+wire srst_clk;
 
 //=======================================================
 //  Structural
@@ -93,7 +94,7 @@ assign LEDR[8:0] = m;
 
 counter count(
 	.clk(CLOCK_50),
-	.reset(reset_count),
+	.reset(0),
 	.count(pwm_count)
 );
 
@@ -111,6 +112,11 @@ clock_divider slow(
 	.clk_out(slow_clk)
 );
 
+reset_clock reset_clk(
+	.clk(CLOCK_50),
+	.clk_out(srst_clk)
+);
+
 func f(
 	.clk(slow_clk),
 	.k(k),
@@ -121,7 +127,7 @@ func f(
 
 pwm controller(
 	.clk(pwm_count),
-	.rst(reset_count),
+	.rst(0),
 	.compare(r),
 	.m(pwm_out)
 );
@@ -134,7 +140,7 @@ direction_handler direct(
 
 speed_counter sc(
 	.clk(CLOCK_50),
-	.reset(buttons[2]),
+	.srst(srst_clk),
 	.input_a(encoder_a),
 	.input_b(encoder_b),
 	.speed(m)
