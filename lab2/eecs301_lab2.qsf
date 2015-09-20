@@ -442,20 +442,8 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1[35]
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name VERILOG_FILE V/func.v
-set_global_assignment -name VERILOG_FILE V/clock_divider.v
-set_global_assignment -name VERILOG_FILE V/pwm.v
-set_global_assignment -name VERILOG_FILE V/goal_counter.v
-set_global_assignment -name VERILOG_FILE V/flipflop.v
-set_global_assignment -name VERILOG_FILE V/counter.v
-set_global_assignment -name VERILOG_FILE eecs301_lab2.v
-set_global_assignment -name SDC_FILE eecs301_lab2.sdc
-set_global_assignment -name VERILOG_FILE V/direction_handler.v
-set_global_assignment -name VERILOG_FILE V/speed_counter.v
-set_global_assignment -name VERILOG_FILE V/reset_clock.v
 set_global_assignment -name ENABLE_SIGNALTAP ON
 set_global_assignment -name USE_SIGNALTAP_FILE stp1.stp
-set_global_assignment -name SIGNALTAP_FILE stp1.stp
 set_global_assignment -name SLD_NODE_CREATOR_ID 110 -section_id auto_signaltap_0
 set_global_assignment -name SLD_NODE_ENTITY_NAME sld_signaltap -section_id auto_signaltap_0
 set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_clk -to CLOCK_50 -section_id auto_signaltap_0
@@ -550,5 +538,18 @@ set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[0] -t
 set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[8] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
 set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[9] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
 set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[20] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_global_assignment -name VERILOG_FILE V/speedcount_pwm.v
+set_global_assignment -name VERILOG_FILE V/func.v
+set_global_assignment -name VERILOG_FILE V/clock_divider.v
+set_global_assignment -name VERILOG_FILE V/pwm.v
+set_global_assignment -name VERILOG_FILE V/goal_counter.v
+set_global_assignment -name VERILOG_FILE V/flipflop.v
+set_global_assignment -name VERILOG_FILE V/counter.v
+set_global_assignment -name VERILOG_FILE eecs301_lab2.v
+set_global_assignment -name SDC_FILE eecs301_lab2.sdc
+set_global_assignment -name VERILOG_FILE V/direction_handler.v
+set_global_assignment -name VERILOG_FILE V/speed_counter.v
+set_global_assignment -name VERILOG_FILE V/reset_clock.v
+set_global_assignment -name SIGNALTAP_FILE stp1.stp
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name SLD_FILE db/stp1_auto_stripped.stp

@@ -77,6 +77,7 @@ wire pwm_out;
 // Assignment for a slow clock
 wire slow_clk;
 wire srst_clk;
+wire srst_clk2;
 
 //=======================================================
 //  Structural
@@ -114,8 +115,14 @@ clock_divider slow(
 
 reset_clock reset_clk(
 	.clk(CLOCK_50),
-	.clk_out(srst_clk)
+	.clk_out(srst_clk2)
 );
+
+speedcount_pwm sp(
+	.clk_in(srst_clk2),
+	.x_in('b000001),
+	.PWM_out(srst_clk)
+ );
 
 func f(
 	.clk(slow_clk),
