@@ -8,7 +8,6 @@ module reset_clock(clk, clk_out);
 	
 	always @(posedge clk)
 		begin
-			//if (counter == 'b11111111111111111) counter = 0;
 			counter <= counter + 1;
 		end
 		

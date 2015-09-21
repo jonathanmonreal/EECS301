@@ -11,8 +11,8 @@ module func(clk, k, g, m, out);
 	
 	always @(posedge clk)
 		begin
-			if (g > m) r = k * (g - m);
-			else r = k * (m - g);
+			if (g > m) r = (k / 'b11111111) * (g - m);
+			else r = (k / 'b11111111) * (m - g);
 			if (g == 0) r = 0;
 			out = r[15:4];
 		end

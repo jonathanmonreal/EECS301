@@ -8,8 +8,8 @@ module direction_handler(direction, pwm_in, out);
 	
 	always
 		begin
-			if (direction) out = {1'b0, pwm_in}; // If the direction is 1
-			else out = {pwm_in, 1'b0};           // Else if the direction is 0
+			if (direction) out = {~pwm_in, pwm_in}; // If the direction is 1
+			else out = {pwm_in, ~pwm_in};           // Else if the direction is 0
 		end
 		
 endmodule

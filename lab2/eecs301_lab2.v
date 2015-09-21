@@ -77,6 +77,7 @@ wire pwm_out;
 // Assignment for a slow clock
 wire slow_clk;
 wire srst_clk;
+wire srst_clk2;
 
 //=======================================================
 //  Structural
@@ -90,7 +91,7 @@ assign {encoder_b, encoder_a} = GPIO_0[7:6];
 // Assign the buttons to be the inverse of the active low keys
 assign buttons = ~KEY;
 assign k = SW[9:2];
-assign LEDR[8:0] = m;
+assign LEDR[8:0] = r[8:0];
 
 // Module assignments
 counter count(
@@ -111,6 +112,11 @@ goal_counter goal(
 clock_divider slow(
 	.clk(CLOCK_50),
 	.clk_out(slow_clk)
+);
+
+reset_clock reset_clk(
+	.clk(CLOCK_50),
+	.clk_out(srst_clk2)
 );
 
 speedcount_pwm sp(
