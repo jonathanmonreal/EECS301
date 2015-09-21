@@ -1,3 +1,6 @@
+// Jonathan Monreal
+// A basic counter to be used with the PWM
+
 module counter(clk, reset, count);
 
 	input clk, reset;

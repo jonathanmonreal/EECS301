@@ -1,3 +1,6 @@
+// Jonathan Monreal
+// A basic D-flipflop to be used in the speed counter
+
 module flipflop(clk, reset, d, q);
 	
 	input clk, reset, d;

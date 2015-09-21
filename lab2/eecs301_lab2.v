@@ -77,7 +77,6 @@ wire pwm_out;
 // Assignment for a slow clock
 wire slow_clk;
 wire srst_clk;
-wire srst_clk2;
 
 //=======================================================
 //  Structural
@@ -93,6 +92,7 @@ assign buttons = ~KEY;
 assign k = SW[9:2];
 assign LEDR[8:0] = m;
 
+// Module assignments
 counter count(
 	.clk(CLOCK_50),
 	.reset(0),
@@ -111,11 +111,6 @@ goal_counter goal(
 clock_divider slow(
 	.clk(CLOCK_50),
 	.clk_out(slow_clk)
-);
-
-reset_clock reset_clk(
-	.clk(CLOCK_50),
-	.clk_out(srst_clk2)
 );
 
 speedcount_pwm sp(
@@ -147,6 +142,7 @@ direction_handler direct(
 
 speed_counter sc(
 	.clk(CLOCK_50),
+	.reset(reset_count),
 	.srst(srst_clk),
 	.input_a(encoder_a),
 	.input_b(encoder_b),

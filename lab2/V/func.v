@@ -1,3 +1,6 @@
+// Jonathan Monreal and Jiawei Wu
+// This module implements the control function of r = k * (g - m)
+
 module func(clk, k, g, m, out);
 
 	input clk;
