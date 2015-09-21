@@ -11,7 +11,7 @@
    <SOPCModuleParameter>
     <C>2</C>
     <Name>DESIGN_HASH</Name>
-    <Value>20cd6f2c325bc78b18b0</Value>
+    <Value>4900e8d72b135a5fd2d3</Value>
    </SOPCModuleParameter>
    <SOPCModuleParameter>
     <C>3</C>
@@ -69,7 +69,7 @@
     <Value>Unknown</Value>
    </SOPCModuleParameter>
   </SOPCModule>
-  <SystemID>1825827608</SystemID>
+  <SystemID>1858589931</SystemID>
  </SOPCSystem>
  <SchemaVersion>schema_2013-01-18</SchemaVersion>
 </ProgramExecution>
