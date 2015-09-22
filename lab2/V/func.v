@@ -14,6 +14,8 @@ module func(clk, k, g, m, out);
 			if (g > m) r = (k * (g - m));
 			else r = (k * (m - g));
 			if (g == 0) r = 0;
+			// Only taking the 8 msb is equivalent to dividing by 256,
+			// scaling k to be between 0 and 1.
 			out = r[15:8];
 		end
 
