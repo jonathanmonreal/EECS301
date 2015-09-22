@@ -5,16 +5,16 @@ module func(clk, k, g, m, out);
 
 	input clk;
 	input [7:0] k, g, m;
-	output reg [7:0] out
+	output reg [7:0] out;
 	
-	reg [7:0] r = 0;
+	reg [15:0] r = 0;
 	
 	always @(posedge clk)
 		begin
-			if (g > m) r = (k * (g - m))/('b11111111);
-			else r = (k * (m - g))/('b11111111);
+			if (g > m) r = (k * (g - m));
+			else r = (k * (m - g));
 			if (g == 0) r = 0;
-			out = r;
+			out = r[15:8];
 		end
 
 endmodule

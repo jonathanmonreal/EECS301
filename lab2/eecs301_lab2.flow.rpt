@@ -1,6 +1,6 @@
 Flow report for eecs301_lab2
-Mon Sep 21 15:33:33 2015
-Quartus II 64-Bit Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
+Tue Sep 22 09:30:26 2015
+Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Full Version
 
 
 ---------------------
@@ -21,45 +21,46 @@ Quartus II 64-Bit Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 1991-2014 Altera Corporation
+Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
 Your use of Altera Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
 to the terms and conditions of the Altera Program License 
-Subscription Agreement, Altera MegaCore Function License 
-Agreement, or other applicable license agreement, including, 
-without limitation, that your use is for the sole purpose of 
-programming logic devices manufactured by Altera and sold by 
-Altera or its authorized distributors.  Please refer to the 
-applicable agreement for further details.
+Subscription Agreement, the Altera Quartus II License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
 
 
 
-+------------------------------------------------------------------------------+
-; Flow Summary                                                                 ;
-+---------------------------------+--------------------------------------------+
-; Flow Status                     ; Successful - Mon Sep 21 15:33:20 2015      ;
-; Quartus II 64-Bit Version       ; 13.1.4 Build 182 03/12/2014 SJ Web Edition ;
-; Revision Name                   ; eecs301_lab2                               ;
-; Top-level Entity Name           ; eecs301_lab2                               ;
-; Family                          ; Cyclone V                                  ;
-; Device                          ; 5CSEMA5F31C6                               ;
-; Timing Models                   ; Final                                      ;
-; Logic utilization (in ALMs)     ; 356 / 32,070 ( 1 % )                       ;
-; Total registers                 ; 641                                        ;
-; Total pins                      ; 175 / 457 ( 38 % )                         ;
-; Total virtual pins              ; 0                                          ;
-; Total block memory bits         ; 2,432 / 4,065,280 ( < 1 % )                ;
-; Total DSP Blocks                ; 2 / 87 ( 2 % )                             ;
-; Total HSSI RX PCSs              ; 0                                          ;
-; Total HSSI PMA RX Deserializers ; 0                                          ;
-; Total HSSI TX PCSs              ; 0                                          ;
-; Total HSSI TX Channels          ; 0                                          ;
-; Total PLLs                      ; 0 / 6 ( 0 % )                              ;
-; Total DLLs                      ; 0 / 4 ( 0 % )                              ;
-+---------------------------------+--------------------------------------------+
++-------------------------------------------------------------------------------+
+; Flow Summary                                                                  ;
++---------------------------------+---------------------------------------------+
+; Flow Status                     ; Successful - Tue Sep 22 09:29:55 2015       ;
+; Quartus II 64-Bit Version       ; 15.0.0 Build 145 04/22/2015 SJ Full Version ;
+; Revision Name                   ; eecs301_lab2                                ;
+; Top-level Entity Name           ; eecs301_lab2                                ;
+; Family                          ; Cyclone V                                   ;
+; Device                          ; 5CSEMA5F31C6                                ;
+; Timing Models                   ; Final                                       ;
+; Logic utilization (in ALMs)     ; 442 / 32,070 ( 1 % )                        ;
+; Total registers                 ; 641                                         ;
+; Total pins                      ; 175 / 457 ( 38 % )                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 2,432 / 4,065,280 ( < 1 % )                 ;
+; Total DSP Blocks                ; 2 / 87 ( 2 % )                              ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0 / 6 ( 0 % )                               ;
+; Total DLLs                      ; 0 / 4 ( 0 % )                               ;
++---------------------------------+---------------------------------------------+
 
 
 +-----------------------------------------+
@@ -67,7 +68,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 09/21/2015 15:32:15 ;
+; Start date & time ; 09/22/2015 09:27:35 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; eecs301_lab2        ;
 +-------------------+---------------------+
@@ -78,7 +79,7 @@ applicable agreement for further details.
 +-------------------------------------+-----------------------------------------------------------------------------------------+---------------+-------------+------------------+
 ; Assignment Name                     ; Value                                                                                   ; Default Value ; Entity Name ; Section Id       ;
 +-------------------------------------+-----------------------------------------------------------------------------------------+---------------+-------------+------------------+
-; COMPILER_SIGNATURE_ID               ; 203178705148142.144286393409952                                                         ; --            ; --          ; --               ;
+; COMPILER_SIGNATURE_ID               ; 216075655566268.144292845507488                                                         ; --            ; --          ; --               ;
 ; ENABLE_SIGNALTAP                    ; On                                                                                      ; --            ; --          ; --               ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                                                                      ; --            ; --          ; --               ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                                                                       ; --            ; --          ; --               ;
@@ -111,8 +112,8 @@ applicable agreement for further details.
 ; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_TRIGGER_BITS=19                                                                     ; --            ; --          ; auto_signaltap_0 ;
 ; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_INVERSION_MASK=00000000000000000000000000000000000000000000000000000000000000000000 ; --            ; --          ; auto_signaltap_0 ;
 ; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_INVERSION_MASK_LENGTH=68                                                            ; --            ; --          ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_NODE_CRC_LOWORD=21821                                                               ; --            ; --          ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_NODE_CRC_HIWORD=40705                                                               ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_STORAGE_QUALIFIER_BITS=19                                                           ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_INCREMENTAL_ROUTING=1                                                               ; --            ; --          ; auto_signaltap_0 ;
 ; SMART_RECOMPILE                     ; On                                                                                      ; Off           ; --          ; --               ;
 ; USE_SIGNALTAP_FILE                  ; stp1.stp                                                                                ; --            ; --          ; --               ;
 +-------------------------------------+-----------------------------------------------------------------------------------------+---------------+-------------+------------------+
@@ -123,11 +124,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:05     ; 1.0                     ; 642 MB              ; 00:00:05                           ;
-; Fitter                    ; 00:00:46     ; 1.5                     ; 2054 MB             ; 00:01:03                           ;
-; Assembler                 ; 00:00:11     ; 1.0                     ; 643 MB              ; 00:00:10                           ;
-; TimeQuest Timing Analyzer ; 00:00:12     ; 1.3                     ; 870 MB              ; 00:00:13                           ;
-; Total                     ; 00:01:14     ; --                      ; --                  ; 00:01:31                           ;
+; Analysis & Synthesis      ; 00:00:41     ; 1.0                     ; 805 MB              ; 00:01:31                           ;
+; Partition Merge           ; 00:00:04     ; 1.0                     ; 868 MB              ; 00:00:04                           ;
+; Fitter                    ; 00:01:09     ; 1.3                     ; 2093 MB             ; 00:01:26                           ;
+; Assembler                 ; 00:00:17     ; 1.0                     ; 750 MB              ; 00:00:16                           ;
+; TimeQuest Timing Analyzer ; 00:00:29     ; 1.1                     ; 1103 MB             ; 00:00:32                           ;
+; Total                     ; 00:02:40     ; --                      ; --                  ; 00:03:49                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -136,18 +138,20 @@ applicable agreement for further details.
 +---------------------------+------------------+-----------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +---------------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis      ; G312-D26         ; Windows 7 ; 6.1        ; x86_64         ;
-; Fitter                    ; G312-D26         ; Windows 7 ; 6.1        ; x86_64         ;
-; Assembler                 ; G312-D26         ; Windows 7 ; 6.1        ; x86_64         ;
-; TimeQuest Timing Analyzer ; G312-D26         ; Windows 7 ; 6.1        ; x86_64         ;
+; Analysis & Synthesis      ; WINDOWS-UPL8F5C  ; Windows 7 ; 6.2        ; x86_64         ;
+; Partition Merge           ; WINDOWS-UPL8F5C  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; WINDOWS-UPL8F5C  ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; WINDOWS-UPL8F5C  ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; WINDOWS-UPL8F5C  ; Windows 7 ; 6.2        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
-quartus_map --read_settings_files=on --write_settings_files=off eecs301_lab2 -c eecs301_lab2
-quartus_fit --read_settings_files=off --write_settings_files=off eecs301_lab2 -c eecs301_lab2
+quartus_map --read_settings_files=on --write_settings_files=off eecs301_lab2 -c eecs301_lab2 --recompile=on
+quartus_cdb --read_settings_files=on --write_settings_files=off eecs301_lab2 -c eecs301_lab2 --merge=on --recompile=on
+quartus_fit --read_settings_files=off --write_settings_files=off eecs301_lab2 -c eecs301_lab2 --recompile=on
 quartus_asm --read_settings_files=off --write_settings_files=off eecs301_lab2 -c eecs301_lab2
 quartus_sta eecs301_lab2 -c eecs301_lab2
 
