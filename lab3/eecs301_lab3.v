@@ -67,15 +67,23 @@ assign GPIO_0[11] = ~LDAC;
 assign GPIO_0[12] = ~CLR;
 
 // Switch and button definitions
-wire variable_switch = ~SW[0];
+wire variable = ~SW[0];
 wire enable_SPI = ~SW[1];
 wire reset = ~KEY[0];
+wire down = ~KEY[1];
+wire up = ~KEY[2];
+
+// Amplitude and frequency registers
+reg amplitude;
+reg frequency;
+
+// Temporary
+
+assign LEDR = amplitude;
 
 //=======================================================
 //  Structural coding
 //=======================================================
-
-
 
 
 endmodule
