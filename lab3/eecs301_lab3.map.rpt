@@ -1,5 +1,5 @@
 Analysis & Synthesis report for eecs301_lab3
-Mon Sep 28 11:37:43 2015
+Mon Sep 28 12:23:36 2015
 Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Full Version
 
 
@@ -43,7 +43,7 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Sep 28 11:37:43 2015       ;
+; Analysis & Synthesis Status     ; Successful - Mon Sep 28 12:23:36 2015       ;
 ; Quartus II 64-Bit Version       ; 15.0.0 Build 145 04/22/2015 SJ Full Version ;
 ; Revision Name                   ; eecs301_lab3                                ;
 ; Top-level Entity Name           ; eecs301_lab3                                ;
@@ -260,11 +260,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 15.0.0 Build 145 04/22/2015 SJ Full Version
-    Info: Processing started: Mon Sep 28 11:37:22 2015
+    Info: Processing started: Mon Sep 28 12:23:15 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off eecs301_lab3 -c eecs301_lab3
 Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
+Info (12021): Found 1 design units, including 1 entities, in source file nco/synthesis/nco.v
+    Info (12023): Found entity 1: NCO
 Info (12021): Found 1 design units, including 1 entities, in source file eecs301_lab3.v
     Info (12023): Found entity 1: eecs301_lab3
+Info (12021): Found 1 design units, including 1 entities, in source file shiftreg.v
+    Info (12023): Found entity 1: shiftreg
 Info (12127): Elaborating entity "eecs301_lab3" for the top level hierarchy
 Warning (10034): Output port "HEX0" at eecs301_lab3.v(20) has no driver
 Warning (10034): Output port "HEX1" at eecs301_lab3.v(21) has no driver
@@ -470,9 +474,9 @@ Info (21057): Implemented 175 device resources after synthesis - the final resou
     Info (21059): Implemented 84 output pins
     Info (21060): Implemented 72 bidirectional pins
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 197 warnings
-    Info: Peak virtual memory: 713 megabytes
-    Info: Processing ended: Mon Sep 28 11:37:43 2015
+    Info: Peak virtual memory: 717 megabytes
+    Info: Processing ended: Mon Sep 28 12:23:36 2015
     Info: Elapsed time: 00:00:21
-    Info: Total CPU time (on all processors): 00:00:48
+    Info: Total CPU time (on all processors): 00:00:49
 
 
