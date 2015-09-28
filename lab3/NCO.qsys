@@ -70,7 +70,7 @@
   <parameter name="design_env" value="NATIVE" />
   <parameter name="dpri" value="4" />
   <parameter name="fmod_pipe" value="1" />
-  <parameter name="freq_out" value="1.0" />
+  <parameter name="freq_out" value="0.02" />
   <parameter name="fsamp" value="50.0" />
   <parameter name="mpr" value="18" />
   <parameter name="numba" value="1" />
