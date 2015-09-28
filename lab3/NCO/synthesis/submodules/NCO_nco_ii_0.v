@@ -22,26 +22,18 @@
 
 module NCO_nco_ii_0(clk, reset_n, clken, phi_inc_i, fsin_o, out_valid);
 
-parameter mpr = 18;
-parameter opr = 36;
+parameter mpr = 12;
 parameter apr = 16;
 parameter apri= 16;
 parameter aprf= 32;
 parameter aprp= 16;
 parameter aprid=21;
 parameter dpri= 4;
-parameter rdw = 18;
-parameter rawc = 8;
-parameter rnwc = 256;
-parameter rawf = 8;
-parameter rnwf = 256;
-parameter Pn = 16384;
-parameter mxnbc = 4608;
-parameter mxnbf = 4608;
-parameter rsfc = "NCO_nco_ii_0_sin_c.hex";
-parameter rsff = "NCO_nco_ii_0_sin_f.hex";
-parameter rcfc = "NCO_nco_ii_0_cos_c.hex";
-parameter rcff = "NCO_nco_ii_0_cos_f.hex";
+parameter rdw = 11;
+parameter raw = 13;
+parameter rnw = 8192;
+parameter rsf = "NCO_nco_ii_0_sin.hex";
+parameter rcf = "NCO_nco_ii_0_cos.hex";
 parameter nc = 1;
 parameter log2nc =0;
 parameter outselinit = -1;
@@ -67,31 +59,45 @@ wire reset;
 assign reset = !reset_n;
 
 wire [apr-1:0]  phi_inc_i_w;
+wire [mpr-1:0] sin_rom_2c_w;
+wire [mpr-1:0] cos_rom_2c_w;
+wire [mpr-2:0] sin_rom_d_w;
+wire [mpr-2:0] cos_rom_d_w;
+wire [raw-1:0] raxx001w;
 wire [apr-1:0] phi_acc_w;
-wire [mpr-1:0] rfx_s;	
-wire [mpr-1:0] rcx_s;
-wire [mpr-1:0] rfx_c;	
-wire [mpr-1:0] rcx_c;
-wire [mpr-1:0] rfy_s;	
-wire [mpr-1:0] rcy_s;
-wire [mpr-1:0] rfy_c;	
-wire [mpr-1:0] rcy_c;
-wire [rawc-1:0] raxxx001ms;
-wire [rawc-1:0] raxxx001mc;
-wire [rawc-1:0] raxxx000m;
-wire [rawf-1:0] raxxx000l;
-wire [rawc-1:0] raxxx001m;
-wire [rawf-1:0] raxxx001l;
 wire [aprid-1:0] phi_acc_w_d;
 wire [aprid-1:0] phi_acc_w_di;
 wire [dpri-1:0]  rval_w_d;
 wire [dpri-1:0]  rval_w;
-wire [opr-1:0] result_i;	
-wire [opr-1:0] result_r;	
+wire [mpr-1:0] sin_o_w;
+wire [mpr-1:0] cos_o_w;
+wire [mpr-2:0] rxs_w;
+wire [mpr-2:0] rxc_w;
 wire [mpr-1:0] fsin_o_w;	
+wire [mpr-1:0] fcos_o_w;	
+wire [2:0] selector_rot;
+wire [2:0] nq;
+
+
+
+
+
+asj_xnqg u011(.phi_a(phi_acc_w_d),
+             .xnq(nq)
+             );
+defparam u011.apr=aprid;
+
+
+segment_arr_tdl tdl( .clk(clk),
+                     .reset(reset),
+                     .clken(clken), 
+                     .current_seg(nq),
+                     .seg_rot(selector_rot)
+                      );
+defparam tdl.npiperom = 2;
+defparam tdl.npiperot = 4;
 
 assign phi_inc_i_w = phi_inc_i;
-
 
 asj_altqmcpipe ux000 (.clk(clk),
              .reset(reset),
@@ -137,96 +143,94 @@ defparam ux0219.apr = apr;
 defparam ux0219.aprid = aprid;
 
 
-asj_gam_dp ux008( .clk(clk),
+asj_gar ux007( .clk(clk),
                    .reset(reset),
+                   .phi_acc_w(phi_acc_w_d[aprid-4:aprid-3-raw]),
                    .clken(clken),
-                   .phi_acc_w(phi_acc_w_d[aprid-1:aprid-rawc-rawf]),
-                   .rom_add_cs(raxxx001ms),
-                   .rom_add_cc(raxxx001mc),
-                   .rom_add_f(raxxx001l)
+                   .segment_lsb(nq[0]),
+                   .rom_add(raxx001w)
                    );
-defparam ux008.rawc = rawc;
-defparam ux008.rawf = rawf;
-defparam ux008.apr = apri;
+defparam ux007.raw = raw;
+defparam ux007.apr = apri;
 
+sid_2c_1p sid2c(.clk(clk),
+                .reset(reset),
+                .clken(clken),
+                .sin_rom(rxs_w),
+                .cos_rom(rxc_w),
+                .sin_rom_2c(sin_rom_2c_w),
+                .cos_rom_2c(cos_rom_2c_w),
+                .sin_rom_d(sin_rom_d_w),
+                .cos_rom_d(cos_rom_d_w)
+                );
 
-asj_nco_as_m_dp_cen ux0220(.clk(clk),
+defparam sid2c.mpr = mpr;
+
+asj_nco_as_m_cen ux0120(.clk(clk),
                    .clken (clken),
-                   .raxx_a(raxxx001ms[rawc-1:0]),
-                   .raxx_b(raxxx001mc[rawc-1:0]),
-                   .q_a(rcx_s[mpr-1:0]),
-                   .q_b(rcx_c[mpr-1:0])
-                     );
-defparam ux0220.mpr = mpr;
-defparam ux0220.rdw = rdw;
-defparam ux0220.raw = rawc;
-defparam ux0220.rnw = rnwc;
-defparam ux0220.rf = rsfc;
-defparam ux0220.dev = "Cyclone V";
+                   .raxx (raxx001w[raw-1:0]),
+                   .srw_int_res(rxs_w[mpr-2:0])
+                    );
 
-asj_nco_as_m_cen ux0122(.clk(clk),
+defparam ux0120.mpr = mpr;
+defparam ux0120.rdw = rdw;
+defparam ux0120.raw = raw;
+defparam ux0120.rnw = rnw;
+defparam ux0120.rf = rsf;
+defparam ux0120.dev = "Cyclone V";
+
+asj_nco_as_m_cen ux0121(.clk(clk),
                    .clken (clken),
-                   .raxx(raxxx001l[rawf-1:0]),
-                   .srw_int_res(rfx_s[mpr-1:0])
-                     );
-defparam ux0122.mpr = mpr;
-defparam ux0122.rdw = rdw;
-defparam ux0122.raw = rawf;
-defparam ux0122.rnw = rnwf;
-defparam ux0122.rf = rsff;
-defparam ux0122.dev = "Cyclone V";
+                   .raxx (raxx001w[raw-1:0]),
+                   .srw_int_res(rxc_w[mpr-2:0])
+                    );
 
-asj_nco_as_m_cen ux0123(.clk(clk),
-                   .clken (clken),
-                   .raxx(raxxx001l[rawf-1:0]),
-                   .srw_int_res(rfx_c[mpr-1:0])
-                     );
-defparam ux0123.mpr = mpr;
-defparam ux0123.rdw = rdw;
-defparam ux0123.raw = rawf;
-defparam ux0123.rnw = rnwf;
-defparam ux0123.rf = rcff;
-defparam ux0123.dev = "Cyclone V";
+defparam ux0121.mpr = mpr;
+defparam ux0121.rdw = rdw;
+defparam ux0121.raw = raw;
+defparam ux0121.rnw = rnw;
+defparam ux0121.rf = rcf;
+defparam ux0121.dev = "Cyclone V";
 
-mac_i_lpmd m0(.clk(clk),
-         .reset(reset),
-         .clken(clken),
-         .a_or_s(1'b1),
-         .dataa_0(rcy_s),
-         .dataa_1(rfy_s),
-         .datab_0(rfy_c),
-         .datab_1(rcy_c),
-         .result(result_i));
-defparam m0.mpr = mpr;
-defparam m0.opr = opr;
+segment_sel  rot(.clk(clk),
+                 .reset(reset),
+                 .clken(clken),
+                 .segment(selector_rot),
+                 .sin_rom_d(sin_rom_d_w),
+                 .cos_rom_d(cos_rom_d_w),
+                 .sin_rom_2c(sin_rom_2c_w),
+                 .cos_rom_2c(cos_rom_2c_w),
+                 .sin_o(sin_o_w)
+		     );
 
-asj_nco_derot ux0136(.crwx_rc(rcx_c),
-                     .crwx_rf(rfx_c),
-                     .srwx_rc(rcx_s),
-                     .srwx_rf(rfx_s),
-                     .crwy_rc(rcy_c),
-                     .crwy_rf(rfy_c),
-                     .srwy_rc(rcy_s),
-                     .srwy_rf(rfy_s)
-                     );
-defparam ux0136.mpr = mpr;
-defparam ux0136.rxt = rdw;
+defparam rot.mpr = mpr;
 
-asj_nco_mob_w blk0( .clk(clk),
-                    .reset(reset),
-                    .clken(clken),
-                    .data_in(result_i),
-                    .data_out(fsin_o_w));
-
-defparam blk0.mpr = mpr;
+asj_nco_mob_rw ux122(.data_in(sin_o_w),
+                     .data_out(fsin_o_w),
+                     .reset(reset),
+                     .clken(clken),
+                     .clk(clk)
+);
+defparam ux122.mpr = mpr;
+defparam ux122.sel = 0;
+asj_nco_mob_rw ux123(.data_in(cos_o_w),
+                     .data_out(fcos_o_w),
+                     .reset(reset),
+                     .clken(clken),
+                     .clk(clk)
+);
+defparam ux123.mpr = mpr;
+defparam ux123.sel = 0;
 assign fsin_o = fsin_o_w;
+
+
 
 asj_nco_isdr ux710isdr(.clk(clk),
                     .reset(reset),
                     .clken(clken),
                     .data_ready(out_valid)
                     );
-defparam ux710isdr.ctc=12;
+defparam ux710isdr.ctc=9;
 defparam ux710isdr.cpr=4;
 
 

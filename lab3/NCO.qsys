@@ -6,11 +6,16 @@
    version="1.0"
    description=""
    tags="INTERNAL_COMPONENT=true"
-   categories="" />
+   categories="System" />
  <parameter name="bonusData"><![CDATA[bonusData 
 {
    element $${FILENAME}
    {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
    }
    element nco_ii_0
    {
@@ -34,7 +39,7 @@
  <parameter name="hideFromIPCatalog" value="true" />
  <parameter name="lockedInterfaceDefinition" value="" />
  <parameter name="maxAdditionalLatency" value="1" />
- <parameter name="projectName" value="" />
+ <parameter name="projectName" value="eecs301_lab3.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="0" />
  <parameter name="testBenchDutName" value="" />
@@ -65,14 +70,14 @@
   <parameter name="aprf" value="32" />
   <parameter name="apri" value="16" />
   <parameter name="aprp" value="16" />
-  <parameter name="arch" value="trig" />
+  <parameter name="arch" value="small_rom" />
   <parameter name="cordic_arch" value="parallel" />
   <parameter name="design_env" value="NATIVE" />
   <parameter name="dpri" value="4" />
   <parameter name="fmod_pipe" value="1" />
   <parameter name="freq_out" value="0.02" />
   <parameter name="fsamp" value="50.0" />
-  <parameter name="mpr" value="18" />
+  <parameter name="mpr" value="12" />
   <parameter name="numba" value="1" />
   <parameter name="numch" value="1" />
   <parameter name="pmod_pipe" value="1" />

@@ -54,7 +54,6 @@ module eecs301_lab3(
 //  REG/WIRE declarations
 //=======================================================
 
-// DAC signal definitions
 reg SYNC;
 reg SCLK;
 reg Din;
@@ -67,15 +66,45 @@ assign GPIO_0[11] = ~LDAC;
 assign GPIO_0[12] = ~CLR;
 
 // Switch and button definitions
-wire variable_switch = ~SW[0];
+wire variable = ~SW[0];
 wire enable_SPI = ~SW[1];
 wire reset = ~KEY[0];
+wire down = ~KEY[1];
+wire up = ~KEY[2];
+
+// Amplitude and frequency registers
+reg amplitude;
+reg frequency;
+
+// Temporary
+
+assign LEDR = amplitude;
+
+wire [17:0] nco_data;
+wire sr_out;
+
 
 //=======================================================
 //  Structural coding
 //=======================================================
 
+shiftreg sr(
+	.clock(),
+	.data(nco_data),
+	.enable(),
+	.load(),
+	.shiftin(),
+	.shiftout(sr_out)
+)
 
+NCO generator(
+		.clk(CLOCK_50),       // clk.clk
+		.clken(1),     //  in.clken
+		.phi_inc_i(), //    .phi_inc_i
+		.fsin_o(ncodata),    // out.fsin_o
+		.out_valid(), //    .out_valid
+		.reset_n()
 
+)
 
 endmodule

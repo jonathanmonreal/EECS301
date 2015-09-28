@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EnsembleReport name="NCO" kind="system" version="15.0" fabric="QSYS">
  <!-- Format version 15.0 145 (Future versions may contain additional information.) -->
- <!-- 2015.09.28.12:21:04 -->
+ <!-- 2015.09.28.14:27:41 -->
  <!-- A collection of modules and connections -->
  <parameter name="clockCrossingAdapter">
   <type>com.altera.sopcmodel.ensemble.EClockAdapter</type>
@@ -53,7 +53,7 @@
  </parameter>
  <parameter name="generationId">
   <type>int</type>
-  <value>1443457263</value>
+  <value>1443464860</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>true</visible>
@@ -101,7 +101,7 @@
  </parameter>
  <parameter name="projectName">
   <type>java.lang.String</type>
-  <value></value>
+  <value>eecs301_lab3.qpf</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>false</visible>
@@ -161,7 +161,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="arch">
    <type>java.lang.String</type>
-   <value>trig</value>
+   <value>small_rom</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -195,7 +195,7 @@ the requested settings for a module instance. -->
    <type>boolean</type>
    <value>true</value>
    <derived>false</derived>
-   <enabled>true</enabled>
+   <enabled>false</enabled>
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
@@ -226,7 +226,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="mpr">
    <type>int</type>
-   <value>18</value>
+   <value>12</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -245,7 +245,7 @@ the requested settings for a module instance. -->
    <value>1</value>
    <derived>false</derived>
    <enabled>true</enabled>
-   <visible>true</visible>
+   <visible>false</visible>
    <valid>true</valid>
   </parameter>
   <parameter name="cycles_per_output">
@@ -253,7 +253,7 @@ the requested settings for a module instance. -->
    <value>1</value>
    <derived>true</derived>
    <enabled>true</enabled>
-   <visible>false</visible>
+   <visible>true</visible>
    <valid>true</valid>
   </parameter>
   <parameter name="want_dither">
@@ -554,7 +554,7 @@ parameters are a RESULT of the module parameters. -->
    <port>
     <name>fsin_o</name>
     <direction>Output</direction>
-    <width>18</width>
+    <width>12</width>
     <role>fsin_o</role>
    </port>
    <port>
@@ -598,5 +598,5 @@ parameters are a RESULT of the module parameters. -->
   <version>15.0</version>
  </plugin>
  <reportVersion>15.0 145</reportVersion>
- <uniqueIdentifier>C48508B1D3BB0000015014C1E91A</uniqueIdentifier>
+ <uniqueIdentifier>C48508B1D3BB000001501535D418</uniqueIdentifier>
 </EnsembleReport>

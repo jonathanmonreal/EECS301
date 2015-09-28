@@ -42,14 +42,12 @@ module shiftreg (
 	data,
 	enable,
 	load,
-	shiftin,
 	shiftout);
 
 	input	  clock;
-	input	[7:0]  data;
+	input	[11:0]  data;
 	input	  enable;
 	input	  load;
-	input	  shiftin;
 	output	  shiftout;
 
 	wire  sub_wire0;
@@ -60,7 +58,6 @@ module shiftreg (
 				.data (data),
 				.enable (enable),
 				.load (load),
-				.shiftin (shiftin),
 				.shiftout (sub_wire0)
 				// synopsys translate_off
 				,
@@ -68,13 +65,14 @@ module shiftreg (
 				.aset (),
 				.q (),
 				.sclr (),
+				.shiftin (),
 				.sset ()
 				// synopsys translate_on
 				);
 	defparam
 		LPM_SHIFTREG_component.lpm_direction = "LEFT",
 		LPM_SHIFTREG_component.lpm_type = "LPM_SHIFTREG",
-		LPM_SHIFTREG_component.lpm_width = 8;
+		LPM_SHIFTREG_component.lpm_width = 12;
 
 
 endmodule
@@ -96,25 +94,23 @@ endmodule
 // Retrieval info: PRIVATE: SSET NUMERIC "0"
 // Retrieval info: PRIVATE: SSET_ALL1 NUMERIC "1"
 // Retrieval info: PRIVATE: SYNTH_WRAPPER_GEN_POSTFIX STRING "0"
-// Retrieval info: PRIVATE: SerialShiftInput NUMERIC "1"
+// Retrieval info: PRIVATE: SerialShiftInput NUMERIC "0"
 // Retrieval info: PRIVATE: SerialShiftOutput NUMERIC "1"
-// Retrieval info: PRIVATE: nBit NUMERIC "8"
+// Retrieval info: PRIVATE: nBit NUMERIC "12"
 // Retrieval info: PRIVATE: new_diagram STRING "1"
 // Retrieval info: LIBRARY: lpm lpm.lpm_components.all
 // Retrieval info: CONSTANT: LPM_DIRECTION STRING "LEFT"
 // Retrieval info: CONSTANT: LPM_TYPE STRING "LPM_SHIFTREG"
-// Retrieval info: CONSTANT: LPM_WIDTH NUMERIC "8"
+// Retrieval info: CONSTANT: LPM_WIDTH NUMERIC "12"
 // Retrieval info: USED_PORT: clock 0 0 0 0 INPUT NODEFVAL "clock"
-// Retrieval info: USED_PORT: data 0 0 8 0 INPUT NODEFVAL "data[7..0]"
+// Retrieval info: USED_PORT: data 0 0 12 0 INPUT NODEFVAL "data[11..0]"
 // Retrieval info: USED_PORT: enable 0 0 0 0 INPUT NODEFVAL "enable"
 // Retrieval info: USED_PORT: load 0 0 0 0 INPUT NODEFVAL "load"
-// Retrieval info: USED_PORT: shiftin 0 0 0 0 INPUT NODEFVAL "shiftin"
 // Retrieval info: USED_PORT: shiftout 0 0 0 0 OUTPUT NODEFVAL "shiftout"
 // Retrieval info: CONNECT: @clock 0 0 0 0 clock 0 0 0 0
-// Retrieval info: CONNECT: @data 0 0 8 0 data 0 0 8 0
+// Retrieval info: CONNECT: @data 0 0 12 0 data 0 0 12 0
 // Retrieval info: CONNECT: @enable 0 0 0 0 enable 0 0 0 0
 // Retrieval info: CONNECT: @load 0 0 0 0 load 0 0 0 0
-// Retrieval info: CONNECT: @shiftin 0 0 0 0 shiftin 0 0 0 0
 // Retrieval info: CONNECT: shiftout 0 0 0 0 @shiftout 0 0 0 0
 // Retrieval info: GEN_FILE: TYPE_NORMAL shiftreg.v TRUE
 // Retrieval info: GEN_FILE: TYPE_NORMAL shiftreg.inc FALSE
