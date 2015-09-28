@@ -85,5 +85,14 @@ assign LEDR = amplitude;
 //  Structural coding
 //=======================================================
 
+Module NCO generator(
+		.clk(),       // clk.clk
+		.clken(),     //  in.clken
+		.phi_inc_i(), //    .phi_inc_i
+		.fsin_o(),    // out.fsin_o
+		.out_valid(), //    .out_valid
+		.reset_n()
+
+)
 
 endmodule
