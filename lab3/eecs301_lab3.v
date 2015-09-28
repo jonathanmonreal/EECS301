@@ -54,12 +54,28 @@ module eecs301_lab3(
 //  REG/WIRE declarations
 //=======================================================
 
+// DAC signal definitions
+reg SYNC;
+reg SCLK;
+reg Din;
+reg LDAC;
+reg CLR;
+assign GPIO_0[10] = ~SYNC;
+assign GPIO_0[8] = SCLK;
+assign GPIO_0[9] = Din;
+assign GPIO_0[11] = ~LDAC;
+assign GPIO_0[12] = ~CLR;
 
-
-
+// Switch and button definitions
+wire variable_switch = ~SW[0];
+wire enable_SPI = ~SW[1];
+wire reset = ~KEY[0];
 
 //=======================================================
 //  Structural coding
 //=======================================================
+
+
+
 
 endmodule
