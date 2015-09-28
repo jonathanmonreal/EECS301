@@ -79,15 +79,19 @@ reg frequency;
 // Temporary
 
 assign LEDR = amplitude;
+<<<<<<< HEAD
 
 wire [17:0] nco_data;
 wire sr_out;
 
+=======
+>>>>>>> b1c0d6dd5055eadc018c17d17f2e0c1824688db9
 
 //=======================================================
 //  Structural coding
 //=======================================================
 
+<<<<<<< HEAD
 shiftreg sr(
 	.clock(),
 	.data(nco_data),
@@ -102,6 +106,13 @@ NCO generator(
 		.clken(1),     //  in.clken
 		.phi_inc_i(), //    .phi_inc_i
 		.fsin_o(ncodata),    // out.fsin_o
+=======
+Module NCO generator(
+		.clk(),       // clk.clk
+		.clken(),     //  in.clken
+		.phi_inc_i(), //    .phi_inc_i
+		.fsin_o(),    // out.fsin_o
+>>>>>>> b1c0d6dd5055eadc018c17d17f2e0c1824688db9
 		.out_valid(), //    .out_valid
 		.reset_n()
 

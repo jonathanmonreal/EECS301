@@ -1,5 +1,5 @@
 Analysis & Synthesis report for eecs301_lab3
-Mon Sep 28 12:23:36 2015
+Mon Sep 28 14:00:18 2015
 Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Full Version
 
 
@@ -43,7 +43,7 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Sep 28 12:23:36 2015       ;
+; Analysis & Synthesis Status     ; Successful - Mon Sep 28 14:00:18 2015       ;
 ; Quartus II 64-Bit Version       ; 15.0.0 Build 145 04/22/2015 SJ Full Version ;
 ; Revision Name                   ; eecs301_lab3                                ;
 ; Top-level Entity Name           ; eecs301_lab3                                ;
@@ -168,13 +168,13 @@ agreement for further details.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                 ;
-+----------------------------------+-----------------+------------------------+--------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path   ; Library ;
-+----------------------------------+-----------------+------------------------+--------------------------------+---------+
-; eecs301_lab3.v                   ; yes             ; User Verilog HDL File  ; C:/EECS301/lab3/eecs301_lab3.v ;         ;
-+----------------------------------+-----------------+------------------------+--------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                 ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                   ; Library ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------------------+---------+
+; eecs301_lab3.v                   ; yes             ; User Verilog HDL File  ; C:/Users/Jonathan Monreal/Desktop/EECS 301/lab3/eecs301_lab3.v ;         ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------------------+---------+
 
 
 +----------------------------------------------------------------+
@@ -260,23 +260,88 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 15.0.0 Build 145 04/22/2015 SJ Full Version
-    Info: Processing started: Mon Sep 28 12:23:15 2015
+    Info: Processing started: Mon Sep 28 13:59:54 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off eecs301_lab3 -c eecs301_lab3
 Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
+Info (12248): Elaborating Qsys system entity "NCO.qsys"
+Info (12250): 2015.09.28.14:00:11 Progress: Loading lab3/NCO.qsys
+Info (12250): 2015.09.28.14:00:12 Progress: Reading input file
+Info (12250): 2015.09.28.14:00:12 Progress: Adding nco_ii_0 [altera_nco_ii 15.0]
+Info (12250): 2015.09.28.14:00:12 Progress: Parameterizing module nco_ii_0
+Info (12250): 2015.09.28.14:00:12 Progress: Building connections
+Info (12250): 2015.09.28.14:00:12 Progress: Parameterizing connections
+Info (12250): 2015.09.28.14:00:12 Progress: Validating
+Info (12250): 2015.09.28.14:00:13 Progress: Done reading input file
+Info (12250): NCO: Generating NCO "NCO" for QUARTUS_SYNTH
+Info (12250): Nco_ii_0: "NCO" instantiated altera_nco_ii "nco_ii_0"
+Info (12250): NCO: Done "NCO" with 2 modules, 22 files
+Info (12249): Finished elaborating Qsys system entity "NCO.qsys"
+Info (12021): Found 1 design units, including 1 entities, in source file nco/synthesis/submodules/nco_nco_ii_0.v
+    Info (12023): Found entity 1: NCO_nco_ii_0
 Info (12021): Found 1 design units, including 1 entities, in source file nco/synthesis/nco.v
     Info (12023): Found entity 1: NCO
 Info (12021): Found 1 design units, including 1 entities, in source file eecs301_lab3.v
     Info (12023): Found entity 1: eecs301_lab3
 Info (12021): Found 1 design units, including 1 entities, in source file shiftreg.v
     Info (12023): Found entity 1: shiftreg
+Info (12021): Found 1 design units, including 1 entities, in source file rom.v
+    Info (12023): Found entity 1: rom
+Info (12021): Found 1 design units, including 1 entities, in source file controller.v
+    Info (12023): Found entity 1: controller
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nco/nco.v
+    Info (12023): Found entity 1: NCO
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nco/submodules/nco_nco_ii_0.v
+    Info (12023): Found entity 1: NCO_nco_ii_0
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nco/submodules/asj_altqmcpipe.v
+    Info (12023): Found entity 1: asj_altqmcpipe
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nco/submodules/asj_dxx.v
+    Info (12023): Found entity 1: asj_dxx
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nco/submodules/asj_dxx_g.v
+    Info (12023): Found entity 1: asj_dxx_g
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nco/submodules/asj_gam_dp.v
+    Info (12023): Found entity 1: asj_gam_dp
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nco/submodules/asj_nco_aprid_dxx.v
+    Info (12023): Found entity 1: asj_nco_aprid_dxx
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nco/submodules/asj_nco_as_m_cen.v
+    Info (12023): Found entity 1: asj_nco_as_m_cen
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nco/submodules/asj_nco_as_m_dp_cen.v
+    Info (12023): Found entity 1: asj_nco_as_m_dp_cen
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nco/submodules/asj_nco_derot.v
+    Info (12023): Found entity 1: asj_nco_derot
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nco/submodules/asj_nco_isdr.v
+    Info (12023): Found entity 1: asj_nco_isdr
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nco/submodules/asj_nco_mob_w.v
+    Info (12023): Found entity 1: asj_nco_mob_w
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nco/submodules/las.v
+    Info (12023): Found entity 1: las
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nco/submodules/lmsd.v
+    Info (12023): Found entity 1: lmsd
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nco/submodules/mac_i_lpmd.v
+    Info (12023): Found entity 1: mac_i_lpmd
 Info (12127): Elaborating entity "eecs301_lab3" for the top level hierarchy
+Warning (10858): Verilog HDL warning at eecs301_lab3.v(58): object SYNC used but never assigned
+Warning (10858): Verilog HDL warning at eecs301_lab3.v(59): object SCLK used but never assigned
+Warning (10858): Verilog HDL warning at eecs301_lab3.v(60): object Din used but never assigned
+Warning (10858): Verilog HDL warning at eecs301_lab3.v(61): object LDAC used but never assigned
+Warning (10858): Verilog HDL warning at eecs301_lab3.v(62): object CLR used but never assigned
+Warning (10036): Verilog HDL or VHDL warning at eecs301_lab3.v(70): object "variable" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at eecs301_lab3.v(71): object "enable_SPI" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at eecs301_lab3.v(72): object "reset" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at eecs301_lab3.v(73): object "down" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at eecs301_lab3.v(74): object "up" assigned a value but never read
+Warning (10858): Verilog HDL warning at eecs301_lab3.v(77): object amplitude used but never assigned
+Warning (10030): Net "SYNC" at eecs301_lab3.v(58) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "SCLK" at eecs301_lab3.v(59) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "Din" at eecs301_lab3.v(60) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "LDAC" at eecs301_lab3.v(61) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "CLR" at eecs301_lab3.v(62) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "amplitude" at eecs301_lab3.v(77) has no driver or initial value, using a default initial value '0'
 Warning (10034): Output port "HEX0" at eecs301_lab3.v(20) has no driver
 Warning (10034): Output port "HEX1" at eecs301_lab3.v(21) has no driver
 Warning (10034): Output port "HEX2" at eecs301_lab3.v(22) has no driver
 Warning (10034): Output port "HEX3" at eecs301_lab3.v(23) has no driver
 Warning (10034): Output port "HEX4" at eecs301_lab3.v(24) has no driver
 Warning (10034): Output port "HEX5" at eecs301_lab3.v(25) has no driver
-Warning (10034): Output port "LEDR" at eecs301_lab3.v(31) has no driver
 Warning (10034): Output port "VGA_B" at eecs301_lab3.v(37) has no driver
 Warning (10034): Output port "VGA_G" at eecs301_lab3.v(40) has no driver
 Warning (10034): Output port "VGA_R" at eecs301_lab3.v(42) has no driver
@@ -288,7 +353,6 @@ Warning (10034): Output port "VGA_CLK" at eecs301_lab3.v(39) has no driver
 Warning (10034): Output port "VGA_HS" at eecs301_lab3.v(41) has no driver
 Warning (10034): Output port "VGA_SYNC_N" at eecs301_lab3.v(43) has no driver
 Warning (10034): Output port "VGA_VS" at eecs301_lab3.v(44) has no driver
-Warning (12158): Entity "eecs301_lab3" contains only dangling pins
 Warning (13039): The following bidirectional pins have no drivers
     Warning (13040): bidirectional pin "GPIO_0[0]" has no driver
     Warning (13040): bidirectional pin "GPIO_0[1]" has no driver
@@ -298,11 +362,6 @@ Warning (13039): The following bidirectional pins have no drivers
     Warning (13040): bidirectional pin "GPIO_0[5]" has no driver
     Warning (13040): bidirectional pin "GPIO_0[6]" has no driver
     Warning (13040): bidirectional pin "GPIO_0[7]" has no driver
-    Warning (13040): bidirectional pin "GPIO_0[8]" has no driver
-    Warning (13040): bidirectional pin "GPIO_0[9]" has no driver
-    Warning (13040): bidirectional pin "GPIO_0[10]" has no driver
-    Warning (13040): bidirectional pin "GPIO_0[11]" has no driver
-    Warning (13040): bidirectional pin "GPIO_0[12]" has no driver
     Warning (13040): bidirectional pin "GPIO_0[13]" has no driver
     Warning (13040): bidirectional pin "GPIO_0[14]" has no driver
     Warning (13040): bidirectional pin "GPIO_0[15]" has no driver
@@ -362,6 +421,16 @@ Warning (13039): The following bidirectional pins have no drivers
     Warning (13040): bidirectional pin "GPIO_1[33]" has no driver
     Warning (13040): bidirectional pin "GPIO_1[34]" has no driver
     Warning (13040): bidirectional pin "GPIO_1[35]" has no driver
+Warning (13032): The following tri-state nodes are fed by constants
+    Warning (13033): The pin "GPIO_0[12]" is fed by VCC
+    Warning (13033): The pin "GPIO_0[11]" is fed by VCC
+    Warning (13033): The pin "GPIO_0[10]" is fed by VCC
+    Warning (13033): The pin "GPIO_0[9]" is fed by GND
+    Warning (13033): The pin "GPIO_0[8]" is fed by GND
+Warning (13009): TRI or OPNDRN buffers permanently enabled
+    Warning (13010): Node "GPIO_0[10]~synth"
+    Warning (13010): Node "GPIO_0[11]~synth"
+    Warning (13010): Node "GPIO_0[12]~synth"
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "ADC_CONVST" is stuck at GND
     Warning (13410): Pin "ADC_DIN" is stuck at GND
@@ -447,6 +516,18 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "VGA_R[7]" is stuck at GND
     Warning (13410): Pin "VGA_SYNC_N" is stuck at GND
     Warning (13410): Pin "VGA_VS" is stuck at GND
+Warning (20013): Ignored assignments for entity "NCO" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_global_assignment -name IP_GENERATED_DEVICE_FAMILY "\{Cyclone V\}" -entity NCO -qip "C:/Users/Jonathan Monreal/Desktop/EECS 301/lab3/db/ip/NCO/NCO.qip" -library NCO was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TARGETED_DEVICE_FAMILY "Cyclone V" -entity NCO -qip "C:/Users/Jonathan Monreal/Desktop/EECS 301/lab3/db/ip/NCO/NCO.qip" -library NCO was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_QSYS_MODE STANDALONE -entity NCO -qip "C:/Users/Jonathan Monreal/Desktop/EECS 301/lab3/db/ip/NCO/NCO.qip" -library NCO was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_NAME Qsys -entity NCO -qip "C:/Users/Jonathan Monreal/Desktop/EECS 301/lab3/db/ip/NCO/NCO.qip" -library NCO was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_VERSION 15.0 -entity NCO -qip "C:/Users/Jonathan Monreal/Desktop/EECS 301/lab3/db/ip/NCO/NCO.qip" -library NCO was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_ENV Qsys -entity NCO -qip "C:/Users/Jonathan Monreal/Desktop/EECS 301/lab3/db/ip/NCO/NCO.qip" -library NCO was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name SLD_INFO "QSYS_NAME NCO HAS_SOPCINFO 1 GENERATION_ID 1443463214" -entity NCO -qip "C:/Users/Jonathan Monreal/Desktop/EECS 301/lab3/db/ip/NCO/NCO.qip" -library NCO was ignored
+Warning (20013): Ignored assignments for entity "NCO_nco_ii_0" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_NAME altera_nco_ii -entity NCO_nco_ii_0 -qip "C:/Users/Jonathan Monreal/Desktop/EECS 301/lab3/db/ip/NCO/NCO.qip" -library NCO was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_VERSION 15.0 -entity NCO_nco_ii_0 -qip "C:/Users/Jonathan Monreal/Desktop/EECS 301/lab3/db/ip/NCO/NCO.qip" -library NCO was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_ENV Qsys -entity NCO_nco_ii_0 -qip "C:/Users/Jonathan Monreal/Desktop/EECS 301/lab3/db/ip/NCO/NCO.qip" -library NCO was ignored
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 19 input pin(s) that do not drive logic
@@ -473,10 +554,10 @@ Info (21057): Implemented 175 device resources after synthesis - the final resou
     Info (21058): Implemented 19 input pins
     Info (21059): Implemented 84 output pins
     Info (21060): Implemented 72 bidirectional pins
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 197 warnings
-    Info: Peak virtual memory: 717 megabytes
-    Info: Processing ended: Mon Sep 28 12:23:36 2015
-    Info: Elapsed time: 00:00:21
-    Info: Total CPU time (on all processors): 00:00:49
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 229 warnings
+    Info: Peak virtual memory: 722 megabytes
+    Info: Processing ended: Mon Sep 28 14:00:18 2015
+    Info: Elapsed time: 00:00:24
+    Info: Total CPU time (on all processors): 00:00:59
 
 

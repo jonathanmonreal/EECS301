@@ -110,11 +110,11 @@ GPIO_0[4] <> <UNC>
 GPIO_0[5] <> <UNC>
 GPIO_0[6] <> <UNC>
 GPIO_0[7] <> <UNC>
-GPIO_0[8] <> <UNC>
-GPIO_0[9] <> <UNC>
-GPIO_0[10] <> <UNC>
-GPIO_0[11] <> <UNC>
-GPIO_0[12] <> <UNC>
+GPIO_0[8] <> <GND>
+GPIO_0[9] <> <GND>
+GPIO_0[10] <> <VCC>
+GPIO_0[11] <> <VCC>
+GPIO_0[12] <> <VCC>
 GPIO_0[13] <> <UNC>
 GPIO_0[14] <> <UNC>
 GPIO_0[15] <> <UNC>
