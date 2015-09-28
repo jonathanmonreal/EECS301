@@ -45,7 +45,7 @@ module shiftreg (
 	shiftout);
 
 	input	  clock;
-	input	[11:0]  data;
+	input	[31:0]  data;
 	input	  enable;
 	input	  load;
 	output	  shiftout;
@@ -72,7 +72,7 @@ module shiftreg (
 	defparam
 		LPM_SHIFTREG_component.lpm_direction = "LEFT",
 		LPM_SHIFTREG_component.lpm_type = "LPM_SHIFTREG",
-		LPM_SHIFTREG_component.lpm_width = 12;
+		LPM_SHIFTREG_component.lpm_width = 32;
 
 
 endmodule
@@ -96,19 +96,19 @@ endmodule
 // Retrieval info: PRIVATE: SYNTH_WRAPPER_GEN_POSTFIX STRING "0"
 // Retrieval info: PRIVATE: SerialShiftInput NUMERIC "0"
 // Retrieval info: PRIVATE: SerialShiftOutput NUMERIC "1"
-// Retrieval info: PRIVATE: nBit NUMERIC "12"
+// Retrieval info: PRIVATE: nBit NUMERIC "32"
 // Retrieval info: PRIVATE: new_diagram STRING "1"
 // Retrieval info: LIBRARY: lpm lpm.lpm_components.all
 // Retrieval info: CONSTANT: LPM_DIRECTION STRING "LEFT"
 // Retrieval info: CONSTANT: LPM_TYPE STRING "LPM_SHIFTREG"
-// Retrieval info: CONSTANT: LPM_WIDTH NUMERIC "12"
+// Retrieval info: CONSTANT: LPM_WIDTH NUMERIC "32"
 // Retrieval info: USED_PORT: clock 0 0 0 0 INPUT NODEFVAL "clock"
-// Retrieval info: USED_PORT: data 0 0 12 0 INPUT NODEFVAL "data[11..0]"
+// Retrieval info: USED_PORT: data 0 0 32 0 INPUT NODEFVAL "data[31..0]"
 // Retrieval info: USED_PORT: enable 0 0 0 0 INPUT NODEFVAL "enable"
 // Retrieval info: USED_PORT: load 0 0 0 0 INPUT NODEFVAL "load"
 // Retrieval info: USED_PORT: shiftout 0 0 0 0 OUTPUT NODEFVAL "shiftout"
 // Retrieval info: CONNECT: @clock 0 0 0 0 clock 0 0 0 0
-// Retrieval info: CONNECT: @data 0 0 12 0 data 0 0 12 0
+// Retrieval info: CONNECT: @data 0 0 32 0 data 0 0 32 0
 // Retrieval info: CONNECT: @enable 0 0 0 0 enable 0 0 0 0
 // Retrieval info: CONNECT: @load 0 0 0 0 load 0 0 0 0
 // Retrieval info: CONNECT: shiftout 0 0 0 0 @shiftout 0 0 0 0

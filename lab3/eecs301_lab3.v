@@ -54,11 +54,11 @@ module eecs301_lab3(
 //  REG/WIRE declarations
 //=======================================================
 
-reg SYNC;
-reg SCLK;
-reg Din;
-reg LDAC;
-reg CLR;
+wire SYNC;
+wire SCLK;
+wire Din;
+wire LDAC;
+wire CLR;
 assign GPIO_0[10] = ~SYNC;
 assign GPIO_0[8] = SCLK;
 assign GPIO_0[9] = Din;
@@ -73,49 +73,56 @@ wire down = ~KEY[1];
 wire up = ~KEY[2];
 
 // Amplitude and frequency registers
-reg amplitude;
-reg frequency;
+wire [7:0] amplitude;
+wire [7:0] frequency;
 
 // Temporary
 
 assign LEDR = amplitude;
-<<<<<<< HEAD
 
 wire [17:0] nco_data;
-wire sr_out;
-
-=======
->>>>>>> b1c0d6dd5055eadc018c17d17f2e0c1824688db9
+wire [31:0] dac_in;
+wire slow_clk;
+assign dac_in[19:8] = nco_data;
+assign dac_in[7:6] = 'b00;
+assign dac_in[23:20] = 'b0000; // address
+assign dac_in[27:24] = 'b0011; // command
+assign SCLK = slow_clk;
+assign LDAC = 0;
 
 //=======================================================
 //  Structural coding
 //=======================================================
 
-<<<<<<< HEAD
+clock_divider slow(
+	.clk(CLOCK_50),
+	.clk_out(slow_clk)
+);
+controller control(
+	.clk(CLOCK_50),
+	.rst(reset),
+	.variable(variable),
+	.down(down),
+	.up(up),
+	.amp(amplitude),
+	.freq(frequency)
+);
+
 shiftreg sr(
-	.clock(),
-	.data(nco_data),
-	.enable(),
-	.load(),
-	.shiftin(),
-	.shiftout(sr_out)
-)
+	.clock(CLOCK_50),
+	.data(dac_in),
+	.enable(1),
+	.load(slow_clk),
+	.shiftout(Din)
+);
 
 NCO generator(
 		.clk(CLOCK_50),       // clk.clk
-		.clken(1),     //  in.clken
-		.phi_inc_i(), //    .phi_inc_i
-		.fsin_o(ncodata),    // out.fsin_o
-=======
-Module NCO generator(
-		.clk(),       // clk.clk
-		.clken(),     //  in.clken
-		.phi_inc_i(), //    .phi_inc_i
-		.fsin_o(),    // out.fsin_o
->>>>>>> b1c0d6dd5055eadc018c17d17f2e0c1824688db9
+		.clken(slow_clk),     //  in.clken
+		.phi_inc_i(26), //    .phi_inc_i
+		.fsin_o(nco_data),    // out.fsin_o
 		.out_valid(), //    .out_valid
-		.reset_n()
-
-)
+		.reset_n(reset)
+);
 
 endmodule

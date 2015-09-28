@@ -55,8 +55,8 @@ agreement for further details.
 	(port
 		(pt 256 72)
 		(output)
-		(text "fsin_o[17..0]" (rect 0 0 48 12)(font "Arial" (font_size 8)))
-		(text "fsin_o[17..0]" (rect 194 61 272 72)(font "Arial" (font_size 8)))
+		(text "fsin_o[11..0]" (rect 0 0 47 12)(font "Arial" (font_size 8)))
+		(text "fsin_o[11..0]" (rect 196 61 274 72)(font "Arial" (font_size 8)))
 		(line (pt 256 72)(pt 176 72)(line_width 3))
 	)
 	(port

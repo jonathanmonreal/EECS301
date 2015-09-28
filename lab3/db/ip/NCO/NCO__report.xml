@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <deploy
- date="2015.09.28.14:00:16"
+ date="2015.09.28.16:01:09"
  outputDirectory="C:/Users/Jonathan Monreal/Desktop/EECS 301/lab3/db/ip/NCO/">
  <perimeter>
   <parameter
@@ -66,7 +66,7 @@
   <interface name="out" kind="conduit" start="0">
    <property name="associatedClock" value="clk" />
    <property name="associatedReset" value="rst" />
-   <port name="fsin_o" direction="output" role="fsin_o" width="18" />
+   <port name="fsin_o" direction="output" role="fsin_o" width="12" />
    <port name="out_valid" direction="output" role="out_valid" width="1" />
   </interface>
   <interface name="rst" kind="reset" start="0">
@@ -77,13 +77,13 @@
  </perimeter>
  <entity
    path=""
-   parameterizationKey="NCO:1.0:AUTO_CLK_CLOCK_DOMAIN=-1,AUTO_CLK_CLOCK_RATE=-1,AUTO_CLK_RESET_DOMAIN=-1,AUTO_DEVICE=5CSEMA5F31C6,AUTO_DEVICE_FAMILY=Cyclone V,AUTO_DEVICE_SPEEDGRADE=6,AUTO_GENERATION_ID=1443463214,AUTO_UNIQUE_ID=(altera_nco_ii:15.0:apr=16,aprf=32,apri=16,aprp=16,arch=trig,cordic_arch=parallel,cycles_per_output=1,design_env=NATIVE,dpri=4,fmod_pipe=1,freq_out=0.02,fsamp=50.0,mpr=18,numba=1,numch=1,phi_inc=26,pmod_pipe=1,real_freq_out=0.01984,selected_device_family=Cyclone V,trig_cycles_per_output=1,use_dedicated_multipliers=true,want_dither=true,want_freq_mod=false,want_phase_mod=false,want_sin_and_cos=single_output)"
+   parameterizationKey="NCO:1.0:AUTO_CLK_CLOCK_DOMAIN=-1,AUTO_CLK_CLOCK_RATE=-1,AUTO_CLK_RESET_DOMAIN=-1,AUTO_DEVICE=5CSEMA5F31C6,AUTO_DEVICE_FAMILY=Cyclone V,AUTO_DEVICE_SPEEDGRADE=6,AUTO_GENERATION_ID=1443470466,AUTO_UNIQUE_ID=(altera_nco_ii:15.0:apr=16,aprf=32,apri=16,aprp=16,arch=small_rom,cordic_arch=parallel,cycles_per_output=1,design_env=NATIVE,dpri=4,fmod_pipe=1,freq_out=0.02,fsamp=50.0,mpr=12,numba=1,numch=1,phi_inc=26,pmod_pipe=1,real_freq_out=0.01984,selected_device_family=Cyclone V,trig_cycles_per_output=1,use_dedicated_multipliers=true,want_dither=true,want_freq_mod=false,want_phase_mod=false,want_sin_and_cos=single_output)"
    instancePathKey="NCO"
    kind="NCO"
    version="1.0"
    name="NCO">
   <parameter name="AUTO_CLK_CLOCK_RATE" value="-1" />
-  <parameter name="AUTO_GENERATION_ID" value="1443463214" />
+  <parameter name="AUTO_GENERATION_ID" value="1443470466" />
   <parameter name="AUTO_DEVICE" value="5CSEMA5F31C6" />
   <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone V" />
   <parameter name="AUTO_CLK_RESET_DOMAIN" value="-1" />
@@ -97,19 +97,11 @@
   </generatedFiles>
   <childGeneratedFiles>
    <file
-       path="C:/Users/Jonathan Monreal/Desktop/EECS 301/lab3/db/ip/NCO/submodules/NCO_nco_ii_0_sin_c.hex"
+       path="C:/Users/Jonathan Monreal/Desktop/EECS 301/lab3/db/ip/NCO/submodules/NCO_nco_ii_0_sin.hex"
        type="HEX"
        attributes="" />
    <file
-       path="C:/Users/Jonathan Monreal/Desktop/EECS 301/lab3/db/ip/NCO/submodules/NCO_nco_ii_0_cos_c.hex"
-       type="HEX"
-       attributes="" />
-   <file
-       path="C:/Users/Jonathan Monreal/Desktop/EECS 301/lab3/db/ip/NCO/submodules/NCO_nco_ii_0_sin_f.hex"
-       type="HEX"
-       attributes="" />
-   <file
-       path="C:/Users/Jonathan Monreal/Desktop/EECS 301/lab3/db/ip/NCO/submodules/NCO_nco_ii_0_cos_f.hex"
+       path="C:/Users/Jonathan Monreal/Desktop/EECS 301/lab3/db/ip/NCO/submodules/NCO_nco_ii_0_cos.hex"
        type="HEX"
        attributes="" />
    <file
@@ -117,7 +109,7 @@
        type="VERILOG"
        attributes="" />
    <file
-       path="C:/Users/Jonathan Monreal/Desktop/EECS 301/lab3/db/ip/NCO/submodules/mac_i_lpmd.v"
+       path="C:/Users/Jonathan Monreal/Desktop/EECS 301/lab3/db/ip/NCO/submodules/sid_2c_1p.v"
        type="VERILOG"
        attributes="" />
    <file
@@ -125,7 +117,23 @@
        type="VERILOG"
        attributes="" />
    <file
-       path="C:/Users/Jonathan Monreal/Desktop/EECS 301/lab3/db/ip/NCO/submodules/asj_nco_mob_w.v"
+       path="C:/Users/Jonathan Monreal/Desktop/EECS 301/lab3/db/ip/NCO/submodules/asj_nco_mob_rw.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/Users/Jonathan Monreal/Desktop/EECS 301/lab3/db/ip/NCO/submodules/asj_gar.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/Users/Jonathan Monreal/Desktop/EECS 301/lab3/db/ip/NCO/submodules/asj_nco_isdr.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/Users/Jonathan Monreal/Desktop/EECS 301/lab3/db/ip/NCO/submodules/segment_arr_tdl.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/Users/Jonathan Monreal/Desktop/EECS 301/lab3/db/ip/NCO/submodules/segment_sel.v"
        type="VERILOG"
        attributes="" />
    <file
@@ -133,7 +141,11 @@
        type="VERILOG"
        attributes="" />
    <file
-       path="C:/Users/Jonathan Monreal/Desktop/EECS 301/lab3/db/ip/NCO/submodules/asj_nco_as_m_dp_cen.v"
+       path="C:/Users/Jonathan Monreal/Desktop/EECS 301/lab3/db/ip/NCO/submodules/asj_dxx.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/Users/Jonathan Monreal/Desktop/EECS 301/lab3/db/ip/NCO/submodules/asj_xnqg.v"
        type="VERILOG"
        attributes="" />
    <file
@@ -142,30 +154,6 @@
        attributes="" />
    <file
        path="C:/Users/Jonathan Monreal/Desktop/EECS 301/lab3/db/ip/NCO/submodules/asj_altqmcpipe.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="C:/Users/Jonathan Monreal/Desktop/EECS 301/lab3/db/ip/NCO/submodules/asj_nco_derot.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="C:/Users/Jonathan Monreal/Desktop/EECS 301/lab3/db/ip/NCO/submodules/asj_nco_isdr.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="C:/Users/Jonathan Monreal/Desktop/EECS 301/lab3/db/ip/NCO/submodules/las.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="C:/Users/Jonathan Monreal/Desktop/EECS 301/lab3/db/ip/NCO/submodules/asj_dxx.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="C:/Users/Jonathan Monreal/Desktop/EECS 301/lab3/db/ip/NCO/submodules/lmsd.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="C:/Users/Jonathan Monreal/Desktop/EECS 301/lab3/db/ip/NCO/submodules/asj_gam_dp.v"
        type="VERILOG"
        attributes="" />
    <file
@@ -214,7 +202,7 @@
  </entity>
  <entity
    path="submodules/"
-   parameterizationKey="altera_nco_ii:15.0:apr=16,aprf=32,apri=16,aprp=16,arch=trig,cordic_arch=parallel,cycles_per_output=1,design_env=NATIVE,dpri=4,fmod_pipe=1,freq_out=0.02,fsamp=50.0,mpr=18,numba=1,numch=1,phi_inc=26,pmod_pipe=1,real_freq_out=0.01984,selected_device_family=Cyclone V,trig_cycles_per_output=1,use_dedicated_multipliers=true,want_dither=true,want_freq_mod=false,want_phase_mod=false,want_sin_and_cos=single_output"
+   parameterizationKey="altera_nco_ii:15.0:apr=16,aprf=32,apri=16,aprp=16,arch=small_rom,cordic_arch=parallel,cycles_per_output=1,design_env=NATIVE,dpri=4,fmod_pipe=1,freq_out=0.02,fsamp=50.0,mpr=12,numba=1,numch=1,phi_inc=26,pmod_pipe=1,real_freq_out=0.01984,selected_device_family=Cyclone V,trig_cycles_per_output=1,use_dedicated_multipliers=true,want_dither=true,want_freq_mod=false,want_phase_mod=false,want_sin_and_cos=single_output"
    instancePathKey="NCO:.:nco_ii_0"
    kind="altera_nco_ii"
    version="15.0"
@@ -233,7 +221,7 @@
   <parameter name="apr" value="16" />
   <parameter name="trig_cycles_per_output" value="1" />
   <parameter name="dpri" value="4" />
-  <parameter name="mpr" value="18" />
+  <parameter name="mpr" value="12" />
   <parameter name="design_env" value="NATIVE" />
   <parameter name="numch" value="1" />
   <parameter name="want_freq_mod" value="false" />
@@ -241,24 +229,16 @@
   <parameter name="want_sin_and_cos" value="single_output" />
   <parameter name="phi_inc" value="26" />
   <parameter name="fmod_pipe" value="1" />
-  <parameter name="arch" value="trig" />
+  <parameter name="arch" value="small_rom" />
   <parameter name="freq_out" value="0.02" />
   <parameter name="real_freq_out" value="0.01984" />
   <generatedFiles>
    <file
-       path="C:/Users/Jonathan Monreal/Desktop/EECS 301/lab3/db/ip/NCO/submodules/NCO_nco_ii_0_sin_c.hex"
+       path="C:/Users/Jonathan Monreal/Desktop/EECS 301/lab3/db/ip/NCO/submodules/NCO_nco_ii_0_sin.hex"
        type="HEX"
        attributes="" />
    <file
-       path="C:/Users/Jonathan Monreal/Desktop/EECS 301/lab3/db/ip/NCO/submodules/NCO_nco_ii_0_cos_c.hex"
-       type="HEX"
-       attributes="" />
-   <file
-       path="C:/Users/Jonathan Monreal/Desktop/EECS 301/lab3/db/ip/NCO/submodules/NCO_nco_ii_0_sin_f.hex"
-       type="HEX"
-       attributes="" />
-   <file
-       path="C:/Users/Jonathan Monreal/Desktop/EECS 301/lab3/db/ip/NCO/submodules/NCO_nco_ii_0_cos_f.hex"
+       path="C:/Users/Jonathan Monreal/Desktop/EECS 301/lab3/db/ip/NCO/submodules/NCO_nco_ii_0_cos.hex"
        type="HEX"
        attributes="" />
    <file
@@ -266,7 +246,7 @@
        type="VERILOG"
        attributes="" />
    <file
-       path="C:/Users/Jonathan Monreal/Desktop/EECS 301/lab3/db/ip/NCO/submodules/mac_i_lpmd.v"
+       path="C:/Users/Jonathan Monreal/Desktop/EECS 301/lab3/db/ip/NCO/submodules/sid_2c_1p.v"
        type="VERILOG"
        attributes="" />
    <file
@@ -274,7 +254,23 @@
        type="VERILOG"
        attributes="" />
    <file
-       path="C:/Users/Jonathan Monreal/Desktop/EECS 301/lab3/db/ip/NCO/submodules/asj_nco_mob_w.v"
+       path="C:/Users/Jonathan Monreal/Desktop/EECS 301/lab3/db/ip/NCO/submodules/asj_nco_mob_rw.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/Users/Jonathan Monreal/Desktop/EECS 301/lab3/db/ip/NCO/submodules/asj_gar.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/Users/Jonathan Monreal/Desktop/EECS 301/lab3/db/ip/NCO/submodules/asj_nco_isdr.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/Users/Jonathan Monreal/Desktop/EECS 301/lab3/db/ip/NCO/submodules/segment_arr_tdl.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/Users/Jonathan Monreal/Desktop/EECS 301/lab3/db/ip/NCO/submodules/segment_sel.v"
        type="VERILOG"
        attributes="" />
    <file
@@ -282,7 +278,11 @@
        type="VERILOG"
        attributes="" />
    <file
-       path="C:/Users/Jonathan Monreal/Desktop/EECS 301/lab3/db/ip/NCO/submodules/asj_nco_as_m_dp_cen.v"
+       path="C:/Users/Jonathan Monreal/Desktop/EECS 301/lab3/db/ip/NCO/submodules/asj_dxx.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/Users/Jonathan Monreal/Desktop/EECS 301/lab3/db/ip/NCO/submodules/asj_xnqg.v"
        type="VERILOG"
        attributes="" />
    <file
@@ -291,30 +291,6 @@
        attributes="" />
    <file
        path="C:/Users/Jonathan Monreal/Desktop/EECS 301/lab3/db/ip/NCO/submodules/asj_altqmcpipe.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="C:/Users/Jonathan Monreal/Desktop/EECS 301/lab3/db/ip/NCO/submodules/asj_nco_derot.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="C:/Users/Jonathan Monreal/Desktop/EECS 301/lab3/db/ip/NCO/submodules/asj_nco_isdr.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="C:/Users/Jonathan Monreal/Desktop/EECS 301/lab3/db/ip/NCO/submodules/las.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="C:/Users/Jonathan Monreal/Desktop/EECS 301/lab3/db/ip/NCO/submodules/asj_dxx.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="C:/Users/Jonathan Monreal/Desktop/EECS 301/lab3/db/ip/NCO/submodules/lmsd.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="C:/Users/Jonathan Monreal/Desktop/EECS 301/lab3/db/ip/NCO/submodules/asj_gam_dp.v"
        type="VERILOG"
        attributes="" />
    <file

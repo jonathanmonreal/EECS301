@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<!--Created by Liquid XML 2008 (www.liquid-technologies.com) for Altera-->
+<ProgramExecution xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">
+	<QuartusExecution>
+		<AddressBits>64</AddressBits>
+		<ApplicationError>
+		<Bits>64</Bits>
+		<CommandLine>quartus</CommandLine>
+		<ErrorMessage></ErrorMessage>
+		<Line>1382</Line>
+		<Platform>windows</Platform>
+		<SourceFile>/quartus/sys/proj/proj_project.cpp</SourceFile>
+		<StackTrace>
+		</StackTrace>
+		<Subsystem>PROJ</Subsystem>
+	</ApplicationError>
+	<Compilation>
+			<CompileID>0</CompileID>
+			<DeviceFamily/>
+			<IncrementalCompilation/>
+			<TopLevelEntityName/>
+		</Compilation>
+		<DateInvoked>2015/09/28 14:39:34</DateInvoked>
+		<ElapsedTime>8699</ElapsedTime>
+		<IP>172.20.44.34</IP>
+		<IsInternal>false</IsInternal>
+		<IsQt>true</IsQt>
+		<License>
+			<Edition>Full Version</Edition>
+			<LicenseHostID>005056a93bd9</LicenseHostID>
+		</License>
+		<Machine>
+			<CPUCountLogical>4</CPUCountLogical>
+			<CPUCountPhysical>1</CPUCountPhysical>
+			<CPUSpeed>2800</CPUSpeed>
+			<Hostname>JonMBPWindows</Hostname>
+			<NIC>
+				<Address>00ffd012c421</Address>
+			</NIC>
+			<NIC>
+				<Address>00ff523e064a</Address>
+			</NIC>
+			<NIC>
+				<Address>62f81dd048e8</Address>
+			</NIC>
+			<NIC>
+				<Address>60f81dd048e8</Address>
+			</NIC>
+			<NIC>
+				<Address>60f81dd048e9</Address>
+			</NIC>
+			<OS>Windows 7</OS>
+			<OSAddressBits>64</OSAddressBits>
+			<OSVersion>6.2</OSVersion>
+			<Platform>windows</Platform>
+			<ScreenResolution>unknown</ScreenResolution>
+			<TotalPhysicalRAM>8100</TotalPhysicalRAM>
+			<TotalVirtualRAM>798</TotalVirtualRAM>
+		</Machine>
+		<Name>quartus</Name>
+		<PeakMemoryUsed>0</PeakMemoryUsed>
+		<ProjectRevision>
+			<ProjectName/>
+			<Revision/>
+		</ProjectRevision>
+		<QuartusInstallation>
+			<InstallationID>1098707551265.144345094001048</InstallationID>
+			<Version>
+				<Build>145</Build>
+				<BuildSite>SJ</BuildSite>
+				<BuildSuffix/>
+				<Edition>Full Version</Edition>
+				<ServicePack>0</ServicePack>
+				<VersionNumber>15</VersionNumber>
+			</Version>
+		</QuartusInstallation>
+		<QuartusUser>
+			<AlteraUserName>jem177</AlteraUserName>
+			<FAEContactName/>
+			<TalkbackStatus>
+				<DateSet/>
+				<TalkbackOn>true</TalkbackOn>
+			</TalkbackStatus>
+			<UserID>108817791600872.144267362303492</UserID>
+			<UserName>Jonathan Monreal</UserName>
+		</QuartusUser>
+	</QuartusExecution>
+	<SchemaVersion>schema_2013-01-18</SchemaVersion>
+</ProgramExecution>
+
