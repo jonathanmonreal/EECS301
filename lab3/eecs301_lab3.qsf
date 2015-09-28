@@ -446,3 +446,4 @@ set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_
 set_global_assignment -name VERILOG_FILE NCO/synthesis/NCO.v
 set_global_assignment -name VERILOG_FILE eecs301_lab3.v
 set_global_assignment -name SDC_FILE eecs301_lab3.sdc
+set_global_assignment -name QIP_FILE shiftreg.qip
