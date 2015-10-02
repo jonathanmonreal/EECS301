@@ -80,15 +80,17 @@ wire [7:0] frequency;
 
 assign LEDR = amplitude;
 
-wire [17:0] nco_data;
+wire [11:0] nco_data;
 wire [31:0] dac_in;
 wire slow_clk;
+wire load;
+wire load2;
 assign dac_in[19:8] = nco_data;
-assign dac_in[7:6] = 'b00;
-assign dac_in[23:20] = 'b0000; // address
-assign dac_in[27:24] = 'b0011; // command
-assign SCLK = slow_clk;
-assign LDAC = 0;
+assign dac_in[23:20] = 4'b0000; // address
+assign dac_in[27:24] = 4'b0011; // command
+assign SCLK = CLOCK_50;
+assign LDAC = ~load2;
+assign SYNC = ~load;
 
 //=======================================================
 //  Structural coding
@@ -98,8 +100,17 @@ clock_divider slow(
 	.clk(CLOCK_50),
 	.clk_out(slow_clk)
 );
+
+load_pulse pulse(
+.clk_in(CLOCK_50), .x_in(6'b000001), .PWM_out(load)
+);
+
+load_pulse pulse2(
+.clk_in(CLOCK_50), .x_in(6'b100000), .PWM_out(load2)
+);
+
 controller control(
-	.clk(CLOCK_50),
+	.clk(slow_clk),
 	.rst(reset),
 	.variable(variable),
 	.down(down),
@@ -111,18 +122,18 @@ controller control(
 shiftreg sr(
 	.clock(CLOCK_50),
 	.data(dac_in),
-	.enable(1),
-	.load(slow_clk),
+	.enable(1'b1),
+	.load(load),
 	.shiftout(Din)
 );
 
 NCO generator(
 		.clk(CLOCK_50),       // clk.clk
-		.clken(slow_clk),     //  in.clken
-		.phi_inc_i(26), //    .phi_inc_i
+		.clken(1'b1),     //  in.clken
+		.phi_inc_i(16'b0000000000011010), //    .phi_inc_i
 		.fsin_o(nco_data),    // out.fsin_o
 		.out_valid(), //    .out_valid
-		.reset_n(reset)
+		.reset_n(~reset)
 );
 
 endmodule

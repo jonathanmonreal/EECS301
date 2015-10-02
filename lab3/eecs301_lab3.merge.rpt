@@ -1,5 +1,5 @@
 Partition Merge report for eecs301_lab3
-Mon Sep 28 15:54:21 2015
+Fri Oct 02 14:07:52 2015
 Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Full Version
 
 
@@ -10,12 +10,13 @@ Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Full Version
   2. Partition Merge Summary
   3. Partition Merge Netlist Types Used
   4. Partition Merge Rapid Recompile Summary
-  5. Partition Merge Rapid Recompile Table of Modified Assignments
-  6. Connections to In-System Debugging Instance "auto_signaltap_0"
-  7. Partition Merge Partition Pin Processing
-  8. Partition Merge Resource Usage Summary
-  9. Partition Merge RAM Summary
- 10. Partition Merge Messages
+  5. Partition Merge Rapid Recompile Table of Changed Logic Entities
+  6. Partition Merge Rapid Recompile Table of Modified Assignments
+  7. Connections to In-System Debugging Instance "auto_signaltap_1"
+  8. Partition Merge Partition Pin Processing
+  9. Partition Merge Resource Usage Summary
+ 10. Partition Merge RAM Summary
+ 11. Partition Merge Messages
 
 
 
@@ -42,16 +43,16 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Partition Merge Summary                                                       ;
 +---------------------------------+---------------------------------------------+
-; Partition Merge Status          ; Successful - Mon Sep 28 15:54:21 2015       ;
+; Partition Merge Status          ; Successful - Fri Oct 02 14:07:52 2015       ;
 ; Quartus II 64-Bit Version       ; 15.0.0 Build 145 04/22/2015 SJ Full Version ;
 ; Revision Name                   ; eecs301_lab3                                ;
 ; Top-level Entity Name           ; eecs301_lab3                                ;
 ; Family                          ; Cyclone V                                   ;
-; Logic utilization (in ALMs)     ; 449 / 32,070 ( 1 % )                        ;
-; Total registers                 ; 726                                         ;
+; Logic utilization (in ALMs)     ; 750 / 32,070 ( 2 % )                        ;
+; Total registers                 ; 1189                                        ;
 ; Total pins                      ; 175 / 457 ( 38 % )                          ;
 ; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 2,304 / 4,065,280 ( < 1 % )                 ;
+; Total block memory bits         ; 185,984 / 4,065,280 ( 5 % )                 ;
 ; Total DSP Blocks                ; 0 / 87 ( 0 % )                              ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
@@ -68,104 +69,120 @@ agreement for further details.
 ; Partition Name                 ; Partition Type ; Netlist Type Used        ; Netlist Type Requested ; Partition Contents             ;
 +--------------------------------+----------------+--------------------------+------------------------+--------------------------------+
 ; Top                            ; User-created   ; Hybrid (Rapid Recompile) ; Source File            ;                                ;
-; sld_hub:auto_hub               ; Auto-generated ; Post-Synthesis           ; Post-Synthesis         ; sld_hub:auto_hub               ;
-; sld_signaltap:auto_signaltap_0 ; Auto-generated ; Post-Synthesis           ; Post-Synthesis         ; sld_signaltap:auto_signaltap_0 ;
-; hard_block:auto_generated_inst ; Auto-generated ; Source File              ; Source File            ; hard_block:auto_generated_inst ;
+; sld_hub:auto_hub               ; Auto-generated ; Hybrid (Rapid Recompile) ; Post-Synthesis         ; sld_hub:auto_hub               ;
+; sld_signaltap:auto_signaltap_1 ; Auto-generated ; Hybrid (Rapid Recompile) ; Post-Synthesis         ; sld_signaltap:auto_signaltap_1 ;
+; hard_block:auto_generated_inst ; Auto-generated ; Hybrid (Rapid Recompile) ; Source File            ; hard_block:auto_generated_inst ;
 +--------------------------------+----------------+--------------------------+------------------------+--------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------+
-; Partition Merge Rapid Recompile Summary                                                                          ;
-+----------------+------------------------+--------------------------------+-------------------------------+-------+
-; Partition Name ; Rapid Recompile Status ; Netlist Preservation Requested ; Netlist Preservation Achieved ; Notes ;
-+----------------+------------------------+--------------------------------+-------------------------------+-------+
-; Top            ; Engaged                ; 100.00% (887 / 887)            ; 100.00% (887 / 887)           ;       ;
-+----------------+------------------------+--------------------------------+-------------------------------+-------+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Partition Merge Rapid Recompile Summary                                                                                          ;
++--------------------------------+------------------------+--------------------------------+-------------------------------+-------+
+; Partition Name                 ; Rapid Recompile Status ; Netlist Preservation Requested ; Netlist Preservation Achieved ; Notes ;
++--------------------------------+------------------------+--------------------------------+-------------------------------+-------+
+; Top                            ; Engaged                ; 98.31% (1045 / 1063)           ; 82.31% (875 / 1063)           ;       ;
+; sld_hub:auto_hub               ; Engaged                ; 100.00% (313 / 313)            ; 100.00% (313 / 313)           ;       ;
+; sld_signaltap:auto_signaltap_1 ; Engaged                ; 100.00% (1837 / 1837)          ; 100.00% (1837 / 1837)         ;       ;
+; hard_block:auto_generated_inst ; Engaged                ; 100.00% (23 / 23)              ; 100.00% (23 / 23)             ;       ;
++--------------------------------+------------------------+--------------------------------+-------------------------------+-------+
 
 
-+-------------------------------------------------------------------------------------------------------+
-; Partition Merge Rapid Recompile Table of Modified Assignments                                         ;
-+------------------------------------------+----------------------+----------------+--------------------+
-; Modified Assignments                     ; Target               ; Previous Value ; Current Value      ;
-+------------------------------------------+----------------------+----------------+--------------------+
-; USE_SIGNALTAP_FILE                       ;                      ; --             ; stp1.stp           ;
-; ENABLE_SIGNALTAP                         ;                      ; --             ; ON                 ;
-; SLD_NODE_CREATOR_ID                      ;                      ; --             ; 110                ;
-; SLD_NODE_ENTITY_NAME                     ;                      ; --             ; sld_signaltap      ;
-; CONNECT_TO_SLD_NODE_ENTITY_PORT          ; CLOCK_50             ; --             ; acq_clk            ;
-; CONNECT_TO_SLD_NODE_ENTITY_PORT          ; nco_data[0]          ; --             ; acq_trigger_in[0]  ;
-; CONNECT_TO_SLD_NODE_ENTITY_PORT          ; nco_data[0]          ; --             ; acq_data_in[0]     ;
-; CONNECT_TO_SLD_NODE_ENTITY_PORT          ; nco_data[10]         ; --             ; acq_trigger_in[1]  ;
-; CONNECT_TO_SLD_NODE_ENTITY_PORT          ; nco_data[10]         ; --             ; acq_data_in[1]     ;
-; CONNECT_TO_SLD_NODE_ENTITY_PORT          ; nco_data[11]         ; --             ; acq_trigger_in[2]  ;
-; CONNECT_TO_SLD_NODE_ENTITY_PORT          ; nco_data[11]         ; --             ; acq_data_in[2]     ;
-; CONNECT_TO_SLD_NODE_ENTITY_PORT          ; nco_data[12]         ; --             ; acq_trigger_in[3]  ;
-; CONNECT_TO_SLD_NODE_ENTITY_PORT          ; nco_data[12]         ; --             ; acq_data_in[3]     ;
-; CONNECT_TO_SLD_NODE_ENTITY_PORT          ; nco_data[13]         ; --             ; acq_trigger_in[4]  ;
-; CONNECT_TO_SLD_NODE_ENTITY_PORT          ; nco_data[13]         ; --             ; acq_data_in[4]     ;
-; CONNECT_TO_SLD_NODE_ENTITY_PORT          ; nco_data[14]         ; --             ; acq_trigger_in[5]  ;
-; CONNECT_TO_SLD_NODE_ENTITY_PORT          ; nco_data[14]         ; --             ; acq_data_in[5]     ;
-; CONNECT_TO_SLD_NODE_ENTITY_PORT          ; nco_data[15]         ; --             ; acq_trigger_in[6]  ;
-; CONNECT_TO_SLD_NODE_ENTITY_PORT          ; nco_data[15]         ; --             ; acq_data_in[6]     ;
-; CONNECT_TO_SLD_NODE_ENTITY_PORT          ; nco_data[16]         ; --             ; acq_trigger_in[7]  ;
-; CONNECT_TO_SLD_NODE_ENTITY_PORT          ; nco_data[16]         ; --             ; acq_data_in[7]     ;
-; CONNECT_TO_SLD_NODE_ENTITY_PORT          ; nco_data[17]         ; --             ; acq_trigger_in[8]  ;
-; CONNECT_TO_SLD_NODE_ENTITY_PORT          ; nco_data[17]         ; --             ; acq_data_in[8]     ;
-; CONNECT_TO_SLD_NODE_ENTITY_PORT          ; nco_data[1]          ; --             ; acq_trigger_in[9]  ;
-; CONNECT_TO_SLD_NODE_ENTITY_PORT          ; nco_data[1]          ; --             ; acq_data_in[9]     ;
-; CONNECT_TO_SLD_NODE_ENTITY_PORT          ; nco_data[2]          ; --             ; acq_trigger_in[10] ;
-; CONNECT_TO_SLD_NODE_ENTITY_PORT          ; nco_data[2]          ; --             ; acq_data_in[10]    ;
-; CONNECT_TO_SLD_NODE_ENTITY_PORT          ; nco_data[3]          ; --             ; acq_trigger_in[11] ;
-; CONNECT_TO_SLD_NODE_ENTITY_PORT          ; nco_data[3]          ; --             ; acq_data_in[11]    ;
-; CONNECT_TO_SLD_NODE_ENTITY_PORT          ; nco_data[4]          ; --             ; acq_trigger_in[12] ;
-; CONNECT_TO_SLD_NODE_ENTITY_PORT          ; nco_data[4]          ; --             ; acq_data_in[12]    ;
-; CONNECT_TO_SLD_NODE_ENTITY_PORT          ; nco_data[5]          ; --             ; acq_trigger_in[13] ;
-; CONNECT_TO_SLD_NODE_ENTITY_PORT          ; nco_data[5]          ; --             ; acq_data_in[13]    ;
-; CONNECT_TO_SLD_NODE_ENTITY_PORT          ; nco_data[6]          ; --             ; acq_trigger_in[14] ;
-; CONNECT_TO_SLD_NODE_ENTITY_PORT          ; nco_data[6]          ; --             ; acq_data_in[14]    ;
-; CONNECT_TO_SLD_NODE_ENTITY_PORT          ; nco_data[7]          ; --             ; acq_trigger_in[15] ;
-; CONNECT_TO_SLD_NODE_ENTITY_PORT          ; nco_data[7]          ; --             ; acq_data_in[15]    ;
-; CONNECT_TO_SLD_NODE_ENTITY_PORT          ; nco_data[8]          ; --             ; acq_trigger_in[16] ;
-; CONNECT_TO_SLD_NODE_ENTITY_PORT          ; nco_data[8]          ; --             ; acq_data_in[16]    ;
-; CONNECT_TO_SLD_NODE_ENTITY_PORT          ; nco_data[9]          ; --             ; acq_trigger_in[17] ;
-; CONNECT_TO_SLD_NODE_ENTITY_PORT          ; nco_data[9]          ; --             ; acq_data_in[17]    ;
-; POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT ; auto_signaltap_0|gnd ; --             ; crc[0]             ;
-; POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT ; auto_signaltap_0|gnd ; --             ; crc[1]             ;
-; POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT ; auto_signaltap_0|gnd ; --             ; crc[3]             ;
-; POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT ; auto_signaltap_0|gnd ; --             ; crc[5]             ;
-; POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT ; auto_signaltap_0|gnd ; --             ; crc[6]             ;
-; POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT ; auto_signaltap_0|gnd ; --             ; crc[7]             ;
-; POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT ; auto_signaltap_0|gnd ; --             ; crc[10]            ;
-; POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT ; auto_signaltap_0|gnd ; --             ; crc[13]            ;
-; POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT ; auto_signaltap_0|gnd ; --             ; crc[14]            ;
-+------------------------------------------+----------------------+----------------+--------------------+
-This list only includes the top 50 out of 97 changed assignments
++-----------------------------------------------------------------+
+; Partition Merge Rapid Recompile Table of Changed Logic Entities ;
++--------------------------------+--------------------------------+
+; Changed Logic Entities         ; Number of Changed Nodes        ;
++--------------------------------+--------------------------------+
+; |eecs301_lab3|load_pulse:pulse ; 29                             ;
++--------------------------------+--------------------------------+
+
+
++----------------------------------------------------------------+
+; Partition Merge Rapid Recompile Table of Modified Assignments  ;
++----------------------+--------+----------------+---------------+
+; Modified Assignments ; Target ; Previous Value ; Current Value ;
++----------------------+--------+----------------+---------------+
+; SYNTHESIS_ONLY_QIP   ;        ; ON             ; --            ;
++----------------------+--------+----------------+---------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Connections to In-System Debugging Instance "auto_signaltap_0"                                                                                                                                                                                                                                               ;
+; Connections to In-System Debugging Instance "auto_signaltap_1"                                                                                                                                                                                                                                               ;
 +----------------------+---------------+-----------+--------------------------------+-------------------+-------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Name                 ; Type          ; Status    ; Partition Name                 ; Netlist Type Used ; Actual Connection                   ; Details                                                                                                                                                        ;
 +----------------------+---------------+-----------+--------------------------------+-------------------+-------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; CLOCK_50             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; CLOCK_50~input                      ; N/A                                                                                                                                                            ;
+; GPIO_0[9]            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; GPIO_0[9]~input                     ; N/A                                                                                                                                                            ;
+; GPIO_0[9]            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; GPIO_0[9]~input                     ; N/A                                                                                                                                                            ;
+; dac_in[0]            ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; dac_in[0]            ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; dac_in[10]           ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The pre-synthesis tap must be preserved by Analysis & Synthesis before it can be tapped.  Set the partition's netlist type to Source and recompile.            ;
+; dac_in[10]           ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The pre-synthesis tap must be preserved by Analysis & Synthesis before it can be tapped.  Set the partition's netlist type to Source and recompile.            ;
+; dac_in[11]           ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The pre-synthesis tap must be preserved by Analysis & Synthesis before it can be tapped.  Set the partition's netlist type to Source and recompile.            ;
+; dac_in[11]           ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The pre-synthesis tap must be preserved by Analysis & Synthesis before it can be tapped.  Set the partition's netlist type to Source and recompile.            ;
+; dac_in[12]           ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The pre-synthesis tap must be preserved by Analysis & Synthesis before it can be tapped.  Set the partition's netlist type to Source and recompile.            ;
+; dac_in[12]           ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The pre-synthesis tap must be preserved by Analysis & Synthesis before it can be tapped.  Set the partition's netlist type to Source and recompile.            ;
+; dac_in[13]           ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The pre-synthesis tap must be preserved by Analysis & Synthesis before it can be tapped.  Set the partition's netlist type to Source and recompile.            ;
+; dac_in[13]           ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The pre-synthesis tap must be preserved by Analysis & Synthesis before it can be tapped.  Set the partition's netlist type to Source and recompile.            ;
+; dac_in[14]           ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The pre-synthesis tap must be preserved by Analysis & Synthesis before it can be tapped.  Set the partition's netlist type to Source and recompile.            ;
+; dac_in[14]           ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The pre-synthesis tap must be preserved by Analysis & Synthesis before it can be tapped.  Set the partition's netlist type to Source and recompile.            ;
+; dac_in[15]           ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The pre-synthesis tap must be preserved by Analysis & Synthesis before it can be tapped.  Set the partition's netlist type to Source and recompile.            ;
+; dac_in[15]           ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The pre-synthesis tap must be preserved by Analysis & Synthesis before it can be tapped.  Set the partition's netlist type to Source and recompile.            ;
+; dac_in[16]           ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The pre-synthesis tap must be preserved by Analysis & Synthesis before it can be tapped.  Set the partition's netlist type to Source and recompile.            ;
+; dac_in[16]           ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The pre-synthesis tap must be preserved by Analysis & Synthesis before it can be tapped.  Set the partition's netlist type to Source and recompile.            ;
+; dac_in[17]           ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The pre-synthesis tap must be preserved by Analysis & Synthesis before it can be tapped.  Set the partition's netlist type to Source and recompile.            ;
+; dac_in[17]           ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The pre-synthesis tap must be preserved by Analysis & Synthesis before it can be tapped.  Set the partition's netlist type to Source and recompile.            ;
+; dac_in[18]           ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The pre-synthesis tap must be preserved by Analysis & Synthesis before it can be tapped.  Set the partition's netlist type to Source and recompile.            ;
+; dac_in[18]           ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The pre-synthesis tap must be preserved by Analysis & Synthesis before it can be tapped.  Set the partition's netlist type to Source and recompile.            ;
+; dac_in[19]           ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The pre-synthesis tap must be preserved by Analysis & Synthesis before it can be tapped.  Set the partition's netlist type to Source and recompile.            ;
+; dac_in[19]           ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The pre-synthesis tap must be preserved by Analysis & Synthesis before it can be tapped.  Set the partition's netlist type to Source and recompile.            ;
+; dac_in[1]            ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; dac_in[1]            ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; dac_in[20]           ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; dac_in[20]           ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; dac_in[21]           ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; dac_in[21]           ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; dac_in[22]           ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; dac_in[22]           ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; dac_in[23]           ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; dac_in[23]           ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; dac_in[24]           ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; dac_in[24]           ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; dac_in[25]           ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; dac_in[25]           ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; dac_in[26]           ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; dac_in[26]           ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; dac_in[27]           ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; dac_in[27]           ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; dac_in[28]           ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; dac_in[28]           ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; dac_in[29]           ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; dac_in[29]           ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; dac_in[2]            ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; dac_in[2]            ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; dac_in[30]           ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; dac_in[30]           ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; dac_in[31]           ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; dac_in[31]           ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; dac_in[3]            ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; dac_in[3]            ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; dac_in[4]            ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; dac_in[4]            ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; dac_in[5]            ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; dac_in[5]            ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; dac_in[6]            ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; dac_in[6]            ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; dac_in[7]            ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; dac_in[7]            ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; dac_in[8]            ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The pre-synthesis tap must be preserved by Analysis & Synthesis before it can be tapped.  Set the partition's netlist type to Source and recompile.            ;
+; dac_in[8]            ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The pre-synthesis tap must be preserved by Analysis & Synthesis before it can be tapped.  Set the partition's netlist type to Source and recompile.            ;
+; dac_in[9]            ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The pre-synthesis tap must be preserved by Analysis & Synthesis before it can be tapped.  Set the partition's netlist type to Source and recompile.            ;
+; dac_in[9]            ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The pre-synthesis tap must be preserved by Analysis & Synthesis before it can be tapped.  Set the partition's netlist type to Source and recompile.            ;
 ; nco_data[0]          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
 ; nco_data[0]          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
 ; nco_data[10]         ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
 ; nco_data[10]         ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
 ; nco_data[11]         ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
 ; nco_data[11]         ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; nco_data[12]         ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; nco_data[12]         ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; nco_data[13]         ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; nco_data[13]         ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; nco_data[14]         ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; nco_data[14]         ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; nco_data[15]         ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; nco_data[15]         ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; nco_data[16]         ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; nco_data[16]         ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; nco_data[17]         ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; nco_data[17]         ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
 ; nco_data[1]          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
 ; nco_data[1]          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
 ; nco_data[2]          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
@@ -184,38 +201,38 @@ This list only includes the top 50 out of 97 changed assignments
 ; nco_data[8]          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
 ; nco_data[9]          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
 ; nco_data[9]          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; auto_signaltap_0|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND ; N/A                                                                                                                                                            ;
-; auto_signaltap_0|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND ; N/A                                                                                                                                                            ;
-; auto_signaltap_0|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND ; N/A                                                                                                                                                            ;
-; auto_signaltap_0|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND ; N/A                                                                                                                                                            ;
-; auto_signaltap_0|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND ; N/A                                                                                                                                                            ;
-; auto_signaltap_0|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND ; N/A                                                                                                                                                            ;
-; auto_signaltap_0|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND ; N/A                                                                                                                                                            ;
-; auto_signaltap_0|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND ; N/A                                                                                                                                                            ;
-; auto_signaltap_0|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND ; N/A                                                                                                                                                            ;
-; auto_signaltap_0|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND ; N/A                                                                                                                                                            ;
-; auto_signaltap_0|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND ; N/A                                                                                                                                                            ;
-; auto_signaltap_0|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND ; N/A                                                                                                                                                            ;
-; auto_signaltap_0|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND ; N/A                                                                                                                                                            ;
-; auto_signaltap_0|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND ; N/A                                                                                                                                                            ;
-; auto_signaltap_0|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND ; N/A                                                                                                                                                            ;
-; auto_signaltap_0|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND ; N/A                                                                                                                                                            ;
-; auto_signaltap_0|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND ; N/A                                                                                                                                                            ;
-; auto_signaltap_0|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND ; N/A                                                                                                                                                            ;
-; auto_signaltap_0|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND ; N/A                                                                                                                                                            ;
-; auto_signaltap_0|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND ; N/A                                                                                                                                                            ;
-; auto_signaltap_0|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC ; N/A                                                                                                                                                            ;
-; auto_signaltap_0|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC ; N/A                                                                                                                                                            ;
-; auto_signaltap_0|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC ; N/A                                                                                                                                                            ;
-; auto_signaltap_0|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC ; N/A                                                                                                                                                            ;
-; auto_signaltap_0|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC ; N/A                                                                                                                                                            ;
-; auto_signaltap_0|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC ; N/A                                                                                                                                                            ;
-; auto_signaltap_0|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC ; N/A                                                                                                                                                            ;
-; auto_signaltap_0|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC ; N/A                                                                                                                                                            ;
-; auto_signaltap_0|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC ; N/A                                                                                                                                                            ;
-; auto_signaltap_0|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC ; N/A                                                                                                                                                            ;
-; auto_signaltap_0|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC ; N/A                                                                                                                                                            ;
-; auto_signaltap_0|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC ; N/A                                                                                                                                                            ;
+; auto_signaltap_1|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_1 ; post-synthesis    ; sld_signaltap:auto_signaltap_1|~GND ; N/A                                                                                                                                                            ;
+; auto_signaltap_1|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_1 ; post-synthesis    ; sld_signaltap:auto_signaltap_1|~GND ; N/A                                                                                                                                                            ;
+; auto_signaltap_1|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_1 ; post-synthesis    ; sld_signaltap:auto_signaltap_1|~GND ; N/A                                                                                                                                                            ;
+; auto_signaltap_1|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_1 ; post-synthesis    ; sld_signaltap:auto_signaltap_1|~GND ; N/A                                                                                                                                                            ;
+; auto_signaltap_1|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_1 ; post-synthesis    ; sld_signaltap:auto_signaltap_1|~GND ; N/A                                                                                                                                                            ;
+; auto_signaltap_1|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_1 ; post-synthesis    ; sld_signaltap:auto_signaltap_1|~GND ; N/A                                                                                                                                                            ;
+; auto_signaltap_1|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_1 ; post-synthesis    ; sld_signaltap:auto_signaltap_1|~GND ; N/A                                                                                                                                                            ;
+; auto_signaltap_1|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_1 ; post-synthesis    ; sld_signaltap:auto_signaltap_1|~GND ; N/A                                                                                                                                                            ;
+; auto_signaltap_1|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_1 ; post-synthesis    ; sld_signaltap:auto_signaltap_1|~GND ; N/A                                                                                                                                                            ;
+; auto_signaltap_1|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_1 ; post-synthesis    ; sld_signaltap:auto_signaltap_1|~GND ; N/A                                                                                                                                                            ;
+; auto_signaltap_1|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_1 ; post-synthesis    ; sld_signaltap:auto_signaltap_1|~GND ; N/A                                                                                                                                                            ;
+; auto_signaltap_1|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_1 ; post-synthesis    ; sld_signaltap:auto_signaltap_1|~GND ; N/A                                                                                                                                                            ;
+; auto_signaltap_1|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_1 ; post-synthesis    ; sld_signaltap:auto_signaltap_1|~GND ; N/A                                                                                                                                                            ;
+; auto_signaltap_1|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_1 ; post-synthesis    ; sld_signaltap:auto_signaltap_1|~GND ; N/A                                                                                                                                                            ;
+; auto_signaltap_1|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_1 ; post-synthesis    ; sld_signaltap:auto_signaltap_1|~GND ; N/A                                                                                                                                                            ;
+; auto_signaltap_1|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_1 ; post-synthesis    ; sld_signaltap:auto_signaltap_1|~VCC ; N/A                                                                                                                                                            ;
+; auto_signaltap_1|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_1 ; post-synthesis    ; sld_signaltap:auto_signaltap_1|~VCC ; N/A                                                                                                                                                            ;
+; auto_signaltap_1|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_1 ; post-synthesis    ; sld_signaltap:auto_signaltap_1|~VCC ; N/A                                                                                                                                                            ;
+; auto_signaltap_1|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_1 ; post-synthesis    ; sld_signaltap:auto_signaltap_1|~VCC ; N/A                                                                                                                                                            ;
+; auto_signaltap_1|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_1 ; post-synthesis    ; sld_signaltap:auto_signaltap_1|~VCC ; N/A                                                                                                                                                            ;
+; auto_signaltap_1|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_1 ; post-synthesis    ; sld_signaltap:auto_signaltap_1|~VCC ; N/A                                                                                                                                                            ;
+; auto_signaltap_1|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_1 ; post-synthesis    ; sld_signaltap:auto_signaltap_1|~VCC ; N/A                                                                                                                                                            ;
+; auto_signaltap_1|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_1 ; post-synthesis    ; sld_signaltap:auto_signaltap_1|~VCC ; N/A                                                                                                                                                            ;
+; auto_signaltap_1|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_1 ; post-synthesis    ; sld_signaltap:auto_signaltap_1|~VCC ; N/A                                                                                                                                                            ;
+; auto_signaltap_1|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_1 ; post-synthesis    ; sld_signaltap:auto_signaltap_1|~VCC ; N/A                                                                                                                                                            ;
+; auto_signaltap_1|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_1 ; post-synthesis    ; sld_signaltap:auto_signaltap_1|~VCC ; N/A                                                                                                                                                            ;
+; auto_signaltap_1|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_1 ; post-synthesis    ; sld_signaltap:auto_signaltap_1|~VCC ; N/A                                                                                                                                                            ;
+; auto_signaltap_1|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_1 ; post-synthesis    ; sld_signaltap:auto_signaltap_1|~VCC ; N/A                                                                                                                                                            ;
+; auto_signaltap_1|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_1 ; post-synthesis    ; sld_signaltap:auto_signaltap_1|~VCC ; N/A                                                                                                                                                            ;
+; auto_signaltap_1|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_1 ; post-synthesis    ; sld_signaltap:auto_signaltap_1|~VCC ; N/A                                                                                                                                                            ;
+; auto_signaltap_1|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_1 ; post-synthesis    ; sld_signaltap:auto_signaltap_1|~VCC ; N/A                                                                                                                                                            ;
+; auto_signaltap_1|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_1 ; post-synthesis    ; sld_signaltap:auto_signaltap_1|~VCC ; N/A                                                                                                                                                            ;
 +----------------------+---------------+-----------+--------------------------------+-------------------+-------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -940,8 +957,6 @@ This list only includes the top 50 out of 97 changed assignments
 ;     -- altera_reserved_tms        ; Top       ; Input Pad     ; Unplaced           ; Synthesized                                 ;
 ;     -- altera_reserved_tms~input  ; Top       ; Input Buffer  ; Unplaced           ; Synthesized                                 ;
 ;                                   ;           ;               ;                    ;                                             ;
-; ~GND~0                            ; Top       ; Output Port   ; n/a                ;                                             ;
-;                                   ;           ;               ;                    ;                                             ;
 +-----------------------------------+-----------+---------------+--------------------+---------------------------------------------+
 
 
@@ -950,30 +965,27 @@ This list only includes the top 50 out of 97 changed assignments
 +---------------------------------------------+--------------------------+
 ; Resource                                    ; Usage                    ;
 +---------------------------------------------+--------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 422                      ;
+; Estimate of Logic utilization (ALMs needed) ; 818                      ;
 ;                                             ;                          ;
-; Combinational ALUT usage for logic          ; 413                      ;
-;     -- 7 input functions                    ; 1                        ;
-;     -- 6 input functions                    ; 73                       ;
-;     -- 5 input functions                    ; 71                       ;
-;     -- 4 input functions                    ; 45                       ;
-;     -- <=3 input functions                  ; 223                      ;
-; Memory ALUT usage                           ; 11                       ;
-;     -- 64-address deep                      ; 0                        ;
-;     -- 32-address deep                      ; 11                       ;
+; Combinational ALUT usage for logic          ; 532                      ;
+;     -- 7 input functions                    ; 2                        ;
+;     -- 6 input functions                    ; 147                      ;
+;     -- 5 input functions                    ; 61                       ;
+;     -- 4 input functions                    ; 43                       ;
+;     -- <=3 input functions                  ; 279                      ;
 ;                                             ;                          ;
-; Dedicated logic registers                   ; 726                      ;
+; Dedicated logic registers                   ; 1189                     ;
 ;                                             ;                          ;
 ; I/O pins                                    ; 175                      ;
-; Total MLAB memory bits                      ; 22                       ;
-; Total block memory bits                     ; 2304                     ;
+; Total MLAB memory bits                      ; 0                        ;
+; Total block memory bits                     ; 185984                   ;
 ;                                             ;                          ;
 ; Total DSP Blocks                            ; 0                        ;
 ;                                             ;                          ;
 ; Maximum fan-out node                        ; altera_internal_jtag~TDO ;
-; Maximum fan-out                             ; 378                      ;
-; Total fan-out                               ; 4612                     ;
-; Average fan-out                             ; 2.81                     ;
+; Maximum fan-out                             ; 551                      ;
+; Total fan-out                               ; 6894                     ;
+; Average fan-out                             ; 2.62                     ;
 +---------------------------------------------+--------------------------+
 
 
@@ -982,8 +994,9 @@ This list only includes the top 50 out of 97 changed assignments
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+----------------------+
 ; Name                                                                                                                                                                                                  ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF                  ;
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+----------------------+
-; NCO:generator|NCO_nco_ii_0:nco_ii_0|asj_nco_as_m_cen:ux0120|altsyncram:altsyncram_component0|altsyncram_1vf1:auto_generated|ALTSYNCRAM                                                                ; MLAB ; ROM              ; 8192         ; 11           ; 8192         ; 11           ; 90112 ; NCO_nco_ii_0_sin.hex ;
-; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram|altsyncram_2584:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 128          ; 18           ; 128          ; 18           ; 2304  ; None                 ;
+; NCO:generator|NCO_nco_ii_0:nco_ii_0|asj_nco_as_m_cen:ux0120|altsyncram:altsyncram_component0|altsyncram_1vf1:auto_generated|ALTSYNCRAM                                                                ; AUTO ; ROM              ; 8192         ; 11           ; --           ; --           ; 90112 ; NCO_nco_ii_0_sin.hex ;
+; NCO:generator|NCO_nco_ii_0:nco_ii_0|asj_nco_as_m_cen:ux0121|altsyncram:altsyncram_component0|altsyncram_suf1:auto_generated|ALTSYNCRAM                                                                ; AUTO ; ROM              ; 8192         ; 11           ; --           ; --           ; 90112 ; NCO_nco_ii_0_cos.hex ;
+; sld_signaltap:auto_signaltap_1|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram|altsyncram_3584:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 128          ; 45           ; 128          ; 45           ; 5760  ; None                 ;
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+----------------------+
 
 
@@ -993,12 +1006,12 @@ This list only includes the top 50 out of 97 changed assignments
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Partition Merge
     Info: Version 15.0.0 Build 145 04/22/2015 SJ Full Version
-    Info: Processing started: Mon Sep 28 15:54:17 2015
+    Info: Processing started: Fri Oct 02 14:07:47 2015
 Info: Command: quartus_cdb --read_settings_files=on --write_settings_files=off eecs301_lab3 -c eecs301_lab3 --merge=on --recompile=on
 Info (12849): Using Hybrid (Rapid Recompile) netlist for partition "Top"
-Info (35007): Using synthesis netlist for partition "sld_hub:auto_hub"
-Info (35007): Using synthesis netlist for partition "sld_signaltap:auto_signaltap_0"
-Critical Warning (35025): Partially connected in-system debug instance "auto_signaltap_0" to 33 of its 69 required data inputs, trigger inputs, acquisition clocks, and dynamic pins.  There were 0 illegal, 0 inaccessible, and 36 missing sources or connections.
+Info (12849): Using Hybrid (Rapid Recompile) netlist for partition "sld_hub:auto_hub"
+Info (12849): Using Hybrid (Rapid Recompile) netlist for partition "sld_signaltap:auto_signaltap_1"
+Critical Warning (35025): Partially connected in-system debug instance "auto_signaltap_1" to 35 of its 123 required data inputs, trigger inputs, acquisition clocks, and dynamic pins.  There were 0 illegal, 0 inaccessible, and 88 missing sources or connections.
 Info (35002): Resolved and merged 3 partition(s)
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 9 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -1017,16 +1030,16 @@ Warning (21074): Design contains 14 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[7]"
     Warning (15610): No output dependent on input pin "SW[8]"
     Warning (15610): No output dependent on input pin "SW[9]"
-Info (21057): Implemented 1102 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1732 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 22 input pins
     Info (21059): Implemented 85 output pins
     Info (21060): Implemented 72 bidirectional pins
-    Info (21061): Implemented 892 logic cells
-    Info (21064): Implemented 29 RAM segments
+    Info (21061): Implemented 1526 logic cells
+    Info (21064): Implemented 24 RAM segments
 Info: Quartus II 64-Bit Partition Merge was successful. 0 errors, 16 warnings
-    Info: Peak virtual memory: 840 megabytes
-    Info: Processing ended: Mon Sep 28 15:54:21 2015
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Peak virtual memory: 881 megabytes
+    Info: Processing ended: Fri Oct 02 14:07:53 2015
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:05
 
 

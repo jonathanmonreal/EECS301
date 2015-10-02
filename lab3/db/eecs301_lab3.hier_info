@@ -3,7 +3,7 @@ ADC_CONVST <= <GND>
 ADC_DIN <= <GND>
 ADC_DOUT => ~NO_FANOUT~
 ADC_SCLK <= <GND>
-CLOCK_50 => CLOCK_50.IN4
+CLOCK_50 => CLOCK_50.IN5
 CLOCK2_50 => ~NO_FANOUT~
 CLOCK3_50 => ~NO_FANOUT~
 CLOCK4_50 => ~NO_FANOUT~
@@ -49,7 +49,7 @@ HEX5[3] <= <GND>
 HEX5[4] <= <GND>
 HEX5[5] <= <GND>
 HEX5[6] <= <GND>
-KEY[0] => reset.IN2
+KEY[0] => KEY[0].IN1
 KEY[1] => down.IN1
 KEY[2] => up.IN1
 KEY[3] => ~NO_FANOUT~
@@ -112,8 +112,8 @@ GPIO_0[6] <> <UNC>
 GPIO_0[7] <> <UNC>
 GPIO_0[8] <> GPIO_0[8]
 GPIO_0[9] <> GPIO_0[9]
-GPIO_0[10] <> <VCC>
-GPIO_0[11] <> <VCC>
+GPIO_0[10] <> GPIO_0[10]
+GPIO_0[11] <> GPIO_0[11]
 GPIO_0[12] <> <VCC>
 GPIO_0[13] <> <UNC>
 GPIO_0[14] <> <UNC>
@@ -187,20 +187,49 @@ clk => counter[6].CLK
 clk => counter[7].CLK
 clk => counter[8].CLK
 clk => counter[9].CLK
-clk => counter[10].CLK
-clk => counter[11].CLK
-clk => counter[12].CLK
-clk => counter[13].CLK
-clk => counter[14].CLK
-clk => counter[15].CLK
-clk => counter[16].CLK
-clk => counter[17].CLK
-clk => counter[18].CLK
-clk => counter[19].CLK
-clk => counter[20].CLK
-clk => counter[21].CLK
-clk => counter[22].CLK
-clk_out <= counter[22].DB_MAX_OUTPUT_PORT_TYPE
+clk_out <= counter[9].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|eecs301_lab3|load_pulse:pulse
+clk_in => counter[0].CLK
+clk_in => counter[1].CLK
+clk_in => counter[2].CLK
+clk_in => counter[3].CLK
+clk_in => counter[4].CLK
+clk_in => counter[5].CLK
+clk_in => counter[6].CLK
+clk_in => counter[7].CLK
+clk_in => PWM_out~reg0.CLK
+x_in[0] => LessThan0.IN8
+x_in[1] => LessThan0.IN7
+x_in[2] => LessThan0.IN6
+x_in[3] => LessThan0.IN5
+x_in[4] => LessThan0.IN4
+x_in[5] => LessThan0.IN3
+x_in[6] => LessThan0.IN2
+x_in[7] => LessThan0.IN1
+PWM_out <= PWM_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|eecs301_lab3|load_pulse:pulse2
+clk_in => counter[0].CLK
+clk_in => counter[1].CLK
+clk_in => counter[2].CLK
+clk_in => counter[3].CLK
+clk_in => counter[4].CLK
+clk_in => counter[5].CLK
+clk_in => counter[6].CLK
+clk_in => counter[7].CLK
+clk_in => PWM_out~reg0.CLK
+x_in[0] => LessThan0.IN8
+x_in[1] => LessThan0.IN7
+x_in[2] => LessThan0.IN6
+x_in[3] => LessThan0.IN5
+x_in[4] => LessThan0.IN4
+x_in[5] => LessThan0.IN3
+x_in[6] => LessThan0.IN2
+x_in[7] => LessThan0.IN1
+PWM_out <= PWM_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |eecs301_lab3|controller:control

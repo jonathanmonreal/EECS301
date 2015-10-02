@@ -6,7 +6,7 @@ JedecChain;
 	P ActionCode(Ign)
 		Device PartName(SOCVHPS) MfrSpec(OpMask(0));
 	P ActionCode(Cfg)
-		Device PartName(5CSEMA5F31) Path("C:/Users/Jonathan Monreal/Desktop/EECS 301/lab3/") File("eecs301_lab3.sof") MfrSpec(OpMask(1));
+		Device PartName(5CSEMA5F31) Path("C:/EECS301/lab3/") File("eecs301_lab3.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
