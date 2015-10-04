@@ -11,7 +11,7 @@
    <SOPCModuleParameter>
     <C>2</C>
     <Name>DESIGN_HASH</Name>
-    <Value>84f776a2e0d9810b8eeb</Value>
+    <Value>c8ef3a84b6f7e2163a10</Value>
    </SOPCModuleParameter>
    <SOPCModuleParameter>
     <C>3</C>
@@ -26,7 +26,7 @@
    <SOPCModuleParameter>
     <C>5</C>
     <Name>SETTINGS</Name>
-    <Value>{fabric sld dir agent mfr_code 110 type_code 0 version 6 instance 0 ir_width 10 psig f63706bb} </Value>
+    <Value>{fabric sld dir agent mfr_code 110 type_code 0 version 6 instance 1 ir_width 10 psig f63706bb} </Value>
    </SOPCModuleParameter>
    <SOPCModuleParameter>
     <C>6</C>
@@ -41,7 +41,7 @@
    <SOPCModuleParameter>
     <C>8</C>
     <Name>EP_INFOS</Name>
-    <Value>{hpath {sld_signaltap:auto_signaltap_0} } </Value>
+    <Value>{hpath {sld_signaltap:auto_signaltap_1} } </Value>
    </SOPCModuleParameter>
    <SOPCModuleParameter>
     <C>9</C>
@@ -69,7 +69,7 @@
     <Value>Unknown</Value>
    </SOPCModuleParameter>
   </SOPCModule>
-  <SystemID>361469702</SystemID>
+  <SystemID>813304044</SystemID>
  </SOPCSystem>
  <SchemaVersion>schema_2013-01-18</SchemaVersion>
 </ProgramExecution>

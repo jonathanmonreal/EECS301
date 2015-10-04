@@ -1,5 +1,5 @@
 Info: Starting: Create block symbol file (.bsf)
-Info: qsys-generate C:\EECS301\lab3\NCO.qsys --block-symbol-file --output-directory=C:\EECS301\lab3\NCO --family="Cyclone V" --part=5CSEMA5F31C6
+Info: qsys-generate C:\Users\abc19\Documents\GitHub\EECS301\lab3\NCO.qsys --block-symbol-file --output-directory=C:\Users\abc19\Documents\GitHub\EECS301\lab3\NCO --family="Cyclone V" --part=5CSEMA5F31C6
 Progress: Loading lab3/NCO.qsys
 Progress: Reading input file
 Progress: Adding nco_ii_0 [altera_nco_ii 15.0]
@@ -12,7 +12,7 @@ Info: ip-generate succeeded.
 Info: Finished: Create block symbol file (.bsf)
 Info: 
 Info: Starting: Create HDL design files for synthesis
-Info: qsys-generate C:\EECS301\lab3\NCO.qsys --synthesis=VERILOG --output-directory=C:\EECS301\lab3\NCO\synthesis --family="Cyclone V" --part=5CSEMA5F31C6
+Info: qsys-generate C:\Users\abc19\Documents\GitHub\EECS301\lab3\NCO.qsys --synthesis=VERILOG --output-directory=C:\Users\abc19\Documents\GitHub\EECS301\lab3\NCO\synthesis --family="Cyclone V" --part=5CSEMA5F31C6
 Progress: Loading lab3/NCO.qsys
 Progress: Reading input file
 Progress: Adding nco_ii_0 [altera_nco_ii 15.0]

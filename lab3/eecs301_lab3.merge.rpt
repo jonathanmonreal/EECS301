@@ -1,5 +1,5 @@
 Partition Merge report for eecs301_lab3
-Fri Oct 02 14:07:52 2015
+Sat Oct 03 21:32:18 2015
 Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Full Version
 
 
@@ -16,7 +16,8 @@ Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Full Version
   8. Partition Merge Partition Pin Processing
   9. Partition Merge Resource Usage Summary
  10. Partition Merge RAM Summary
- 11. Partition Merge Messages
+ 11. Partition Merge DSP Block Usage Summary
+ 12. Partition Merge Messages
 
 
 
@@ -43,17 +44,17 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Partition Merge Summary                                                       ;
 +---------------------------------+---------------------------------------------+
-; Partition Merge Status          ; Successful - Fri Oct 02 14:07:52 2015       ;
+; Partition Merge Status          ; Successful - Sat Oct 03 21:32:18 2015       ;
 ; Quartus II 64-Bit Version       ; 15.0.0 Build 145 04/22/2015 SJ Full Version ;
 ; Revision Name                   ; eecs301_lab3                                ;
 ; Top-level Entity Name           ; eecs301_lab3                                ;
 ; Family                          ; Cyclone V                                   ;
-; Logic utilization (in ALMs)     ; 750 / 32,070 ( 2 % )                        ;
-; Total registers                 ; 1189                                        ;
+; Logic utilization (in ALMs)     ; 794 / 32,070 ( 2 % )                        ;
+; Total registers                 ; 1255                                        ;
 ; Total pins                      ; 175 / 457 ( 38 % )                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 185,984 / 4,065,280 ( 5 % )                 ;
-; Total DSP Blocks                ; 0 / 87 ( 0 % )                              ;
+; Total DSP Blocks                ; 2 / 87 ( 2 % )                              ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
 ; Total HSSI TX PCSs              ; 0                                           ;
@@ -80,20 +81,22 @@ agreement for further details.
 +--------------------------------+------------------------+--------------------------------+-------------------------------+-------+
 ; Partition Name                 ; Rapid Recompile Status ; Netlist Preservation Requested ; Netlist Preservation Achieved ; Notes ;
 +--------------------------------+------------------------+--------------------------------+-------------------------------+-------+
-; Top                            ; Engaged                ; 98.31% (1045 / 1063)           ; 82.31% (875 / 1063)           ;       ;
-; sld_hub:auto_hub               ; Engaged                ; 100.00% (313 / 313)            ; 100.00% (313 / 313)           ;       ;
-; sld_signaltap:auto_signaltap_1 ; Engaged                ; 100.00% (1837 / 1837)          ; 100.00% (1837 / 1837)         ;       ;
+; Top                            ; Engaged                ; 97.44% (1140 / 1170)           ; 83.33% (975 / 1170)           ;       ;
+; sld_hub:auto_hub               ; Engaged                ; 100.00% (320 / 320)            ; 100.00% (320 / 320)           ;       ;
+; sld_signaltap:auto_signaltap_1 ; Engaged                ; 100.00% (1843 / 1843)          ; 100.00% (1843 / 1843)         ;       ;
 ; hard_block:auto_generated_inst ; Engaged                ; 100.00% (23 / 23)              ; 100.00% (23 / 23)             ;       ;
 +--------------------------------+------------------------+--------------------------------+-------------------------------+-------+
 
 
-+-----------------------------------------------------------------+
-; Partition Merge Rapid Recompile Table of Changed Logic Entities ;
-+--------------------------------+--------------------------------+
-; Changed Logic Entities         ; Number of Changed Nodes        ;
-+--------------------------------+--------------------------------+
-; |eecs301_lab3|load_pulse:pulse ; 29                             ;
-+--------------------------------+--------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Partition Merge Rapid Recompile Table of Changed Logic Entities                                                                             ;
++-------------------------------------------------------------------------------------------------------------------+-------------------------+
+; Changed Logic Entities                                                                                            ; Number of Changed Nodes ;
++-------------------------------------------------------------------------------------------------------------------+-------------------------+
+; |eecs301_lab3|freq_control:freqcontrol                                                                            ; 27                      ;
+; |eecs301_lab3|NCO:generator|NCO_nco_ii_0:nco_ii_0|asj_altqmcpipe:ux000|lpm_add_sub:acc|add_sub_ith:auto_generated ; 26                      ;
+; |eecs301_lab3|NCO:generator|NCO_nco_ii_0:nco_ii_0|asj_altqmcpipe:ux000                                            ; 3                       ;
++-------------------------------------------------------------------------------------------------------------------+-------------------------+
 
 
 +----------------------------------------------------------------+
@@ -177,30 +180,30 @@ agreement for further details.
 ; dac_in[8]            ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The pre-synthesis tap must be preserved by Analysis & Synthesis before it can be tapped.  Set the partition's netlist type to Source and recompile.            ;
 ; dac_in[9]            ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The pre-synthesis tap must be preserved by Analysis & Synthesis before it can be tapped.  Set the partition's netlist type to Source and recompile.            ;
 ; dac_in[9]            ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The pre-synthesis tap must be preserved by Analysis & Synthesis before it can be tapped.  Set the partition's netlist type to Source and recompile.            ;
-; nco_data[0]          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; nco_data[0]          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; nco_data[10]         ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; nco_data[10]         ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; nco_data[11]         ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; nco_data[11]         ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; nco_data[1]          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; nco_data[1]          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; nco_data[2]          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; nco_data[2]          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; nco_data[3]          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; nco_data[3]          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; nco_data[4]          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; nco_data[4]          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; nco_data[5]          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; nco_data[5]          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; nco_data[6]          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; nco_data[6]          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; nco_data[7]          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; nco_data[7]          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; nco_data[8]          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; nco_data[8]          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; nco_data[9]          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; nco_data[9]          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; nco_data[0]          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The pre-synthesis tap must be preserved by Analysis & Synthesis before it can be tapped.  Set the partition's netlist type to Source and recompile.            ;
+; nco_data[0]          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The pre-synthesis tap must be preserved by Analysis & Synthesis before it can be tapped.  Set the partition's netlist type to Source and recompile.            ;
+; nco_data[10]         ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The pre-synthesis tap must be preserved by Analysis & Synthesis before it can be tapped.  Set the partition's netlist type to Source and recompile.            ;
+; nco_data[10]         ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The pre-synthesis tap must be preserved by Analysis & Synthesis before it can be tapped.  Set the partition's netlist type to Source and recompile.            ;
+; nco_data[11]         ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The pre-synthesis tap must be preserved by Analysis & Synthesis before it can be tapped.  Set the partition's netlist type to Source and recompile.            ;
+; nco_data[11]         ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The pre-synthesis tap must be preserved by Analysis & Synthesis before it can be tapped.  Set the partition's netlist type to Source and recompile.            ;
+; nco_data[1]          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The pre-synthesis tap must be preserved by Analysis & Synthesis before it can be tapped.  Set the partition's netlist type to Source and recompile.            ;
+; nco_data[1]          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The pre-synthesis tap must be preserved by Analysis & Synthesis before it can be tapped.  Set the partition's netlist type to Source and recompile.            ;
+; nco_data[2]          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The pre-synthesis tap must be preserved by Analysis & Synthesis before it can be tapped.  Set the partition's netlist type to Source and recompile.            ;
+; nco_data[2]          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The pre-synthesis tap must be preserved by Analysis & Synthesis before it can be tapped.  Set the partition's netlist type to Source and recompile.            ;
+; nco_data[3]          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The pre-synthesis tap must be preserved by Analysis & Synthesis before it can be tapped.  Set the partition's netlist type to Source and recompile.            ;
+; nco_data[3]          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The pre-synthesis tap must be preserved by Analysis & Synthesis before it can be tapped.  Set the partition's netlist type to Source and recompile.            ;
+; nco_data[4]          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The pre-synthesis tap must be preserved by Analysis & Synthesis before it can be tapped.  Set the partition's netlist type to Source and recompile.            ;
+; nco_data[4]          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The pre-synthesis tap must be preserved by Analysis & Synthesis before it can be tapped.  Set the partition's netlist type to Source and recompile.            ;
+; nco_data[5]          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The pre-synthesis tap must be preserved by Analysis & Synthesis before it can be tapped.  Set the partition's netlist type to Source and recompile.            ;
+; nco_data[5]          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The pre-synthesis tap must be preserved by Analysis & Synthesis before it can be tapped.  Set the partition's netlist type to Source and recompile.            ;
+; nco_data[6]          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The pre-synthesis tap must be preserved by Analysis & Synthesis before it can be tapped.  Set the partition's netlist type to Source and recompile.            ;
+; nco_data[6]          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The pre-synthesis tap must be preserved by Analysis & Synthesis before it can be tapped.  Set the partition's netlist type to Source and recompile.            ;
+; nco_data[7]          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The pre-synthesis tap must be preserved by Analysis & Synthesis before it can be tapped.  Set the partition's netlist type to Source and recompile.            ;
+; nco_data[7]          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The pre-synthesis tap must be preserved by Analysis & Synthesis before it can be tapped.  Set the partition's netlist type to Source and recompile.            ;
+; nco_data[8]          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The pre-synthesis tap must be preserved by Analysis & Synthesis before it can be tapped.  Set the partition's netlist type to Source and recompile.            ;
+; nco_data[8]          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The pre-synthesis tap must be preserved by Analysis & Synthesis before it can be tapped.  Set the partition's netlist type to Source and recompile.            ;
+; nco_data[9]          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The pre-synthesis tap must be preserved by Analysis & Synthesis before it can be tapped.  Set the partition's netlist type to Source and recompile.            ;
+; nco_data[9]          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                 ; The pre-synthesis tap must be preserved by Analysis & Synthesis before it can be tapped.  Set the partition's netlist type to Source and recompile.            ;
 ; auto_signaltap_1|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_1 ; post-synthesis    ; sld_signaltap:auto_signaltap_1|~GND ; N/A                                                                                                                                                            ;
 ; auto_signaltap_1|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_1 ; post-synthesis    ; sld_signaltap:auto_signaltap_1|~GND ; N/A                                                                                                                                                            ;
 ; auto_signaltap_1|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_1 ; post-synthesis    ; sld_signaltap:auto_signaltap_1|~GND ; N/A                                                                                                                                                            ;
@@ -965,27 +968,27 @@ agreement for further details.
 +---------------------------------------------+--------------------------+
 ; Resource                                    ; Usage                    ;
 +---------------------------------------------+--------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 818                      ;
+; Estimate of Logic utilization (ALMs needed) ; 851                      ;
 ;                                             ;                          ;
-; Combinational ALUT usage for logic          ; 532                      ;
+; Combinational ALUT usage for logic          ; 581                      ;
 ;     -- 7 input functions                    ; 2                        ;
-;     -- 6 input functions                    ; 147                      ;
-;     -- 5 input functions                    ; 61                       ;
-;     -- 4 input functions                    ; 43                       ;
-;     -- <=3 input functions                  ; 279                      ;
+;     -- 6 input functions                    ; 148                      ;
+;     -- 5 input functions                    ; 75                       ;
+;     -- 4 input functions                    ; 47                       ;
+;     -- <=3 input functions                  ; 309                      ;
 ;                                             ;                          ;
-; Dedicated logic registers                   ; 1189                     ;
+; Dedicated logic registers                   ; 1255                     ;
 ;                                             ;                          ;
 ; I/O pins                                    ; 175                      ;
 ; Total MLAB memory bits                      ; 0                        ;
 ; Total block memory bits                     ; 185984                   ;
 ;                                             ;                          ;
-; Total DSP Blocks                            ; 0                        ;
+; Total DSP Blocks                            ; 2                        ;
 ;                                             ;                          ;
 ; Maximum fan-out node                        ; altera_internal_jtag~TDO ;
-; Maximum fan-out                             ; 551                      ;
-; Total fan-out                               ; 6894                     ;
-; Average fan-out                             ; 2.62                     ;
+; Maximum fan-out                             ; 559                      ;
+; Total fan-out                               ; 7312                     ;
+; Average fan-out                             ; 2.66                     ;
 +---------------------------------------------+--------------------------+
 
 
@@ -1000,13 +1003,25 @@ agreement for further details.
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+----------------------+
 
 
++-----------------------------------------------+
+; Partition Merge DSP Block Usage Summary       ;
++---------------------------------+-------------+
+; Statistic                       ; Number Used ;
++---------------------------------+-------------+
+; Independent 18x18               ; 2           ;
+; Total number of DSP blocks      ; 2           ;
+;                                 ;             ;
+; Fixed Point Unsigned Multiplier ; 2           ;
++---------------------------------+-------------+
+
+
 +--------------------------+
 ; Partition Merge Messages ;
 +--------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Partition Merge
     Info: Version 15.0.0 Build 145 04/22/2015 SJ Full Version
-    Info: Processing started: Fri Oct 02 14:07:47 2015
+    Info: Processing started: Sat Oct 03 21:32:09 2015
 Info: Command: quartus_cdb --read_settings_files=on --write_settings_files=off eecs301_lab3 -c eecs301_lab3 --merge=on --recompile=on
 Info (12849): Using Hybrid (Rapid Recompile) netlist for partition "Top"
 Info (12849): Using Hybrid (Rapid Recompile) netlist for partition "sld_hub:auto_hub"
@@ -1030,16 +1045,17 @@ Warning (21074): Design contains 14 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[7]"
     Warning (15610): No output dependent on input pin "SW[8]"
     Warning (15610): No output dependent on input pin "SW[9]"
-Info (21057): Implemented 1732 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1834 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 22 input pins
     Info (21059): Implemented 85 output pins
     Info (21060): Implemented 72 bidirectional pins
-    Info (21061): Implemented 1526 logic cells
+    Info (21061): Implemented 1626 logic cells
     Info (21064): Implemented 24 RAM segments
+    Info (21062): Implemented 2 DSP elements
 Info: Quartus II 64-Bit Partition Merge was successful. 0 errors, 16 warnings
-    Info: Peak virtual memory: 881 megabytes
-    Info: Processing ended: Fri Oct 02 14:07:53 2015
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:05
+    Info: Peak virtual memory: 930 megabytes
+    Info: Processing ended: Sat Oct 03 21:32:19 2015
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:09
 
 

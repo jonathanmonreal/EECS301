@@ -592,7 +592,11 @@ set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[26] -
 set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[31] -to auto_signaltap_1|gnd -section_id auto_signaltap_1
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ADVANCED_TRIGGER_ENTITY=sld_reserved_eecs301_lab3_auto_signaltap_1_1_6769," -section_id auto_signaltap_1
 set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[20] -to auto_signaltap_1|vcc -section_id auto_signaltap_1
-set_global_assignment -name VERILOG_FILE V/load_pulse.v
+set_global_assignment -name VERILOG_FILE V/freq_control.v
+set_global_assignment -name VERILOG_FILE V/button_clock.v
+set_global_assignment -name VERILOG_FILE V/gain_control.v
+set_global_assignment -name VERILOG_FILE V/sync_pulse.v
+set_global_assignment -name VERILOG_FILE V/ldac_pulse.v
 set_global_assignment -name VERILOG_FILE V/clock_divider.v
 set_global_assignment -name VERILOG_FILE V/controller.v
 set_global_assignment -name VERILOG_FILE NCO/synthesis/submodules/NCO_nco_ii_0.v

@@ -9,7 +9,7 @@ module NCO (
 
 	input		clk;
 	input		clken;
-	input	[15:0]	phi_inc_i;
+	input	[23:0]	phi_inc_i;
 	output	[11:0]	fsin_o;
 	output		out_valid;
 	input		reset_n;

@@ -1,14 +1,14 @@
 // Jonathan Monreal
 // This module is a simple clock divider
 
-module clock_divider2(clk, clk_out);
+module button_clock(clk, clk_out);
 
 	input clk;
 	output wire clk_out;
 	
-	reg [9:0] counter =10'b0;
+	reg [16:0] counter =17'b0;
 	// The output is the msb of the counter
-	assign clk_out = counter[9];
+	assign clk_out = counter[16];
 	
 	always @(posedge clk)
 		begin

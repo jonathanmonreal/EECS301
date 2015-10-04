@@ -6,7 +6,7 @@
 module NCO (
 		input  wire        clk,       // clk.clk
 		input  wire        clken,     //  in.clken
-		input  wire [15:0] phi_inc_i, //    .phi_inc_i
+		input  wire [23:0] phi_inc_i, //    .phi_inc_i
 		output wire [11:0] fsin_o,    // out.fsin_o
 		output wire        out_valid, //    .out_valid
 		input  wire        reset_n    // rst.reset_n

@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<deploy date="2015.09.28.14:27:41" outputDirectory="C:/EECS301/lab3/NCO/">
+<deploy
+ date="2015.10.03.21:20:46"
+ outputDirectory="C:/Users/abc19/Documents/GitHub/EECS301/lab3/NCO/">
  <perimeter>
   <parameter
      name="AUTO_GENERATION_ID"
@@ -59,7 +61,7 @@
    <property name="associatedClock" value="clk" />
    <property name="associatedReset" value="rst" />
    <port name="clken" direction="input" role="clken" width="1" />
-   <port name="phi_inc_i" direction="input" role="phi_inc_i" width="16" />
+   <port name="phi_inc_i" direction="input" role="phi_inc_i" width="24" />
   </interface>
   <interface name="out" kind="conduit" start="0">
    <property name="associatedClock" value="clk" />
@@ -75,13 +77,13 @@
  </perimeter>
  <entity
    path=""
-   parameterizationKey="NCO:1.0:AUTO_CLK_CLOCK_DOMAIN=-1,AUTO_CLK_CLOCK_RATE=-1,AUTO_CLK_RESET_DOMAIN=-1,AUTO_DEVICE=5CSEMA5F31C6,AUTO_DEVICE_FAMILY=Cyclone V,AUTO_DEVICE_SPEEDGRADE=6,AUTO_GENERATION_ID=1443464860,AUTO_UNIQUE_ID=(altera_nco_ii:15.0:apr=16,aprf=32,apri=16,aprp=16,arch=small_rom,cordic_arch=parallel,cycles_per_output=1,design_env=NATIVE,dpri=4,fmod_pipe=1,freq_out=0.02,fsamp=50.0,mpr=12,numba=1,numch=1,phi_inc=26,pmod_pipe=1,real_freq_out=0.01984,selected_device_family=Cyclone V,trig_cycles_per_output=1,use_dedicated_multipliers=true,want_dither=true,want_freq_mod=false,want_phase_mod=false,want_sin_and_cos=single_output)"
+   parameterizationKey="NCO:1.0:AUTO_CLK_CLOCK_DOMAIN=-1,AUTO_CLK_CLOCK_RATE=-1,AUTO_CLK_RESET_DOMAIN=-1,AUTO_DEVICE=5CSEMA5F31C6,AUTO_DEVICE_FAMILY=Cyclone V,AUTO_DEVICE_SPEEDGRADE=6,AUTO_GENERATION_ID=1443921645,AUTO_UNIQUE_ID=(altera_nco_ii:15.0:apr=24,aprf=32,apri=16,aprp=16,arch=small_rom,cordic_arch=parallel,cycles_per_output=1,design_env=NATIVE,dpri=4,fmod_pipe=1,freq_out=0.02,fsamp=50.0,mpr=12,numba=1,numch=1,phi_inc=6711,pmod_pipe=1,real_freq_out=0.02,selected_device_family=Cyclone V,trig_cycles_per_output=1,use_dedicated_multipliers=true,want_dither=true,want_freq_mod=false,want_phase_mod=false,want_sin_and_cos=single_output)"
    instancePathKey="NCO"
    kind="NCO"
    version="1.0"
    name="NCO">
   <parameter name="AUTO_CLK_CLOCK_RATE" value="-1" />
-  <parameter name="AUTO_GENERATION_ID" value="1443464860" />
+  <parameter name="AUTO_GENERATION_ID" value="1443921645" />
   <parameter name="AUTO_DEVICE" value="5CSEMA5F31C6" />
   <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone V" />
   <parameter name="AUTO_CLK_RESET_DOMAIN" value="-1" />
@@ -89,91 +91,93 @@
   <parameter name="AUTO_UNIQUE_ID" value="" />
   <parameter name="AUTO_DEVICE_SPEEDGRADE" value="6" />
   <generatedFiles>
-   <file path="C:/EECS301/lab3/NCO/synthesis/NCO.v" type="VERILOG" />
+   <file
+       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/NCO/synthesis/NCO.v"
+       type="VERILOG" />
   </generatedFiles>
   <childGeneratedFiles>
    <file
-       path="C:/EECS301/lab3/NCO/synthesis/submodules/NCO_nco_ii_0_sin.hex"
+       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/NCO/synthesis/submodules/NCO_nco_ii_0_sin.hex"
        type="HEX"
        attributes="" />
    <file
-       path="C:/EECS301/lab3/NCO/synthesis/submodules/NCO_nco_ii_0_cos.hex"
+       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/NCO/synthesis/submodules/NCO_nco_ii_0_cos.hex"
        type="HEX"
        attributes="" />
    <file
-       path="C:/EECS301/lab3/NCO/synthesis/submodules/NCO_nco_ii_0.v"
+       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/NCO/synthesis/submodules/NCO_nco_ii_0.v"
        type="VERILOG"
        attributes="" />
    <file
-       path="C:/EECS301/lab3/NCO/synthesis/submodules/sid_2c_1p.v"
+       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/NCO/synthesis/submodules/sid_2c_1p.v"
        type="VERILOG"
        attributes="" />
    <file
-       path="C:/EECS301/lab3/NCO/synthesis/submodules/asj_nco_aprid_dxx.v"
+       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/NCO/synthesis/submodules/asj_nco_mob_rw.v"
        type="VERILOG"
        attributes="" />
    <file
-       path="C:/EECS301/lab3/NCO/synthesis/submodules/asj_nco_mob_rw.v"
+       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/NCO/synthesis/submodules/asj_gar.v"
        type="VERILOG"
        attributes="" />
    <file
-       path="C:/EECS301/lab3/NCO/synthesis/submodules/asj_gar.v"
+       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/NCO/synthesis/submodules/asj_nco_isdr.v"
        type="VERILOG"
        attributes="" />
    <file
-       path="C:/EECS301/lab3/NCO/synthesis/submodules/asj_nco_isdr.v"
+       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/NCO/synthesis/submodules/asj_nco_apr_dxx.v"
        type="VERILOG"
        attributes="" />
    <file
-       path="C:/EECS301/lab3/NCO/synthesis/submodules/segment_arr_tdl.v"
+       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/NCO/synthesis/submodules/segment_arr_tdl.v"
        type="VERILOG"
        attributes="" />
    <file
-       path="C:/EECS301/lab3/NCO/synthesis/submodules/segment_sel.v"
+       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/NCO/synthesis/submodules/segment_sel.v"
        type="VERILOG"
        attributes="" />
    <file
-       path="C:/EECS301/lab3/NCO/synthesis/submodules/asj_dxx_g.v"
+       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/NCO/synthesis/submodules/asj_dxx_g.v"
        type="VERILOG"
        attributes="" />
    <file
-       path="C:/EECS301/lab3/NCO/synthesis/submodules/asj_dxx.v"
+       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/NCO/synthesis/submodules/asj_dxx.v"
        type="VERILOG"
        attributes="" />
    <file
-       path="C:/EECS301/lab3/NCO/synthesis/submodules/asj_xnqg.v"
+       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/NCO/synthesis/submodules/asj_xnqg.v"
        type="VERILOG"
        attributes="" />
    <file
-       path="C:/EECS301/lab3/NCO/synthesis/submodules/asj_nco_as_m_cen.v"
+       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/NCO/synthesis/submodules/asj_nco_as_m_cen.v"
        type="VERILOG"
        attributes="" />
    <file
-       path="C:/EECS301/lab3/NCO/synthesis/submodules/asj_altqmcpipe.v"
+       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/NCO/synthesis/submodules/asj_altqmcpipe.v"
        type="VERILOG"
        attributes="" />
    <file
-       path="C:/EECS301/lab3/NCO/synthesis/submodules/asj_altq.ocp"
+       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/NCO/synthesis/submodules/asj_altq.ocp"
        type="OTHER"
        attributes="" />
    <file
-       path="C:/EECS301/lab3/NCO/synthesis/submodules/asj_altqmcash.ocp"
+       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/NCO/synthesis/submodules/asj_altqmcash.ocp"
        type="OTHER"
        attributes="" />
    <file
-       path="C:/EECS301/lab3/NCO/synthesis/submodules/asj_altqmcpipe.ocp"
+       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/NCO/synthesis/submodules/asj_altqmcpipe.ocp"
        type="OTHER"
        attributes="" />
   </childGeneratedFiles>
   <sourceFiles>
-   <file path="C:/EECS301/lab3/NCO.qsys" />
+   <file path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/NCO.qsys" />
   </sourceFiles>
   <childSourceFiles>
    <file
-       path="C:/altera/15.0/ip/altera/dsp/altera_nco_ii/altera_nco_ii_hw.tcl" />
-   <file path="C:/altera/15.0/ip/altera/dsp/altera_nco_ii/nco_helper.jar" />
+       path="D:/altera/15.0/ip/altera/dsp/altera_nco_ii/altera_nco_ii_hw.tcl" />
+   <file path="D:/altera/15.0/ip/altera/dsp/altera_nco_ii/nco_helper.jar" />
    <file
-       path="C:/altera/15.0/quartus/sopc_builder/model/lib/com.altera.entityinterfaces.jar" />
+       path="D:/altera/15.0/quartus/sopc_builder/model/lib/com.altera.entityinterfaces.jar" />
   </childSourceFiles>
   <messages>
    <message level="Debug" culprit="NCO">queue size: 0 starting:NCO "NCO"</message>
@@ -196,7 +200,7 @@
  </entity>
  <entity
    path="submodules/"
-   parameterizationKey="altera_nco_ii:15.0:apr=16,aprf=32,apri=16,aprp=16,arch=small_rom,cordic_arch=parallel,cycles_per_output=1,design_env=NATIVE,dpri=4,fmod_pipe=1,freq_out=0.02,fsamp=50.0,mpr=12,numba=1,numch=1,phi_inc=26,pmod_pipe=1,real_freq_out=0.01984,selected_device_family=Cyclone V,trig_cycles_per_output=1,use_dedicated_multipliers=true,want_dither=true,want_freq_mod=false,want_phase_mod=false,want_sin_and_cos=single_output"
+   parameterizationKey="altera_nco_ii:15.0:apr=24,aprf=32,apri=16,aprp=16,arch=small_rom,cordic_arch=parallel,cycles_per_output=1,design_env=NATIVE,dpri=4,fmod_pipe=1,freq_out=0.02,fsamp=50.0,mpr=12,numba=1,numch=1,phi_inc=6711,pmod_pipe=1,real_freq_out=0.02,selected_device_family=Cyclone V,trig_cycles_per_output=1,use_dedicated_multipliers=true,want_dither=true,want_freq_mod=false,want_phase_mod=false,want_sin_and_cos=single_output"
    instancePathKey="NCO:.:nco_ii_0"
    kind="altera_nco_ii"
    version="15.0"
@@ -212,7 +216,7 @@
   <parameter name="aprf" value="32" />
   <parameter name="want_dither" value="true" />
   <parameter name="want_phase_mod" value="false" />
-  <parameter name="apr" value="16" />
+  <parameter name="apr" value="24" />
   <parameter name="trig_cycles_per_output" value="1" />
   <parameter name="dpri" value="4" />
   <parameter name="mpr" value="12" />
@@ -221,92 +225,92 @@
   <parameter name="want_freq_mod" value="false" />
   <parameter name="use_dedicated_multipliers" value="true" />
   <parameter name="want_sin_and_cos" value="single_output" />
-  <parameter name="phi_inc" value="26" />
+  <parameter name="phi_inc" value="6711" />
   <parameter name="fmod_pipe" value="1" />
   <parameter name="arch" value="small_rom" />
   <parameter name="freq_out" value="0.02" />
-  <parameter name="real_freq_out" value="0.01984" />
+  <parameter name="real_freq_out" value="0.02" />
   <generatedFiles>
    <file
-       path="C:/EECS301/lab3/NCO/synthesis/submodules/NCO_nco_ii_0_sin.hex"
+       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/NCO/synthesis/submodules/NCO_nco_ii_0_sin.hex"
        type="HEX"
        attributes="" />
    <file
-       path="C:/EECS301/lab3/NCO/synthesis/submodules/NCO_nco_ii_0_cos.hex"
+       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/NCO/synthesis/submodules/NCO_nco_ii_0_cos.hex"
        type="HEX"
        attributes="" />
    <file
-       path="C:/EECS301/lab3/NCO/synthesis/submodules/NCO_nco_ii_0.v"
+       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/NCO/synthesis/submodules/NCO_nco_ii_0.v"
        type="VERILOG"
        attributes="" />
    <file
-       path="C:/EECS301/lab3/NCO/synthesis/submodules/sid_2c_1p.v"
+       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/NCO/synthesis/submodules/sid_2c_1p.v"
        type="VERILOG"
        attributes="" />
    <file
-       path="C:/EECS301/lab3/NCO/synthesis/submodules/asj_nco_aprid_dxx.v"
+       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/NCO/synthesis/submodules/asj_nco_mob_rw.v"
        type="VERILOG"
        attributes="" />
    <file
-       path="C:/EECS301/lab3/NCO/synthesis/submodules/asj_nco_mob_rw.v"
+       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/NCO/synthesis/submodules/asj_gar.v"
        type="VERILOG"
        attributes="" />
    <file
-       path="C:/EECS301/lab3/NCO/synthesis/submodules/asj_gar.v"
+       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/NCO/synthesis/submodules/asj_nco_isdr.v"
        type="VERILOG"
        attributes="" />
    <file
-       path="C:/EECS301/lab3/NCO/synthesis/submodules/asj_nco_isdr.v"
+       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/NCO/synthesis/submodules/asj_nco_apr_dxx.v"
        type="VERILOG"
        attributes="" />
    <file
-       path="C:/EECS301/lab3/NCO/synthesis/submodules/segment_arr_tdl.v"
+       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/NCO/synthesis/submodules/segment_arr_tdl.v"
        type="VERILOG"
        attributes="" />
    <file
-       path="C:/EECS301/lab3/NCO/synthesis/submodules/segment_sel.v"
+       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/NCO/synthesis/submodules/segment_sel.v"
        type="VERILOG"
        attributes="" />
    <file
-       path="C:/EECS301/lab3/NCO/synthesis/submodules/asj_dxx_g.v"
+       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/NCO/synthesis/submodules/asj_dxx_g.v"
        type="VERILOG"
        attributes="" />
    <file
-       path="C:/EECS301/lab3/NCO/synthesis/submodules/asj_dxx.v"
+       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/NCO/synthesis/submodules/asj_dxx.v"
        type="VERILOG"
        attributes="" />
    <file
-       path="C:/EECS301/lab3/NCO/synthesis/submodules/asj_xnqg.v"
+       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/NCO/synthesis/submodules/asj_xnqg.v"
        type="VERILOG"
        attributes="" />
    <file
-       path="C:/EECS301/lab3/NCO/synthesis/submodules/asj_nco_as_m_cen.v"
+       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/NCO/synthesis/submodules/asj_nco_as_m_cen.v"
        type="VERILOG"
        attributes="" />
    <file
-       path="C:/EECS301/lab3/NCO/synthesis/submodules/asj_altqmcpipe.v"
+       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/NCO/synthesis/submodules/asj_altqmcpipe.v"
        type="VERILOG"
        attributes="" />
    <file
-       path="C:/EECS301/lab3/NCO/synthesis/submodules/asj_altq.ocp"
+       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/NCO/synthesis/submodules/asj_altq.ocp"
        type="OTHER"
        attributes="" />
    <file
-       path="C:/EECS301/lab3/NCO/synthesis/submodules/asj_altqmcash.ocp"
+       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/NCO/synthesis/submodules/asj_altqmcash.ocp"
        type="OTHER"
        attributes="" />
    <file
-       path="C:/EECS301/lab3/NCO/synthesis/submodules/asj_altqmcpipe.ocp"
+       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/NCO/synthesis/submodules/asj_altqmcpipe.ocp"
        type="OTHER"
        attributes="" />
   </generatedFiles>
   <childGeneratedFiles/>
   <sourceFiles>
    <file
-       path="C:/altera/15.0/ip/altera/dsp/altera_nco_ii/altera_nco_ii_hw.tcl" />
-   <file path="C:/altera/15.0/ip/altera/dsp/altera_nco_ii/nco_helper.jar" />
+       path="D:/altera/15.0/ip/altera/dsp/altera_nco_ii/altera_nco_ii_hw.tcl" />
+   <file path="D:/altera/15.0/ip/altera/dsp/altera_nco_ii/nco_helper.jar" />
    <file
-       path="C:/altera/15.0/quartus/sopc_builder/model/lib/com.altera.entityinterfaces.jar" />
+       path="D:/altera/15.0/quartus/sopc_builder/model/lib/com.altera.entityinterfaces.jar" />
   </sourceFiles>
   <childSourceFiles/>
   <instantiator instantiator="NCO" as="nco_ii_0" />

@@ -1,0 +1,16 @@
+module gain_control(clk,in,k, out);
+
+	input clk;
+	input [11:0] in;
+	input [9:0] k
+	output reg [11:0] out;
+	
+	reg [21:0] r = 0;
+	
+	always @(posedge clk)
+		begin
+			r = k * in;
+			out = r[21:10];
+		end
+
+endmodule
