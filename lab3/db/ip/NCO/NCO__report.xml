@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <deploy
- date="2015.10.03.21:31:26"
- outputDirectory="C:/Users/abc19/Documents/GitHub/EECS301/lab3/db/ip/NCO/">
+ date="2015.10.05.02:46:26"
+ outputDirectory="C:/Users/Jiawei/Documents/GitHub/EECS301/lab3/db/ip/NCO/">
  <perimeter>
   <parameter
      name="AUTO_GENERATION_ID"
@@ -77,13 +77,13 @@
  </perimeter>
  <entity
    path=""
-   parameterizationKey="NCO:1.0:AUTO_CLK_CLOCK_DOMAIN=-1,AUTO_CLK_CLOCK_RATE=-1,AUTO_CLK_RESET_DOMAIN=-1,AUTO_DEVICE=5CSEMA5F31C6,AUTO_DEVICE_FAMILY=Cyclone V,AUTO_DEVICE_SPEEDGRADE=6,AUTO_GENERATION_ID=1443922281,AUTO_UNIQUE_ID=(altera_nco_ii:15.0:apr=24,aprf=32,apri=16,aprp=16,arch=small_rom,cordic_arch=parallel,cycles_per_output=1,design_env=NATIVE,dpri=4,fmod_pipe=1,freq_out=0.02,fsamp=50.0,mpr=12,numba=1,numch=1,phi_inc=6711,pmod_pipe=1,real_freq_out=0.02,selected_device_family=Cyclone V,trig_cycles_per_output=1,use_dedicated_multipliers=true,want_dither=true,want_freq_mod=false,want_phase_mod=false,want_sin_and_cos=single_output)"
+   parameterizationKey="NCO:1.0:AUTO_CLK_CLOCK_DOMAIN=-1,AUTO_CLK_CLOCK_RATE=-1,AUTO_CLK_RESET_DOMAIN=-1,AUTO_DEVICE=5CSEMA5F31C6,AUTO_DEVICE_FAMILY=Cyclone V,AUTO_DEVICE_SPEEDGRADE=6,AUTO_GENERATION_ID=1444027584,AUTO_UNIQUE_ID=(altera_nco_ii:15.0:apr=24,aprf=32,apri=16,aprp=16,arch=small_rom,cordic_arch=parallel,cycles_per_output=1,design_env=NATIVE,dpri=4,fmod_pipe=1,freq_out=0.02,fsamp=50.0,mpr=12,numba=1,numch=1,phi_inc=6711,pmod_pipe=1,real_freq_out=0.02,selected_device_family=Cyclone V,trig_cycles_per_output=1,use_dedicated_multipliers=true,want_dither=true,want_freq_mod=false,want_phase_mod=false,want_sin_and_cos=single_output)"
    instancePathKey="NCO"
    kind="NCO"
    version="1.0"
    name="NCO">
   <parameter name="AUTO_CLK_CLOCK_RATE" value="-1" />
-  <parameter name="AUTO_GENERATION_ID" value="1443922281" />
+  <parameter name="AUTO_GENERATION_ID" value="1444027584" />
   <parameter name="AUTO_DEVICE" value="5CSEMA5F31C6" />
   <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone V" />
   <parameter name="AUTO_CLK_RESET_DOMAIN" value="-1" />
@@ -92,92 +92,92 @@
   <parameter name="AUTO_DEVICE_SPEEDGRADE" value="6" />
   <generatedFiles>
    <file
-       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/db/ip/NCO/NCO.v"
+       path="C:/Users/Jiawei/Documents/GitHub/EECS301/lab3/db/ip/NCO/NCO.v"
        type="VERILOG" />
   </generatedFiles>
   <childGeneratedFiles>
    <file
-       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/NCO_nco_ii_0_sin.hex"
+       path="C:/Users/Jiawei/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/NCO_nco_ii_0_sin.hex"
        type="HEX"
        attributes="" />
    <file
-       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/NCO_nco_ii_0_cos.hex"
+       path="C:/Users/Jiawei/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/NCO_nco_ii_0_cos.hex"
        type="HEX"
        attributes="" />
    <file
-       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/NCO_nco_ii_0.v"
+       path="C:/Users/Jiawei/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/NCO_nco_ii_0.v"
        type="VERILOG"
        attributes="" />
    <file
-       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/sid_2c_1p.v"
+       path="C:/Users/Jiawei/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/sid_2c_1p.v"
        type="VERILOG"
        attributes="" />
    <file
-       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/asj_nco_mob_rw.v"
+       path="C:/Users/Jiawei/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/asj_nco_mob_rw.v"
        type="VERILOG"
        attributes="" />
    <file
-       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/asj_gar.v"
+       path="C:/Users/Jiawei/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/asj_gar.v"
        type="VERILOG"
        attributes="" />
    <file
-       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/asj_nco_isdr.v"
+       path="C:/Users/Jiawei/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/asj_nco_isdr.v"
        type="VERILOG"
        attributes="" />
    <file
-       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/asj_nco_apr_dxx.v"
+       path="C:/Users/Jiawei/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/asj_nco_apr_dxx.v"
        type="VERILOG"
        attributes="" />
    <file
-       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/segment_arr_tdl.v"
+       path="C:/Users/Jiawei/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/segment_arr_tdl.v"
        type="VERILOG"
        attributes="" />
    <file
-       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/segment_sel.v"
+       path="C:/Users/Jiawei/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/segment_sel.v"
        type="VERILOG"
        attributes="" />
    <file
-       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/asj_dxx_g.v"
+       path="C:/Users/Jiawei/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/asj_dxx_g.v"
        type="VERILOG"
        attributes="" />
    <file
-       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/asj_dxx.v"
+       path="C:/Users/Jiawei/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/asj_dxx.v"
        type="VERILOG"
        attributes="" />
    <file
-       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/asj_xnqg.v"
+       path="C:/Users/Jiawei/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/asj_xnqg.v"
        type="VERILOG"
        attributes="" />
    <file
-       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/asj_nco_as_m_cen.v"
+       path="C:/Users/Jiawei/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/asj_nco_as_m_cen.v"
        type="VERILOG"
        attributes="" />
    <file
-       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/asj_altqmcpipe.v"
+       path="C:/Users/Jiawei/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/asj_altqmcpipe.v"
        type="VERILOG"
        attributes="" />
    <file
-       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/asj_altq.ocp"
+       path="C:/Users/Jiawei/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/asj_altq.ocp"
        type="OTHER"
        attributes="" />
    <file
-       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/asj_altqmcash.ocp"
+       path="C:/Users/Jiawei/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/asj_altqmcash.ocp"
        type="OTHER"
        attributes="" />
    <file
-       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/asj_altqmcpipe.ocp"
+       path="C:/Users/Jiawei/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/asj_altqmcpipe.ocp"
        type="OTHER"
        attributes="" />
   </childGeneratedFiles>
   <sourceFiles>
-   <file path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/NCO.qsys" />
+   <file path="C:/Users/Jiawei/Documents/GitHub/EECS301/lab3/NCO.qsys" />
   </sourceFiles>
   <childSourceFiles>
    <file
-       path="D:/altera/15.0/ip/altera/dsp/altera_nco_ii/altera_nco_ii_hw.tcl" />
-   <file path="D:/altera/15.0/ip/altera/dsp/altera_nco_ii/nco_helper.jar" />
+       path="G:/altera/15.0/ip/altera/dsp/altera_nco_ii/altera_nco_ii_hw.tcl" />
+   <file path="G:/altera/15.0/ip/altera/dsp/altera_nco_ii/nco_helper.jar" />
    <file
-       path="D:/altera/15.0/quartus/sopc_builder/model/lib/com.altera.entityinterfaces.jar" />
+       path="G:/altera/15.0/quartus/sopc_builder/model/lib/com.altera.entityinterfaces.jar" />
   </childSourceFiles>
   <messages>
    <message level="Debug" culprit="NCO">queue size: 0 starting:NCO "NCO"</message>
@@ -234,85 +234,85 @@
   <parameter name="real_freq_out" value="0.02" />
   <generatedFiles>
    <file
-       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/NCO_nco_ii_0_sin.hex"
+       path="C:/Users/Jiawei/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/NCO_nco_ii_0_sin.hex"
        type="HEX"
        attributes="" />
    <file
-       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/NCO_nco_ii_0_cos.hex"
+       path="C:/Users/Jiawei/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/NCO_nco_ii_0_cos.hex"
        type="HEX"
        attributes="" />
    <file
-       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/NCO_nco_ii_0.v"
+       path="C:/Users/Jiawei/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/NCO_nco_ii_0.v"
        type="VERILOG"
        attributes="" />
    <file
-       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/sid_2c_1p.v"
+       path="C:/Users/Jiawei/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/sid_2c_1p.v"
        type="VERILOG"
        attributes="" />
    <file
-       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/asj_nco_mob_rw.v"
+       path="C:/Users/Jiawei/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/asj_nco_mob_rw.v"
        type="VERILOG"
        attributes="" />
    <file
-       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/asj_gar.v"
+       path="C:/Users/Jiawei/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/asj_gar.v"
        type="VERILOG"
        attributes="" />
    <file
-       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/asj_nco_isdr.v"
+       path="C:/Users/Jiawei/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/asj_nco_isdr.v"
        type="VERILOG"
        attributes="" />
    <file
-       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/asj_nco_apr_dxx.v"
+       path="C:/Users/Jiawei/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/asj_nco_apr_dxx.v"
        type="VERILOG"
        attributes="" />
    <file
-       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/segment_arr_tdl.v"
+       path="C:/Users/Jiawei/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/segment_arr_tdl.v"
        type="VERILOG"
        attributes="" />
    <file
-       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/segment_sel.v"
+       path="C:/Users/Jiawei/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/segment_sel.v"
        type="VERILOG"
        attributes="" />
    <file
-       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/asj_dxx_g.v"
+       path="C:/Users/Jiawei/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/asj_dxx_g.v"
        type="VERILOG"
        attributes="" />
    <file
-       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/asj_dxx.v"
+       path="C:/Users/Jiawei/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/asj_dxx.v"
        type="VERILOG"
        attributes="" />
    <file
-       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/asj_xnqg.v"
+       path="C:/Users/Jiawei/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/asj_xnqg.v"
        type="VERILOG"
        attributes="" />
    <file
-       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/asj_nco_as_m_cen.v"
+       path="C:/Users/Jiawei/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/asj_nco_as_m_cen.v"
        type="VERILOG"
        attributes="" />
    <file
-       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/asj_altqmcpipe.v"
+       path="C:/Users/Jiawei/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/asj_altqmcpipe.v"
        type="VERILOG"
        attributes="" />
    <file
-       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/asj_altq.ocp"
+       path="C:/Users/Jiawei/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/asj_altq.ocp"
        type="OTHER"
        attributes="" />
    <file
-       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/asj_altqmcash.ocp"
+       path="C:/Users/Jiawei/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/asj_altqmcash.ocp"
        type="OTHER"
        attributes="" />
    <file
-       path="C:/Users/abc19/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/asj_altqmcpipe.ocp"
+       path="C:/Users/Jiawei/Documents/GitHub/EECS301/lab3/db/ip/NCO/submodules/asj_altqmcpipe.ocp"
        type="OTHER"
        attributes="" />
   </generatedFiles>
   <childGeneratedFiles/>
   <sourceFiles>
    <file
-       path="D:/altera/15.0/ip/altera/dsp/altera_nco_ii/altera_nco_ii_hw.tcl" />
-   <file path="D:/altera/15.0/ip/altera/dsp/altera_nco_ii/nco_helper.jar" />
+       path="G:/altera/15.0/ip/altera/dsp/altera_nco_ii/altera_nco_ii_hw.tcl" />
+   <file path="G:/altera/15.0/ip/altera/dsp/altera_nco_ii/nco_helper.jar" />
    <file
-       path="D:/altera/15.0/quartus/sopc_builder/model/lib/com.altera.entityinterfaces.jar" />
+       path="G:/altera/15.0/quartus/sopc_builder/model/lib/com.altera.entityinterfaces.jar" />
   </sourceFiles>
   <childSourceFiles/>
   <instantiator instantiator="NCO" as="nco_ii_0" />

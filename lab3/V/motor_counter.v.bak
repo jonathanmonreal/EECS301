@@ -1,0 +1,50 @@
+// Jonathan Monreal
+// 
+
+module motor_counter(clk, reset, input_a, input_b, counter);
+
+	input clk, reset, input_a, input_b;
+	output reg [9:0] counter;
+	
+	wire dff_a0, dff_a1, dff_b0, dff_ab1,, en;
+	
+	flipflop a0(
+		.clk(clk),
+		.reset(reset),
+		.d(input_a),
+		.q(dff_a0),
+	);
+	
+	flipflop a1(
+		.clk(clk),
+		.reset(reset),
+		.d(dff_a0),
+		.q(dff_a1)
+	);
+
+	flipflop b0(
+		.clk(clk),
+		.reset(reset),
+		.d(input_b),
+		.q(dff_b0),
+	);
+	
+	flipflop b1(
+		.clk(clk),
+		.reset(reset),
+		.d(dff_b0),
+		.q(dff_b1)
+	);
+
+	
+	assign ena = dff_a0 && ~dff_a1; // enable for encoder a
+	assign enb = dff_b0 && ~dff_b1; // enable for encoder b
+	reg [9:0] counter;
+	
+	always @(posedge clk)
+		begin
+			if (ena & counter < 'b1111111111 & counter > 'b0000000000) counter <= counter + 1;
+			if (enb & counter < 'b1111111111 & counter > 'b0000000000) counter <= counter - 1;
+		end
+		
+endmodule

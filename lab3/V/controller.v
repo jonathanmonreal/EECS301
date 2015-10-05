@@ -1,6 +1,6 @@
-module controller(clk, rst, variable, down, up, amp, freq);
+module controller(clk, rst, selector, down, up, amp, freq);
 
-input clk, rst, variable, down, up;
+input clk, rst, selector, down, up;
 output reg [9:0] amp, freq;
 
 always @(posedge clk or posedge rst)
@@ -10,7 +10,7 @@ always @(posedge clk or posedge rst)
 				freq = 'b0000110100;
 				amp  = 'b1111111111;
 			end
-		else if (variable)
+		else if (selector)
 			begin
 				if (up & freq < 'b1111111111) freq = freq + 1;
 				else if (down & freq > 'b0000000001) freq = freq - 1;

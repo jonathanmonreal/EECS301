@@ -59,11 +59,13 @@ wire SCLK;
 wire Din;
 wire LDAC;
 wire CLR;
+wire encoder_a, encoder_b;
 assign GPIO_0[10] = ~SYNC;
 assign GPIO_0[8] = SCLK;
 assign GPIO_0[9] = Din;
 assign GPIO_0[11] = ~LDAC;
 assign GPIO_0[12] = ~CLR;
+assign {encoder_b, encoder_a} = GPIO_0[7:6];
 
 // Switch and button definitions
 wire variable = ~SW[0];
@@ -119,15 +121,25 @@ ldac_pulse pul(
 
 
 
-controller control(
-	.clk(button_freq),
-	.rst(reset),
-	.variable(variable),
-	.down(down),
-	.up(up),
-	.amp(amplitude),
-	.freq(frequency)
+motor_counter mc(
+.clk(CLOCK_50), 
+.reset(reset), 
+.selector(variable),
+.input_a(encoder_a), 
+.input_b(encoder_b), 
+.amp(amplitude),
+.freq(frequency)
 );
+
+//controller control(
+//	.clk(button_freq),
+//	.rst(reset),
+//	.selector(variable),
+//	.down(down),
+//	.up(up),
+//	.amp(amplitude),
+//	.freq(frequency)
+//);
 
 gain_control ampcontrol(
 	.clk(CLOCK_50),

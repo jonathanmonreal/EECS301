@@ -3,7 +3,7 @@ ADC_CONVST <= <GND>
 ADC_DIN <= <GND>
 ADC_DOUT => ~NO_FANOUT~
 ADC_SCLK <= <GND>
-CLOCK_50 => CLOCK_50.IN8
+CLOCK_50 => CLOCK_50.IN9
 CLOCK2_50 => ~NO_FANOUT~
 CLOCK3_50 => ~NO_FANOUT~
 CLOCK4_50 => ~NO_FANOUT~
@@ -50,8 +50,8 @@ HEX5[4] <= <GND>
 HEX5[5] <= <GND>
 HEX5[6] <= <GND>
 KEY[0] => KEY[0].IN1
-KEY[1] => down.IN1
-KEY[2] => up.IN1
+KEY[1] => ~NO_FANOUT~
+KEY[2] => ~NO_FANOUT~
 KEY[3] => ~NO_FANOUT~
 LEDR[0] <= amplitude[0].DB_MAX_OUTPUT_PORT_TYPE
 LEDR[1] <= amplitude[1].DB_MAX_OUTPUT_PORT_TYPE
@@ -108,8 +108,6 @@ GPIO_0[2] <> <UNC>
 GPIO_0[3] <> <UNC>
 GPIO_0[4] <> <UNC>
 GPIO_0[5] <> <UNC>
-GPIO_0[6] <> <UNC>
-GPIO_0[7] <> <UNC>
 GPIO_0[8] <> GPIO_0[8]
 GPIO_0[9] <> GPIO_0[9]
 GPIO_0[10] <> GPIO_0[10]
@@ -265,71 +263,31 @@ right[7] => LessThan1.IN1
 PWM_out <= PWM_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|eecs301_lab3|controller:control
-clk => amp[0]~reg0.CLK
-clk => amp[1]~reg0.CLK
-clk => amp[2]~reg0.CLK
-clk => amp[3]~reg0.CLK
-clk => amp[4]~reg0.CLK
-clk => amp[5]~reg0.CLK
-clk => amp[6]~reg0.CLK
-clk => amp[7]~reg0.CLK
-clk => amp[8]~reg0.CLK
-clk => amp[9]~reg0.CLK
-clk => freq[0]~reg0.CLK
-clk => freq[1]~reg0.CLK
-clk => freq[2]~reg0.CLK
-clk => freq[3]~reg0.CLK
-clk => freq[4]~reg0.CLK
-clk => freq[5]~reg0.CLK
-clk => freq[6]~reg0.CLK
-clk => freq[7]~reg0.CLK
-clk => freq[8]~reg0.CLK
-clk => freq[9]~reg0.CLK
-rst => amp[0]~reg0.PRESET
-rst => amp[1]~reg0.PRESET
-rst => amp[2]~reg0.PRESET
-rst => amp[3]~reg0.PRESET
-rst => amp[4]~reg0.PRESET
-rst => amp[5]~reg0.PRESET
-rst => amp[6]~reg0.PRESET
-rst => amp[7]~reg0.PRESET
-rst => amp[8]~reg0.PRESET
-rst => amp[9]~reg0.PRESET
-rst => freq[0]~reg0.ACLR
-rst => freq[1]~reg0.ACLR
-rst => freq[2]~reg0.PRESET
-rst => freq[3]~reg0.ACLR
-rst => freq[4]~reg0.PRESET
-rst => freq[5]~reg0.PRESET
-rst => freq[6]~reg0.ACLR
-rst => freq[7]~reg0.ACLR
-rst => freq[8]~reg0.ACLR
-rst => freq[9]~reg0.ACLR
-variable => amp[0]~reg0.ENA
-variable => freq[9]~reg0.ENA
-variable => freq[8]~reg0.ENA
-variable => freq[7]~reg0.ENA
-variable => freq[6]~reg0.ENA
-variable => freq[5]~reg0.ENA
-variable => freq[4]~reg0.ENA
-variable => freq[3]~reg0.ENA
-variable => freq[2]~reg0.ENA
-variable => freq[1]~reg0.ENA
-variable => freq[0]~reg0.ENA
-variable => amp[9]~reg0.ENA
-variable => amp[8]~reg0.ENA
-variable => amp[7]~reg0.ENA
-variable => amp[6]~reg0.ENA
-variable => amp[5]~reg0.ENA
-variable => amp[4]~reg0.ENA
-variable => amp[3]~reg0.ENA
-variable => amp[2]~reg0.ENA
-variable => amp[1]~reg0.ENA
-down => always0.IN1
-down => always0.IN1
-up => always0.IN1
-up => always0.IN1
+|eecs301_lab3|motor_counter:mc
+clk => clk.IN4
+reset => reset.IN4
+input_a => input_a.IN1
+input_b => input_b.IN1
+selector => freq.OUTPUTSELECT
+selector => freq.OUTPUTSELECT
+selector => freq.OUTPUTSELECT
+selector => freq.OUTPUTSELECT
+selector => freq.OUTPUTSELECT
+selector => freq.OUTPUTSELECT
+selector => freq.OUTPUTSELECT
+selector => freq.OUTPUTSELECT
+selector => freq.OUTPUTSELECT
+selector => freq.OUTPUTSELECT
+selector => amp.OUTPUTSELECT
+selector => amp.OUTPUTSELECT
+selector => amp.OUTPUTSELECT
+selector => amp.OUTPUTSELECT
+selector => amp.OUTPUTSELECT
+selector => amp.OUTPUTSELECT
+selector => amp.OUTPUTSELECT
+selector => amp.OUTPUTSELECT
+selector => amp.OUTPUTSELECT
+selector => amp.OUTPUTSELECT
 amp[0] <= amp[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 amp[1] <= amp[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 amp[2] <= amp[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -350,6 +308,34 @@ freq[6] <= freq[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 freq[7] <= freq[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 freq[8] <= freq[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 freq[9] <= freq[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|eecs301_lab3|motor_counter:mc|flipflop:a0
+clk => q~reg0.CLK
+reset => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|eecs301_lab3|motor_counter:mc|flipflop:a1
+clk => q~reg0.CLK
+reset => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|eecs301_lab3|motor_counter:mc|flipflop:b0
+clk => q~reg0.CLK
+reset => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|eecs301_lab3|motor_counter:mc|flipflop:b1
+clk => q~reg0.CLK
+reset => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |eecs301_lab3|gain_control:ampcontrol
