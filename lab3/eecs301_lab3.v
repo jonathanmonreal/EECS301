@@ -60,16 +60,21 @@ wire Din;
 wire LDAC;
 wire CLR;
 wire encoder_a, encoder_b;
+wire [1:0] motor_in;
+wire motor_en = SW[9];
 assign GPIO_0[10] = ~SYNC;
 assign GPIO_0[8] = SCLK;
 assign GPIO_0[9] = Din;
 assign GPIO_0[11] = ~LDAC;
 assign GPIO_0[12] = ~CLR;
+assign {GPIO_0[3], GPIO_0[1]} = motor_in;
+assign GPIO_0[4] = motor_en;
 assign {encoder_b, encoder_a} = GPIO_0[7:6];
 
 // Switch and button definitions
 wire variable = ~SW[0];
 wire enable_SPI = ~SW[1];
+
 wire reset = ~KEY[0];
 wire down = ~KEY[1];
 wire up = ~KEY[2];
@@ -77,10 +82,6 @@ wire up = ~KEY[2];
 // Amplitude and frequency registers
 wire [9:0] amplitude;
 wire [9:0] frequency;
-
-// Temporary
-
-assign LEDR = amplitude;
 
 wire [11:0] nco_data;
 wire [23:0] phi_input;
@@ -106,6 +107,10 @@ clock_divider slow(
 	.clk_out(slow_clk)
 );
 
+//speedcount_pwm motorinput(
+//	.clk_in(slow_clk),.selector(variable), .x_in('b001111), .PWM_out(motor_in)
+//);
+
 button_clock bc(
 	.clk(CLOCK_50),
 	.clk_out(button_freq)
@@ -123,10 +128,10 @@ ldac_pulse pul(
 
 motor_counter mc(
 .clk(CLOCK_50), 
-.reset(reset), 
-.selector(variable),
+.reset(reset),
 .input_a(encoder_a), 
 .input_b(encoder_b), 
+.select(~variable),
 .amp(amplitude),
 .freq(frequency)
 );

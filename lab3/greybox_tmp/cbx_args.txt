@@ -1,10 +1,9 @@
-LPM_DIRECTION=RIGHT
+LPM_DIRECTION=LEFT
 LPM_TYPE=LPM_SHIFTREG
-LPM_WIDTH=32
+LPM_WIDTH=8
 DEVICE_FAMILY="Cyclone V"
 clock
 data
 enable
 load
-shiftin
 shiftout

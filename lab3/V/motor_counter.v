@@ -1,12 +1,11 @@
-// Jonathan Monreal
-// 
 
-module motor_counter(clk, reset, input_a, input_b, selector, amp, freq);
 
-	input clk, reset, input_a, input_b, selector;
+module motor_counter(clk, reset, input_a, input_b, select, amp, freq);
+
+	input clk, reset, input_a, input_b, select;
 	output reg [9:0] amp, freq;
 	
-	wire dff_a0, dff_a1, dff_b0, dff_b1, ena, enb;
+	wire dff_a0, dff_a1,dff_b0,dff_b1, count_dir, en;
 	
 	flipflop a0(
 		.clk(clk),
@@ -26,38 +25,39 @@ module motor_counter(clk, reset, input_a, input_b, selector, amp, freq);
 		.clk(clk),
 		.reset(reset),
 		.d(input_b),
-		.q(dff_b0),
+		.q(count_dir)
 	);
 	
-	flipflop b1(
-		.clk(clk),
-		.reset(reset),
-		.d(dff_b0),
-		.q(dff_b1)
-	);
-
 	
-	assign ena = dff_a0 && ~dff_a1; // enable for encoder a
-	assign enb = dff_b0 && ~dff_b1; // enable for encoder b
+//	flipflop b1(
+	//	.clk(clk),
+	//	.reset(reset),
+	//	.d(dff_b0),
+//		.q(dff_b1)
+//	);
 	
+	assign en = dff_a0 && ~dff_a1; // The enable
+	//assign enb = dff_b0 && ~dff_b1;
+	reg [9:0] counter,counter2;
 	
 	always @(posedge clk)
 		begin
-			if (reset)
+		if (reset) 
 			begin
-				freq = 'b0000110100;
-				amp  = 'b1111111111;
+				counter2 <= 'b0000110100; counter <= 'b1111111110;
 			end
-		else if (selector)
+		else if (select) 
 			begin
-				if (ena & freq < 'b1111111111) freq = freq + 1;
-				else if (enb & freq > 'b0000000001) freq = freq - 1;
+				if (en & counter < 'b1111111111) counter <= counter + 1;
+				if (count_dir & en & counter > 'b0000000000) counter <= counter - 1;
 			end
-		else
+		else 
 			begin
-				if (ena & amp < 'b1111111111) amp = amp + 1;
-				else if (enb & amp > 'b0000000001) amp = amp - 1;
+				if (en & counter2 < 'b1111111111) counter2 <= counter2 + 1;
+				if (count_dir & en & counter2 > 'b0000000000) counter2 <= counter2 - 1;
 			end
+		amp = counter;
+		freq = counter2;	
 		end
 		
 endmodule
